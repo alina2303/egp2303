@@ -271,7 +271,7 @@ i {
 }
 
  img.icon1 {
-   vertical-align: center;
+   vertical-align: middle;
    /*left: right;*/
    width: 30px;
    padding-right: 15px;
