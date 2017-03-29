@@ -522,6 +522,7 @@ a.case {
 } 
 .red { 
 	color: red;
+	padding-top: 10px;
 } 
 .exercise{ 
 	width: 120px; 
