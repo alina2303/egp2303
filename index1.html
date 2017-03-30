@@ -138,7 +138,7 @@
 						</div>
 						<div class="row">
 							<p>
-							Om et <abbr title="navneord">substantiv</abbr> skal have ’en’ eller ’et’ som ubestemt <abbr title="kendeord">artikel</abbr> afgøres af, om <abbr title="navneordet">substantivet</abbr> er <abbr title="hankøn">maskulinum</abbr>/<abbr title="hankøn">femininum</abbr> eller <abbr title="intetkøn">neutrum</abbr>.
+							Om et <abbr title="navneord">substantiv</abbr> skal have ’en’ eller ’et’ som ubestemt <abbr title="kendeord">artikel</abbr> afgøres af, om <abbr title="navneordet">substantivet</abbr> er <abbr title="hankøn">maskulinum</abbr>/<abbr title="hunkøn">femininum</abbr> eller <abbr title="intetkøn">neutrum</abbr>.
 							</p>
 						</div>
 						<div class="row">
@@ -146,7 +146,7 @@
 								<img src="img/flag2.png" alt="">
 							</div>
 							<p>
-								Engelsk har også to ord for den ubestemte <abbr title="kendeord">artikel</abbr>: <span>a</span> og <span>an</span>. På engelsk skelner man dog ikke mellem, om et  <abbr title="navneord">substantiv</abbr> er <abbr title="hankøn">maskulinum</abbr>/<abbr title="hankøn">femininum</abbr> eller <abbr title="intetkøn">neutrum</abbr>.
+								Engelsk har også to ord for den ubestemte <abbr title="kendeord">artikel</abbr>: <span>a</span> og <span>an</span>. På engelsk skelner man dog ikke mellem, om et  <abbr title="navneord">substantiv</abbr> er <abbr title="hankøn">maskulinum</abbr>/<abbr title="hunkøn">femininum</abbr> eller <abbr title="intetkøn">neutrum</abbr>.
 								<br>
 								Om engelsk bruger <span>a</span> eller <span>an</span> foran et <abbr title="navneord">substantiv</abbr>/<abbr title="tillægsord">adjektiv</abbr> afgøres af, om ordet begynder med en konsonantlyd eller en vokallyd.
 							</p>
@@ -219,18 +219,11 @@
 							<p>NB! Hvis der i den pågældende sammenhæng/situation kun er én af slagsen, skal <abbr title="kendeordet">artiklen</abbr> ikke med:</p>
 						<div class="hidden-block">
 								<div class="text-holder">
-									<span>He was <ins>President</ins> of the United States.</span>
+									<span>He was <ins>President</ins> of the United States. <s>(USA har jo kun én præsident)</s></span>
 									<br>
-									<span><s>(USA har jo kun én præsident)</s></span>
+									<span>He was <ins>headmaster</ins> of this school during the War. <s>(skolen har kun én inspektør)</s></span>
 									<br>
-									<span>He was <ins>headmaster</ins> of this school during the War.</span>
-									<br>
-									<span><s>(skolen har kun én inspektør)</s></span>
-									<br>
-									<span>He was <ins>captain</ins> of the Queen Mary.</span>
-									<br>
-									<span><s>(Skibet har kun én kaptajn)</s></span>
-
+									<span>He was <ins>captain</ins> of the Queen Mary. <s>(Skibet har kun én kaptajn)</s></span>
 								</div>
 								<div class="arrow">
 									<img src="img/Arrow.png" alt="">
@@ -246,17 +239,11 @@
 							</p>
 							<div class="hidden-block">
 								<div class="text-holder">
-									<span>She had <ins>a headache</ins>.</span>
+									<span>She had <ins>a headache</ins>. <s>(der findes mange hovedpiner)</s></span>
 									<br>
-									<span><s>(der findes mange hovedpiner)</s></span>
+									<span>He has <ins>a right</ins> to be in this class. <s>(der findes mange rettigheder)</s></span>
 									<br>
-									<span>He has <ins>a right</ins> to be in this class.</span>
-									<br>
-									<span><s>(der findes mange rettigheder)</s></span>
-									<br>
-									<span>He smokes <ins>a pipe</ins>.</span>
-									<br>
-									<span><s>(der findes mange piber i verden)</s></span>
+									<span>He smokes <ins>a pipe</ins>. <s>(der findes mange piber i verden)</s></span>	
 								</div>
 								<div class="arrow">
 									<img src="img/Arrow.png" alt="">
@@ -567,31 +554,5 @@ $('.js-test-form-1').test([{
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}]);
 </script> 
-<script type="text/javascript">	
-				
-					$('#demo').click(function(){
-						guiders.createGuider({
-						attachTo: "#demo",
-						  buttons: [{name: "Вперед"},{name: "Закрыть"}],
-						  description: "Нажми \"вперед\" чтобы увидеть подсказку в разных положениях",
-						  id: "tip",
-						  next:"index2_tips",
-						  overlay: true,
-						  position:12,
-						  autoFocus:true,
-						  title: "Вы можете также изменять положение подсказки"
-						}).show();
-						
-						guiders.createGuider({
-						attachTo: "#demo",
-						  buttons: [{name: "Назад"},{name: "Закрыть"}],
-						  description: "",
-						  id: "index2_tips",
-						  overlay: true,
-						  position:5,
-						  title: "Guiders.js поддерживает 12 различных позиций"
-						});
-					});
-				</script>
 
 </body></html>

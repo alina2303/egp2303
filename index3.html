@@ -162,7 +162,7 @@
 									<br>
 									<span>the boss<ins>'s</ins> car <s>(chefens bil)</s></span>
 									<br>
-									<span>the child<ins>'s</ins> cat <s>(barnets kat)</s></span>
+									<span>the bosse<ins>s'</ins> cars <s>(chefernes biler)</s></span>
 									<br>
 									
 								</div>
@@ -282,7 +282,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Afgør om ordet i rullemenuen udtrykker genitiv. Hvis det gør, skal du vælge den rigtige placering af apostroffen. Vælg fra rullemenuen.
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -305,7 +305,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Vælg den af de 2 muligheder, som anvender den rigtige form for genitiv (-’<span>s</span> eller of-genitiv)
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -433,22 +433,22 @@ $('.js-test-form').test([{
 	}]);
 
 $('.js-test-form-1').test([{
-		text: '1. Do you take {{milk, the milk|link}}in your tea?',
-		answers: ['milk'],
+		text: '1. {{<i>The lamp’s glass</i>, <i>The glass of the lamp</i>|radio}}',
+		answers: ['<i>The lamp’s glass</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '2. {{Life, The life|link}}is full of wonderful surprises, he smiled.',
-		answers: ['Life'],
+		text: '2. {{<i>The coat’s feathers</i>, <i>The feathers of the coat</i>|radio}}',
+		answers: ['<i>The feathers of the coat</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '3. {{Time, The time|link}}I spent working at the factory really taught me a lot.',
-		answers: ['The time'],
+		text: '3. {{<i>The books’ covers</i>, <i>The covers of the books</i>|radio}}I spent working at the factory really taught me a lot.',
+		answers: ['<i>The covers of the books</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
 	}, {
-		text: '4. {{Crime, The crime|link}}is a huge problem in many inner cities.',
+		text: '4. {{Crime, The crime|radio}}is a huge problem in many inner cities.',
 		answers: ['Crime'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
