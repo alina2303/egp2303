@@ -305,7 +305,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den af de 2 muligheder, som anvender den rigtige form for genitiv (-’<span>s</span> eller of-genitiv)
+								Vælg den af de 2 muligheder, som anvender den rigtige form for genitiv (-’<span class="bold-italic">s</span> eller <span class="bold-italic">of</span>-genitiv)
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -436,7 +436,7 @@ $('.js-test-form-1').test([{
 		text: '1. {{<i>The lamp’s glass</i>, <i>The glass of the lamp</i>|radio}}',
 		answers: ['<i>The lamp’s glass</i>'],
 		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved ting</div></div></div>'
 	}, {
 		text: '2. {{<i>The coat’s feathers</i>, <i>The feathers of the coat</i>|radio}}',
 		answers: ['<i>The feathers of the coat</i>'],
@@ -448,68 +448,68 @@ $('.js-test-form-1').test([{
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
 	}, {
-		text: '4. {{Crime, The crime|radio}}is a huge problem in many inner cities.',
-		answers: ['Crime'],
+		text: '4. {{<i>The gorilla’s hands</i>, <i>The hands of the gorilla</i>|radio}}',
+		answers: ['<i>The gorilla’s hands</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '5. They were both very interested in {{history, the history|link}}.',
-		answers: ['history'],
+		text: '5. {{<i>The dentist’s instruments</i>, <i>The instruments of the dentist</i>|radio}}.',
+		answers: ['<i>The dentist’s instruments</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '6. It was {{first time, the first time|link}}they had ever met.',
-		answers: ['the first time'],
+		text: '6. {{<i>The building’s roof</i>, <i>The roof of the building</i>|radio}}',
+		answers: ['<i>The roof of the building</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
 	}, {
-		text: '7. I think {{nature, the nature|link}}can teach us many valuable things.',
-		answers: ['nature'],
+		text: '7. {{<i>The trees’ leaves</i>, <i>The leaves of the trees</i>|radio}}',
+		answers: ['<i>The leaves of the trees</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '8. During the French Revolution, they fought for {{freedom, the freedom|link}}.',
-		answers: ['freedom'],
+		text: '8. {{<i>The document’s pages</i>, <i>The pages of the document</i>|radio}}.',
+		answers: ['<i>The pages of the document</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '9. {{Paintings, The paintings|link}}in the gallery are all very expensive.',
-		answers: ['The paintings'],
+		text: '9. {{<i>The horse’s mouth</i>, <i>The paintings</i>|radio}}',
+		answers: ['<i>The horse’s mouth</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
 	}, {
-		text: '10. {{History, The history|link}}of Germany is interesting.',
-		answers: ['The history'],
+		text: '10. {{<i>The baby’s toy</i>, <i>The toy of the baby</i>|radio}}',
+		answers: ['<i>The baby’s toy</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
 	}, {
-		text: '11. It’s time to find {{love, the love|link}}again, she said. Let’s go to Jim’s party!',
-		answers: ['love'],
+		text: '11. {{<i>The doorbell’s ringing</i>, <i>The ringing of the doorbell</i>|radio}}',
+		answers: ['<i>The ringing of the doorbell</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '12. {{Music, The music|link}}of the 90s plays an important role in my life.',
-		answers: ['The music'],
+		text: '12. {{<i>The dress’s colour</i>, <i>The colour of the dress</i>|radio}}',
+		answers: ['<i>The colour of the dress</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
 	}, {
-		text: '13. {{Time, The time|link}}we spend together is precious, the commercial said.',
-		answers: ['The time'],
+		text: '13. {{<i>The car’s beautiful lines</i>, <i>The beautiful lines of the car</i>|radio}}',
+		answers: ['<i>The beautiful lines of the car</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
 	}, {
-		text: '14. {{Articles, The articles|link}}are difficult to use.',
-		answers: ['Articles'],
+		text: '14. {{<i>The footballer’s boot</i>, <i>The boot of the footballer</i>|radio}}',
+		answers: ['<i>The footballer’s boot</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}, {
-		text: '15. {{Water, The water|link}}we bought at the supermarket did not taste good.',
-		answers: ['The water'],
+		text: '15. {{<i>The professor’s office</i>, <i>The office of the professor</i>|radio}}',
+		answers: ['<i>The professor’s office</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
 	}, {
-		text: '16. Many young people faced {{death, the death|link}}during the First World War.',
-		answers: ['death'],
+		text: '16. {{<i>The table’s legs </i>, <i>The legs of the table</i>|radio}}',
+		answers: ['<i>The legs of the table</i>'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
 	}]);

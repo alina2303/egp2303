@@ -332,7 +332,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg <span class="bold-italic">’the’</span> eller ’x’ (= ingen artikel) (20 sætninger)
+								Vælg den korrekte sætning.
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -355,7 +355,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								I én af sætningerne er der fejl i brug af bestemt artikel. Hvilken? (10 spørgsmål)
+							Vælg det korrekte from af det possessive pronomen. 
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -404,158 +404,111 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. We can go by {{, x, the|select}} bus if you prefer that.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
+		answers: ['<i>We met at the hairdresser’s.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '2. Everybody left the office and went home to celebrate {{, x, the|select}} Christmas.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
+		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_12.png"></p>'
 	}, {
-		text: '3. Two cyclists were taken to {{, x, the|select}} hospital before the race was over.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
+		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '4. I was born in {{, x, the|select}} South, but grew up in New York.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
+		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_6.png"></p>'
 	}, {
-		text: '5. She always went to {{, x, the|select}} bed very early because she had to go to work at five am.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
+		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '6. A sign reminded them to keep on {{, x, the|select}} left side of the road.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
+		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_7.png"></p>'
 	}, {
-		text: '7. Only shortly after he had been released from {{, x, the|select}} prison, he was arrested again.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
+		answers: ['<i>The river Seine runs through Paris.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '8. She told us to keep straight on for another mile and then turn to {{, x, the|select}} left.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
+		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_7.png"></p>'
 	}, {
-		text: '9. What did you have for {{, x, the|select}} breakfast when you went to Greece last year?',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
+		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"></p>'
 	}, {
-		text: '10. The doctor says that I can visit her at {{, x, the|select}} hospital tomorrow.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
+		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '11. He has read {{, x, the|select}} Washington Post every morning for 10 years.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
+		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
 	}, {
-		text: '12. I don’t think I will ever forget {{, x, the|select}} dinner we had at the top of the Eiffel Tower.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
+		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"> , NB!</p>'
 	}, {
-		text: '13. My sister lives on {{, x, the|select}} third floor, in an apartment facing the Thames.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
+		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
+		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> Engelsk har bestemt kendeord ved ’ordenstal’</p>'
-	}, {
-		text: '14. He has gone to {{, x, the|select}} church every Sunday for twenty years.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '15. On April 14, 1912,{{, x, the|select}} Titanic hit an iceberg and less than 3 hours later it had sunk.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '16. {{, x, the|select}} passive voice is often used in scientific writings.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_8.png"></p>'
-	}, {
-		text: '17. She quit {{, x, the|select}} university because she got an interesting job.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '18. We have booked a week at {{, x, the|select}} Intercontinental. It is said to be a nice hotel.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '19. She has just published a number of essays on {{, x, the|select}} man and nature.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_10.png"></p>'
-	}, {
-		text: '20. “We are going to {{, x, the|select}} dinner with the Browns”, he said, “so you’d better hurry!”',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"></p>'
-	
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. {{It may lead to bushfires when the wind blows from north., We are very proud of the church in our town., I forgot my gloves at the hospital when I visited Tom.|radio}} </p>',
-		answers: ['It may lead to bushfires when the wind blows from north.'],
-		right: '<p><img src="img/right2.png" alt="" /> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>.</p>',
+		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',
+		answers: ['your'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
 	}, {
-		text: '<p> 2. {{Jane and Joshua spent their honeymoon at the Hotel California., Alice does not go to the school by bus because it is less than a mile from her home., Do you think we should move the table a little to the left?|radio}}</p>',
-		answers: ['Alice does not go to the school by bus because it is less than a mile from her home.'],
-		right: '<p><img src="img/right2.png" alt=""/> Anden sætning skal være:<br> <span> Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span></p>',
+		text: '<p> 2. The house you can see in front of you is {{ , their, theirs, their’s|select}}.</p>',
+		answers: ['theirs'],
+		right: '<p><img src="img/right2.png" alt=""/></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '<p> 3. {{I like the blue jacket the most., She often read the Daily News when she lived in the USA., Do you know that Jane was taken to the hospital this morning?|radio}} </p>',
-		answers: ['Do you know that Jane was taken to the hospital this morning?'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være: <br> <span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span></p>',
+		text: '<p> 3. Leave that book! It is {{ , mine, my|select}}.</p>',
+		answers: ['mine'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '<p> 4. {{I left work early today because I felt a little dizzy., She went to the church to study the beautiful wooden carvings., My boyfriend likes to have bacon and eggs for the breakfast.|radio}} </p>',
-		answers: ['My boyfriend likes to have bacon and eggs for the breakfast.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>.</p>',
+		text: '<p> 4. Leave them! It is {{ , my, mine|select}} books.</p>',
+		answers: ['my'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
 	}, {
-		text: '<p> 5. {{It was the first time that the pilot landed in the Philippines., We all found some creepy costumes to wear for Halloween., The time flies when you are among friends.|radio}}</p>',
-		answers: ['The time flies when you are among friends.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span></p>',
+		text: '<p> 5. The responsibility is {{ , our, ours, our’s|select}} No doubt about that.</p>',
+		answers: ['ours'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
 	}, {
-		text: '<p> 6. {{She felt so tired after having worked all day., My brother always goes by the train because he does not have a car., ”Is life too easy for young people today?” the headline said.|radio}}</p>',
-		answers: ['My brother always goes by the train because he does not have a car.'],
-		right: '<p><img src="img/right2.png" alt="" /> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span></p>',
+		text: '<p> 6. Do you see the girl at the counter? The idea was {{ , hers, her, her’s|select}}</p>',
+		answers: ['hers'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
 	}, {
-		text: '<p> 7. {{I have read all the books about the life of the Egyptians., I really think most of his novels are extraordinary., It is first time that I have really appreciated a novel.|radio}}</p>',
-		answers: ['It is first time that I have really appreciated a novel.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span></p>',
+		text: '<p> 7. Is the car in the parking lot {{ , your, yours, your’s|select}}</p>',
+		answers: ['yours'],
+		right: '<p><img src="img/right2.png" alt="" /> </p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
 	}, {
-		text: '<p> 8. {{She is owner of a beautiful little cottage in Devon., He caught a glimpse of her on the opposite side of the street., Breakfast is served in the dinning-room between 6.30 am and 9.30 am. |radio}}</p>',
-		answers: ['She is owner of a beautiful little cottage in Devon.'],
-		right: '<p><img src="img/right2.png" alt="" /> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span></p>',
+		text: '<p> 8. {{, Its, it’s|select}} fur has been cut far too often.</p>',
+		answers: ['Its'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
-	}, {
-		text: '<p> 9. {{I love the autumn because of all the beautiful colours., She had lived by the sea her entire life., Her brother had gone to sea as a sailor when he was 16.|radio}}</p>',
-		answers: ['I love the autumn because of all the beautiful colours.'],
-		right: '<p><img src="img/right2.png" alt="" /> Første sætning skal være:<br> <span>I love autumn because of all the beautiful colours.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>I love autumn because of all the beautiful colours.</span> Se regel <img class="link" src="img/roed_12.png"></p>'
-	}, {
-		text: '<p> 10. {{I think we should move the table away from the window., The babysitter will put the kids to bed., She went by the plane because it was much quicker.|radio}}</p>',
-		answers: ['She went by the plane because it was much quicker.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span>She went <ins>by plane</ins> because it was much quicker.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>She went <ins>by plane</ins> because it was much quicker.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	
 	}]);
 </script> 
 
