@@ -217,16 +217,16 @@ span  {
 }
 .border-blue {
 	margin: 0 20px;
-	border: solid #2B477D 15px; /*#0033cc  #668cff  #99b3ff*/
-	border-radius: 12px;
+	border: solid #2B477D 11px; /*#0033cc  #668cff  #99b3ff*/
+	border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
 
 }
 .border-red {
 	margin: 0 20px 0 20px;
-    border: solid  #e63900 15px; /* #cc0000 */
-    border-radius: 12px;
+    border: solid  #e63900 11px; /* #cc0000 */
+    border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -234,8 +234,8 @@ span  {
 
 .border-green {
 	margin: 0 20px 0 20px;
-    border: solid #00802b 15px; /* #006600 #00802b */
-    border-radius: 12px;
+    border: solid #00802b 11px; /* #006600 #00802b */
+    border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -399,22 +399,22 @@ Style for hide and show*/
 /*style for exercise*/
 .border-blue-ex { 
 	margin: 0px 20px 0px 20px;
-    border: solid #2B477D 15px; /*#0033cc  #668cff  #99b3ff #006699*/
-    border-radius: 12px;
+    border: solid #2B477D 11px; /*#0033cc  #668cff  #99b3ff #006699*/
+    border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
 } 
 .border-red-ex { 
 	margin: 0px 20px 0px 20px;
-    border: solid #e63900 15px; /*#ff3300  #668cff  #99b3ff #006699*/
-    border-radius: 12px;
+    border: solid #e63900 11px; /*#ff3300  #668cff  #99b3ff #006699*/
+    border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
 } 
 .border-green-ex { 
 	margin: 0px 20px 0px 20px;
-    border: solid #00802b  15px; /*#0033cc  #668cff  #99b3ff #006699*/
-    border-radius: 12px;
+    border: solid #00802b  11px; /*#0033cc  #668cff  #99b3ff #006699*/
+    border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
 } 
@@ -766,3 +766,30 @@ b {
 padding-left:  40px;
 
 }*/
+.tool-tip-holder.blue .tool-tip {
+	display: inline-block;
+	position: absolute;
+	background: #2a507c;
+	color: #fff;
+	border-radius: 8px;
+	padding: 6px;
+	font-size: 13px;
+	min-width: 170px;
+	line-height: 15px;
+	top: 33px;
+	left: 0;
+	background: #2a507c;
+	
+}
+.tool-tip-holder.blue .tool-tip:before {
+	content: '';
+	position: absolute;
+	top: -9px;
+	left: 14px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 3.5px 10px 3.5px;
+	border-color: transparent transparent #2a507c transparent;
+
+}
