@@ -362,6 +362,18 @@ Style for hide and show*/
 	top: 6px;
 	left: 18px;
 }
+.content-holder .row .flag1 {
+	width: 45%;
+	position: relative;
+}
+.content-holder .row .flag2 {
+	width: 45%;
+	top: 0px;
+	position: absolute;
+	text-align: right;
+	right: -30px;
+	margin-right: 33px;
+}
 .content-holder .row .flag img {
 	width: 30px;
 }
@@ -774,10 +786,10 @@ b {
 	width: 460px;
 	margin-top: 10px;
 }
-/*.marker {
+.markers {
 padding-left:  40px;
 
-}*/
+}
 .tool-tip-holder.blue .tool-tip {
 	display: inline-block;
 	position: absolute;
@@ -807,4 +819,8 @@ padding-left:  40px;
 }
 .comment {
 	font-weight: normal;
+}
+.flag2 .row h4 {
+	margin-top: 0px;
+
 }
