@@ -279,6 +279,7 @@ i {
    }
    abbr {
     cursor: pointer;
+    text-decoration: none;
     
    }
    .otbold{
@@ -385,7 +386,7 @@ Style for hide and show*/
     left: 12px;
     cursor: pointer;
 }
-.content-holder .row .arrow img {
+.content-holder .arrow img {
 	width: 20px;
 }
 .hidden-block {
@@ -824,3 +825,57 @@ padding-left:  40px;
 	margin-top: 0px;
 
 }
+.table-type-1 {
+			width: 100%;
+			margin: 5px 0px 20px 0px;
+}
+		
+		.table-type-1 tr,
+		.table-type-1 td,
+		.table-type-1 th {
+			border: 1px solid #000;
+			border-collapse: collapse;
+			vertical-align: top;
+		}
+		.table-type-1 tr {
+			border-left: 1px solid transparent;
+		}
+		.table-type-1 th:nth-child(odd),
+		.table-type-1 td:nth-child(odd) {
+			border-left: 1px solid transparent;
+		}
+		.table-type-1 th:nth-child(even),
+		.table-type-1 td:nth-child(even) {
+			border-right: 1px solid transparent;
+		}
+		.table-type-1 td,
+		.table-type-1 th {
+			padding: 5px;
+		}
+		.table-type-1 tr:first-child,
+		.table-type-1 tr:first-child th {
+			border-top: 1px solid transparent;
+		}
+		.table-type-1 .table-head {
+			text-align: center;
+			padding: 20px 0;
+		}
+		.table-type-1 .table-head s {
+			display: inline-block;
+			padding: 5px 15px;
+			color: #fff;
+			background: rgba(163,209,125,1);
+			background: -moz-radial-gradient(center, ellipse cover, rgba(163,209,125,1) 0%, rgba(85,173,9,1) 100%);
+			background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(163,209,125,1)), color-stop(100%, rgba(85,173,9,1)));
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(163,209,125,1) 0%, rgba(85,173,9,1) 100%);
+			background: -o-radial-gradient(center, ellipse cover, rgba(163,209,125,1) 0%, rgba(85,173,9,1) 100%);
+			background: -ms-radial-gradient(center, ellipse cover, rgba(163,209,125,1) 0%, rgba(85,173,9,1) 100%);
+			background: radial-gradient(ellipse at center, rgba(163,209,125,1) 0%, rgba(85,173,9,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3d17d', endColorstr='#55ad09', GradientType=1 );
+			border-radius: 10px;
+		}
+		.table-type-1 td {
+			width: 50%;
+		}
+		ul#navigation .new {background-color: #009933;
+	}
