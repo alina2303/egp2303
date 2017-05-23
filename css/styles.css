@@ -51,11 +51,11 @@ ul#navigation li {
 	position: relative;
 	z-index: 1;
 }
-ul#navigation li:first-child {background-color: #2B477D;
+ul#navigation li.blue {background-color: #2B477D;
 	}
-ul#navigation li:nth-child(2) {background-color: #ff3300;
+ul#navigation li.rod {background-color: #ff3300;
 	}
-ul#navigation li:nth-child(3) {background-color: #009933;
+ul#navigation li.green {background-color: #009933;
 	}
 
 ul#navigation li.selected {
@@ -100,19 +100,19 @@ ul#navigation li a:link, ul#navigation li a:visited {
 	-o-transition: background-color 0.3s linear;
 }
 
-ul#navigation li:first-child a:hover {
+ul#navigation li.blue a:hover {
 	background-color: #5a87dd;
 }
-ul#navigation li:nth-child(2) a:hover {
+ul#navigation li.rod a:hover {
 	background-color: #ff704d;
 }
-ul#navigation li:nth-child(3) a:hover {
+ul#navigation li.green a:hover {
 	background-color: #00e64d;
 }
 
 
-ul#navigation li.selected:first-child a:link,
- ul#navigation li.selected:first-child a:visited {
+ul#navigation li.selected.blue a:link,
+ ul#navigation li.selected.blue a:visited {
 	color: #0033cc;
 	border: solid 1px #fff;
 	-webkit-transition: background-color 0.2s linear;
@@ -123,8 +123,8 @@ ul#navigation li.selected:first-child a:link,
 
 }
 
-ul#navigation li.selected:nth-child(2) a:link, 
-ul#navigation li.selected:nth-child(2) a:visited {
+ul#navigation li.selected.rod a:link, 
+ul#navigation li.selected.rod a:visited {
 	color: #e62e00;
 	border: solid 1px #fff;
 	-webkit-transition: background-color 0.2s linear;
@@ -134,8 +134,8 @@ ul#navigation li.selected:nth-child(2) a:visited {
 	font-weight: bold;
 	
 }
-ul#navigation li.selected:nth-child(3) a:link,
-ul#navigation li.selected:nth-child(3) a:visited {
+ul#navigation li.selected.green a:link,
+ul#navigation li.selected.green a:visited {
 	color: #248f24;
 	border: solid 1px #fff;
 	-webkit-transition: background-color 0.2s linear;
@@ -817,6 +817,33 @@ padding-left:  40px;
 	border-width: 0 3.5px 10px 3.5px;
 	border-color: transparent transparent #2a507c transparent;
 
+}
+.tool-tip-holder.green .tool-tip {
+	display: inline-block;
+	position: absolute;
+	background: #00802b;
+	color: #fff;
+	border-radius: 8px;
+	padding: 6px;
+	font-size: 13px;
+	min-width: 170px;
+	line-height: 15px;
+	top: 33px;
+	left: 0;
+	background: #00802b;
+	
+}
+.tool-tip-holder.green .tool-tip:before {
+	content: '';
+	position: absolute;
+	top: -9px;
+	left: 14px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 3.5px 10px 3.5px;
+	border-color: transparent transparent #00802b transparent;
+  
 }
 .comment {
 	font-weight: normal;

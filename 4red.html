@@ -13,7 +13,7 @@
     <link href="css/menu.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<!-- start header -->
@@ -103,9 +103,9 @@
 <h1>4. Ordstilling</h1>
 
 <ul id="navigation">
-	<li class="one"><a href="index4.html">Blå</a></li>
-	<li class="two selected"><a href="4red.html">Rød</a></li>
-	<li class="three"><a href="4green.html">Grøn</a></li>
+	<li class="one blue"><a href="index4.html">Blå</a></li>
+	<li class="two selected rod"><a href="4red.html">Rød</a></li>
+	<li class="three green"><a href="4green.html">Grøn</a></li>
 	<li class="shadow"></li>
 </ul>
 	<div id="content">
@@ -325,7 +325,7 @@ $('.js-test-form').test([{
 	
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. {{<i>It may lead to bushfires when the wind blows from north</i>., <i>We are very proud of the church in our town</i>., <i>I forgot my gloves at the hospital when I visited Tom</i>.|radio}} </p>',
+		text: '<p> 1. {{Pigen der bar en rød frakke var altid glad., Der kommer altid en bus om søndagen., Pigerne var der altid når vi åbnede.|radio}} </p>',
 		answers: ['<i>It may lead to bushfires when the wind blows from north</i>.'],
 		right: '<p><img src="img/right2.png" alt="" /> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>.</p>',
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
