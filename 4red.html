@@ -5,7 +5,7 @@
 <html class=" js no-touch" lang="da"><head>
 
     <meta charset="utf-8">
-    <title>Chapter 2</title>
+    <title>Chapter 4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Your page description here">
     <meta name="author" content="">
@@ -191,7 +191,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								I én af sætningerne er der fejl i brug af bestemt artikel. Hvilken? (10 spørgsmål)
+								Vælg den sætning, som indeholder et foreløbigt <abbr title="grundled"><strong>subjekt</strong></abbr> (8 spørgsmål)
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -223,8 +223,8 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. We can go by {{, x, the|select}} bus if you prefer that.',
-		answers: ['x'],
+		text: '1. {{ <p class="link-full-sentence">Der er lige kommet</p>, en pakke, med posten|link}}.',
+		answers: ['en pakke'],
 		right: '<img src="img/right2.png" alt="" />',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_13.png"><div class="tool-tip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, rerum.</div></div></div>'
 	}, {
@@ -325,56 +325,45 @@ $('.js-test-form').test([{
 	
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. {{Pigen der bar en rød frakke var altid glad., Der kommer altid en bus om søndagen., Pigerne var der altid når vi åbnede.|radio}} </p>',
-		answers: ['<i>It may lead to bushfires when the wind blows from north</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>.</p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
+		text: '<p> 1. {{Pigen'+"&#44;"+' der bar en rød frakke'+"&#44;"+' var altid glad., Der kommer altid en bus om søndagen., Pigerne var der altid'+"&#44;"+' når vi åbnede.|radio}} </p>',
+		answers: ['Der kommer altid en bus om søndagen.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der kommer al d en bus om søndagen. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">En bus</ins> kommer altid om søndagen.</div></div></div>'
 	}, {
-		text: '<p> 2. {{<i>Jane and Joshua spent their honeymoon at the Hotel California</i>., <i>Alice does not go to the school by bus because it is less than a mile from her home</i>., <i>Do you think we should move the table a little to the left?</i>|radio}}</p>',
-		answers: ['<i>Alice does not go to the school by bus because it is less than a mile from her home</i>.'],
-		right: '<p><img src="img/right2.png" alt=""/> Anden sætning skal være:<br> <span> Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<p> 2. {{Der sejlede en båd gennem kanalen., Båden'+"&#44;"+' der kommer fra Panama'+"&#44;"+' er gammel., Ham'+"&#44;"+' der sejlede båden'+"&#44;"+' var fra Australien.|radio}} </p>',
+		answers: ['Der sejlede en båd gennem kanalen.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">En båd</ins> sejlede gennem kanalen.</div></div></div>'
 	}, {
-		text: '<p> 3. {{<i>I like the blue jacket the most</i>., <i>She often read the Daily News when she lived in the USA</i>., <i>Do you know that Jane was taken to the hospital this morning?</i>|radio}} </p>',
-		answers: ['<i>Do you know that Jane was taken to the hospital this morning?</i>'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være: <br> <span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<p> 3. {{Kvinden i den taxa'+"&#44;"+' der holdt bagerst'+"&#44;"+' var meget vred., Der fandtes ingen grund til at blive så ophidset., Den dame'+"&#44;"+' der råbte højt'+"&#44;"+' er min kones søster.|radio}} </p>',
+		answers: ['Der fandtes ingen grund til at blive så ophidset.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Ingen grund</ins> fandtes til at blive så ophidset.</div></div></div>'
 	}, {
-		text: '<p> 4. {{<i>I left work early today because I felt a little dizzy</i>., <i>She went to the church to study the beautiful wooden carvings</i>., <i>My boyfriend likes to have bacon and eggs for the breakfast</i>.|radio}} </p>',
-		answers: ['<i>My boyfriend likes to have bacon and eggs for the breakfast</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>.</p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
+		text: '<p> 4. {{Der stod altid mange blomster i stuen., Se! Der er han jo., Kommunen havde købt krukker med blomster'+"&#44;"+' der stod overalt i byen.|radio}} </p>',
+		answers: ['Der stod altid mange blomster i stuen.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Mange blomster</ins> stod altid i stuen.</div></div></div>'
 	}, {
-		text: '<p> 5. {{<i>It was the first time that the pilot landed in the Philippines</i>., <i>We all found some creepy costumes to wear for Halloween</i>., <i>The time flies when you are among friends</i>.|radio}}</p>',
-		answers: ['<i>The time flies when you are among friends</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
+		text: '<p> 5. {{Tror du'+"&#44;"+' at der ligger mere end fem æbler i køleskabet?, Hun legede med den af sine hunde'+"&#44;"+' der var far til hvalpene., Et vækkeur'+"&#44;"+' der ikke virker'+"&#44;"+' er ikke meget værd.|radio}} </p>',
+		answers: ['Tror du'+"&#44;"+' at der ligger mere end fem æbler i køleskabet?'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Mere end fem æbler</ins> ligger i køleskabet.</div></div></div>'
 	}, {
-		text: '<p> 6. {{<i>She felt so tired after having worked all day</i>., <i>My brother always goes by the train because he does not have a car</i>., <i>”Is life too easy for young people today?” the headline said</i>.|radio}}</p>',
-		answers: ['<i>My brother always goes by the train because he does not have a car</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<p> 6. {{Der var en dejlig duft af bacon i køkkenet., Se den der fugl'+"&#44;"+' den fløj lige under tørrestativet., Pigen'+"&#44;"+' der gik over gaden'+"&#44;"+' standsede trafikken. |radio}} </p>',
+		answers: ['Der var en dejlig duft af bacon i køkkenet.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">En dejlig duft af bacon</ins> var i køkkenet.</div></div></div>'
 	}, {
-		text: '<p> 7. {{<i>I have read all the books about the life of the Egyptians</i>., <i>I really think most of his novels are extraordinary</i>., <i>It is first time that I have really appreciated a novel</i>.|radio}}</p>',
-		answers: ['<i>It is first time that I have really appreciated a novel</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
+		text: '<p> 7. {{Stop lige med det der! Det kan ingen mennesker leve med., Se'+"&#44;"+' der er fem katte på taget., Der'+"&#44;"+' hvor de kommer fra'+"&#44;"+' er det meget tørt.|radio}} </p>',
+		answers: ['Se'+"&#44;"+' der er fem katte på taget.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Fem katte</ins> er på taget.</div></div></div>'
 	}, {
-		text: '<p> 8. {{<i>She is owner of a beautiful little cottage in Devon</i>., <i>He caught a glimpse of her on the opposite side of the street</i>., <i>Breakfast is served in the dinning-room between 6.30 am and 9.30 am</i>. |radio}}</p>',
-		answers: ['<i>She is owner of a beautiful little cottage in Devon</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
-	}, {
-		text: '<p> 9. {{<i>I love the autumn because of all the beautiful colours</i>., <i>She had lived by the sea her entire life</i>., <i>Her brother had gone to sea as a sailor when he was 16</i>.|radio}}</p>',
-		answers: ['<i>I love the autumn because of all the beautiful colours</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Første sætning skal være:<br> <span>I love autumn because of all the beautiful colours.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>I love autumn because of all the beautiful colours.</span> Se regel <img class="link" src="img/roed_12.png"></p>'
-	}, {
-		text: '<p> 10. {{<i>I think we should move the table away from the window</i>., <i>The babysitter will put the kids to bed</i>., <i>She went by the plane because it was much quicker</i>.|radio}}</p>',
-		answers: ['<i>She went by the plane because it was much quicker</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /> Tredje sætning skal være:<br> <span>She went <ins>by plane</ins> because it was much quicker.</span></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>She went <ins>by plane</ins> because it was much quicker.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	
+		text: '<p> 8. {{Se der'+"&#44;"+' Kejseren har jo ikke noget tøj på., De kom til en sti'+"&#44;"+' der førte ind i skoven., Der løber altid mange mennesker rundt på skøjtebanen.|radio}} </p>',
+		answers: ['Der løber altid mange mennesker rundt på skøjtebanen.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Mange mennesker</ins> løber rundt på skøjtebanen.</div></div></div>'
 	}]);
 </script> 
 
