@@ -674,6 +674,11 @@ a.case {
 	padding-right: 7px;
 	padding-left: 0;
 }
+.input-item.links.links-clear {
+	margin-right: 2px;
+	padding-right: 2px;
+	padding-left: 0;
+}
 .input-item.links:last-child {
 	padding-right: 0;
 }
@@ -682,6 +687,10 @@ a.case {
 	position: absolute;
 	top: 0;
 	right: 0;
+
+}
+.input-item.links.links-clear:after {
+	display: none;
 
 }
 .input-item.links:last-child:after {
@@ -702,6 +711,17 @@ a.case {
 	text-decoration: underline;
 	font-style: italic;
 }
+.input-item.links.links-clear label {
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+
+}
+.input-item.links.links-clear:after {
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+}
 .headings {
 	padding-left: 20px;
 	width: 150px;
@@ -720,6 +740,11 @@ b {
 }
 .not-normal, .not-italic {
 	font-style: normal;
+
+}
+.font-normal{
+	font-style: normal;
+	font-weight: normal;
 
 }
 .bold-italic {
@@ -789,6 +814,7 @@ b {
 }
 .markers {
 padding-left:  40px;
+padding-top: 0;
 
 }
 .tool-tip-holder.blue .tool-tip {
@@ -905,13 +931,58 @@ padding-left:  40px;
 			width: 50%;
 		}
 		ul#navigation .new {background-color: #009933;
-	}
-	.right-answer{
+		}
+		.right-answer{
 			padding-top: 50px;
 		}
-		
-		.link-full-sentence{
-		
-		text-decoration: none;
+		center {
+			background-color: #bdd0ed;
+    		width: 60%;
+    		padding: 5px;
+    		font-weight: bold;
+    	}
+    	.green-bg {
+			background-color: #98d6a1;
+    		margin-left: 60px;
+    		padding: 8px;
+    		font-weight: bold;
+    		display: inline-block;
 
-}
+    	}
+    	.blue-bg {
+			background-color: #bdd0ed;
+    		margin-left: 60px;
+    		padding: 8px;
+    		font-weight: bold;
+    		display: inline-block;
+
+    	}
+    	.adjectiv {
+			width: 400px;
+			margin-right: 60px;
+		}
+
+		table, th, td {
+    		border: 1px solid black;
+    		border-collapse: collapse;
+
+
+		}
+    	.adjectiv td, th {
+    		padding: 1px;
+    		text-align: center;
+		}
+    	.adjectiv th abbr {
+    		font-weight: bold;
+		}
+		.adjectiv tr:nth-child(1) {
+    		background-color: #bdd0ed;
+		}
+		/*@media screen and (max-width: 500px) {
+    .adjectiv {
+        width: 100px;
+    }
+}*/
+		 .row.topmargin {
+			margin-top: 20px;
+		}

@@ -296,7 +296,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Vælg den rigtige form af verbet (20 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -314,12 +314,12 @@
 						</div> 
 					</div> 
 				</div> 
-					<img class="headings-ex" src="img/Ovelse_bla_2.png">
+					<img class="headings-ex" src="img/Ovelse 3_blaa.png">
 					<div class="border-blue-ex">
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Vælg den rigtige form af verbet (15 sætninger)
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -351,169 +351,185 @@
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <a class="tooltip" href="#"><img class="link" src="img/blaa_1.png"><span class="custom help"><img src="Help.png" alt="Помощь" height="48" width="48" /><em>Помощь</em>Это просто пример того, как сделать подсказки с использованием CSS!</span></a></p>'
+		text: '<i class="font-normal">1.</i> My friend Peter {{, am, are, is|select}} always happy.',
+		answers: ['is'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>Peter (he)</span> er 3. person ental, og verbet skal derfor være <span>is</span>.</div></div></div>'
 	}, {
-		text: '2. He wants to study in  ....... USA. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<i class="font-normal">2.</i> My friend Peter {{, was, were|select}} always smiling.',
+		answers: ['was'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>Peter (he)</span> er 3. person ental, og verbet skal derfor være <span>was</span>.</div></div></div>'
 	}, {
-		text: '3. ....... most of the students in our class wanted to go to London. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<i class="font-normal">3.</i> The story he told me {{, was, were|select}} interesting.',
+		answers: ['was'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>The story (it)</span> er 3. person ental, og verbet skal derfor være <span>was</span>.</div></div></div>'
 	}, {
-		text: '4. She is   ....... daughter of one of my teachers from high school. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<i class="font-normal">4.</i> The girls {{, was, were|select}} all singers.',
+		answers: ['were'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>The girls (they)</span> er 3. person flertal, og verbet skal derfor være <span>were</span>.</div></div></div>'
 	}, {
-		text: '5. This was  ....... third time that she had tried to call him. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<i class="font-normal">5.</i> You {{, am, are, is|select}} most welcome.',
+		answers: ['are'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>You</span> er 2. person ental eller flertal, og verbet skal derfor være <span>are</span>.</div></div></div>'
 	}, {
-		text: '6. ....... author of the novel is still unknown. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<i class="font-normal">6.</i> I {{, was, were|select}} pleased to see her laughing.',
+		answers: ['was'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>I</span> er 1. person ental, og verbet skal derfor være <span>was</span>.</div></div></div>'
 	}, {
-		text: '7. He broke ....... one arm when he was skiing in Aspen. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<i class="font-normal">7.</i> We {{, am, is, are|select}} always ready.',
+		answers: ['are'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>We</span> er 1. person flertal, og verbet skal derfor være <span>are</span>.</div></div></div>'
 	}, {
-		text: '8. Have you ever been to ....... Netherlands?. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande i flertal bruger bestemt artikel</p>'
+		text: '<i class="font-normal">8.</i> The band {{, am, is, are|select}} playing in Copenhagen next Friday.',
+		answers: ['is'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>The band (it)</span> er 3. person ental, og verbet skal derfor være <span>is</span>.</div></div></div>'
 	}, {
-		text: '9. Yes, we visited ....... Hague last summer. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<i class="font-normal">9.</i> You {{, was, were |select}} all welcomed by his mother.',
+		answers: ['were'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>You</span> er her 2. person flertal. Verbet skal derfor være <span>were</span>.</div></div></div>'
 	}, {
-		text: '10. I think ....... most students do their homework. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<i class="font-normal">10.</i> Joan and Jimmy {{, am, are, is|select}} great friends.',
+		answers: ['are'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>Joan and Jimmy (they)</span> er 3. person flertal, og verbet skal derfor være <span>are</span>.</div></div></div>'
 	}, {
-		text: '11. My best friend lives in ....... United Kingdom. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande med <span>union</span> (her <span>united</span>), <span>state</span>, og <span>republic</span> i navnet har artikel</p>'
+		text: '<i class="font-normal">11.</i> My friend Peter {{, sing, sings|select}} in my brother’s band.',
+		answers: ['sings'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> <div class="tool-tip"><span>Peter (he)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
 	}, {
-		text: '12. You will find an English version on ....... opposite page. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"> , <span>opposite</span> bruges med bestemt artikel ligesom <span>same</span> og <span>following</span></p>'
+		text: '<i class="font-normal">12.</i> My neighbours always {{, make, makes|select}} a terrible noice.',
+		answers: ['make'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> <div class="tool-tip"><span>My neighbours (they)</span> er 3. person flertal.</div></div></div>'
 	}, {
-		text: '13. When they came back, ....... one student was missing. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<i class="font-normal">13.</i> My friend’s dog {{, pee, pees|select}} everywhere – it is disgusting.',
+		answers: ['pees'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> <div class="tool-tip"><span>My friend’s dog (it)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
 	}, {
-		text: '14. ....... same thing happened three years ago. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<i class="font-normal">14.</i> Every time I visit them, their son {{, run, runs|select}} around the house.',
+		answers: ['runs'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> <div class="tool-tip"><span>Their son (he)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
 	}, {
-		text: '15. He is ....... owner of the Franklin Barbecue. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<i class="font-normal">15.</i> The manager {{, do, does|select}} not always stay in his office.',
+		answers: ['does'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> og <img class="link" src="img/blaa_3.png"> <div class="tool-tip"><span>The manager (he)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
 	}, {
-		text: '16. ....... following exercises must be answered before you can go home: 2, 15 and 16. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<i class="font-normal">16.</i> The girl scouts {{, march, marches |select}} ten miles each Sunday.',
+		answers: ['march'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> og <img class="link" src="img/blaa_2.png"> <div class="tool-tip"><span>The girl scouts (they)</span> er 3. person flertal.</div></div></div>'
+	}, {
+		text: '<i class="font-normal">17.</i> My girlfriend {{, miss, misses |select}} me every time I go on a business trip.',
+		answers: ['misses'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> og <img class="link" src="img/blaa_2.png"> <div class="tool-tip"><span>My girlfriend (she)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
+	}, {
+		text: '<i class="font-normal">18.</i> My mother always {{, worry, worries |select}} too much.',
+		answers: ['worries'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> og <img class="link" src="img/blaa_4.png"> <div class="tool-tip"><span>My mother (she)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
+	}, {
+		text: '<i class="font-normal">19.</i> The President {{, go, goes |select}} to Canada at least twice a month.',
+		answers: ['goes'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> og <img class="link" src="img/blaa_3.png"> <div class="tool-tip"><span>The President (he)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
+	}, {
+		text: '<i class="font-normal">20.</i> The minister {{, fly, flies |select}} to Brussels quite frequently.',
+		answers: ['flies'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link2" src="img/flag2.png"> og <img class="link" src="img/blaa_4.png"> <div class="tool-tip"><span>The minister (he or she)</span> er 3. person ental, og verbet skal derfor ende på <span>-s</span>.</div></div></div>'
 	
 	}]);
 
 $('.js-test-form-1').test([{
-		text: '1. Do you take {{milk, the milk|link}}in your tea?',
-		answers: ['milk'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">1.</i> After the party, there {{, was, were|select}} no doubt in his mind.',
+		answers: ['was'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_5.png"> <div class="tool-tip">Det er det egentlige subjekt, som afgør, om verbet er 3. person  ental og skal have <span>-s</span> på.</div></div></div>'
 	}, {
-		text: '2. {{Life, The life|link}}is full of wonderful surprises, he smiled.',
-		answers: ['Life'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">2.</i> Anyone who {{, has, have|select}} have seen them together can tell that they are madly in love.',
+		answers: ['has'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_7.png"> <div class="tool-tip">Det er det, som <span>who</span> fører tilbage til, som afgør, om det skal forstås som ental eller flertal.</div></div></div>'
 	}, {
-		text: '3. {{Time, The time|link}}I spent working at the factory really taught me a lot.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<i class="font-normal">3.</i> Everybody knows someone who {{, is, are|select}} famous.',
+		answers: ['is'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_7.png"> <div class="tool-tip">Det er det, som <span>who</span> fører tilbage til, som afgør, om det skal forstås som ental eller flertal.</div></div></div>'
 	}, {
-		text: '4. {{Crime, The crime|link}}is a huge problem in many inner cities.',
-		answers: ['Crime'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">4.</i> I have always said that there {{, is, are|select}} more to him than meets the eye.',
+		answers: ['is'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_5.png"> <div class="tool-tip">Det er det egentlige subjekt, som afgør, om verbet er 3. person  ental og skal have <span>-s</span> på.</div></div></div>'
 	}, {
-		text: '5. They were both very interested in {{history, the history|link}}.',
-		answers: ['history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">5.</i> There {{, was, were|select}} a lot of people waiting outside the stadium.',
+		answers: ['were'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_6.png"> <div class="tool-tip">Ved <span>a lot/lots of</span> afgør det følgende substantiv, om det skal opfattes som ental eller flertal.</div></div></div>'
 	}, {
-		text: '6. It was {{first time, the first time|link}}they had ever met.',
-		answers: ['the first time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<i class="font-normal">6.</i> In this amateur theater, the characters of Macbeth and his wife, who {{, conspires, conspire|select}} to take over the throne, are played by an elderly couple.',
+		answers: ['conspire'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_7.png"> <div class="tool-tip">Det er det, som <span>who</span> fører tilbage til, som afgør, om det skal forstås som ental eller flertal.</div></div></div>'
 	}, {
-		text: '7. I think {{nature, the nature|link}}can teach us many valuable things.',
-		answers: ['nature'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">7.</i> It’s only children who have not had their shots who {{, gets, get|select}} mumps.',
+		answers: ['get'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_7.png"> <div class="tool-tip">Det er det, som <span>who</span> fører tilbage til, som afgør, om det skal forstås som ental eller flertal.</div></div></div>'
 	}, {
-		text: '8. During the French Revolution, they fought for {{freedom, the freedom|link}}.',
-		answers: ['freedom'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">8.</i> He felt that there {{, was, were|select}} too many questions to consider.',
+		answers: ['were'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_5.png"> <div class="tool-tip">Det er det egentlige subjekt, som afgør, om verbet er 3. person  ental og skal have <span>-s</span> på.</div></div></div>'
 	}, {
-		text: '9. {{Paintings, The paintings|link}}in the gallery are all very expensive.',
-		answers: ['The paintings'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<i class="font-normal">9.</i> Lots of rain {{, has, have|select}} fallen over the past week.',
+		answers: ['has'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_6.png"> <div class="tool-tip">Ved <span>a lot/lots of</span> afgør det følgende substantiv, om det skal opfattes som ental eller flertal.</div></div></div>'
 	}, {
-		text: '10. {{History, The history|link}}of Germany is interesting.',
-		answers: ['The history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<i class="font-normal">10.</i> They are the kind of men who {{, smokes, smoke|select}} cigars.',
+		answers: ['smoke'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_7.png"> <div class="tool-tip">Det er det, som <span>who</span> fører tilbage til, som afgør, om det skal forstås som ental eller flertal.</div></div></div>'
 	}, {
-		text: '11. It’s time to find {{love, the love|link}}again, she said. Let’s go to Jim’s party!',
-		answers: ['love'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">11.</i> The two girls who {{, was, were|select}} missing called their mother.',
+		answers: ['were'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_7.png"> <div class="tool-tip">Det er det, som <span>who</span> fører tilbage til, som afgør, om det skal forstås som ental eller flertal.</div></div></div>'
 	}, {
-		text: '12. {{Music, The music|link}}of the 90s plays an important role in my life.',
-		answers: ['The music'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<i class="font-normal">12.</i> There {{, is, are|select}} five eggs in the fridge.',
+		answers: ['are'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_5.png"> <div class="tool-tip">Det er det egentlige subjekt, som afgør, om verbet er 3. person  ental og skal have <span>-s</span> på.</div></div></div>'
 	}, {
-		text: '13. {{Time, The time|link}}we spend together is precious, the commercial said.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<i class="font-normal">13.</i> There {{, is, are|select}} plenty of sugar in the next cupboard.',
+		answers: ['is'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_6.png"> <div class="tool-tip">Ved <span>plenty</span> of afgør det følgende substantiv, om det skal opfattes som ental eller flertal.</div></div></div>'
 	}, {
-		text: '14. {{Articles, The articles|link}}are difficult to use.',
-		answers: ['Articles'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">14.</i> Where are all the beers? There {{, was, were|select}} a lot of them in the fridge last night!',
+		answers: ['were'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_5.png"> <div class="tool-tip">Det er det egentlige subjekt, som afgør, om verbet er 3. person  ental og skal have <span>-s</span> på.</div></div></div>'
 	}, {
-		text: '15. {{Water, The water|link}}we bought at the supermarket did not taste good.',
-		answers: ['The water'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '16. Many young people faced {{death, the death|link}}during the First World War.',
-		answers: ['death'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<i class="font-normal">15.</i> You should only tell this to someone who {{, has, have|select}} your complete confidence.',
+		answers: ['has'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_7.png"> <div class="tool-tip">Det er det, som <span>who</span> fører tilbage til, som afgør, om det skal forstås som ental eller flertal.</div></div></div>'
 	}]);
+
 </script> 
 
 

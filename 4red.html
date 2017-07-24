@@ -168,7 +168,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg <span class="bold-italic">’the’</span> eller ’x’ (= ingen artikel) (20 sætninger)
+								Klik på den del af sætningen, som udgør det egentlige subjekt (10 sætninger).
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -191,7 +191,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den sætning, som indeholder et foreløbigt <abbr title="grundled"><strong>subjekt</strong></abbr> (8 spørgsmål)
+								Vælg den sætning, som indeholder et foreløbigt <abbr title="grundled"><strong>subjekt</strong></abbr> (8 spørgsmål).
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -223,147 +223,96 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. {{ <p class="link-full-sentence">Der er lige kommet</p>, en pakke, med posten|link}}.',
-		answers: ['en pakke'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_13.png"><div class="tool-tip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, rerum.</div></div></div>'
+		text: '<i class="font-normal">1.</i> {{ Der<strong>&#124;</strong>, er lige kommet<strong>&#124;</strong>, en pakke<strong>&#124;</strong>, med<strong>&#124;</strong>, posten<strong>&#124;</strong>|links-clear}}.',
+		answers: ['en pakke<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">En pakke</ins> er lige ankommet...</div></div></div>'
 	}, {
-		text: '2. Everybody left the office and went home to celebrate {{, x, the|select}} Christmas.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_12.png"></p>'
+		text: '<i class="font-normal">2.</i> {{ Da<strong>&#124;</strong>, postbuddet<strong>&#124;</strong>, kom'+"&#44;"+'<strong>&#124;</strong>, sprang<strong>&#124;</strong>, der<strong>&#124;</strong>, en hund<strong>&#124;</strong>, ud af døren|links-clear}}.',
+		answers: ['en hund<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip">... <ins class="not-italic">en hund</ins> sprang ud af døren</div></div></div>'
 	}, {
-		text: '3. Two cyclists were taken to {{, x, the|select}} hospital before the race was over.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<i class="font-normal">3.</i> {{ Der<strong>&#124;</strong>, er<strong>&#124;</strong>, ingen<strong>&#124;</strong>, der<strong>&#124;</strong>, ved'+"&#44;"+'<strong>&#124;</strong>, at jeg<strong>&#124;</strong>, har fået<strong>&#124;</strong>, nyt job|links-clear}}.',
+		answers: ['ingen<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Ingen</ins> ved, at...</div></div></div>'
 	}, {
-		text: '4. I was born in {{, x, the|select}} South, but grew up in New York.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_6.png"></p>'
+		text: '<i class="font-normal">4.</i> {{ Der<strong>&#124;</strong>, begynder<strong>&#124;</strong>, en ny elev<strong>&#124;</strong>, i<strong>&#124;</strong>, min klasse<strong>&#124;</strong>, i morgen|links-clear}}.',
+		answers: ['en ny elev<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">En ny elev</ins> begynder...</div></div></div>'
 	}, {
-		text: '5. She always went to {{, x, the|select}} bed very early because she had to go to work at five am.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<i class="font-normal">5.</i> {{ Der<strong>&#124;</strong>, kom<strong>&#124;</strong>, fire betjente<strong>&#124;</strong>, på besøg<strong>&#124;</strong>, på min skole|links-clear}}.',
+		answers: ['fire betjente<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Fire betjente</ins> kom...</div></div></div>'
 	}, {
-		text: '6. A sign reminded them to keep on {{, x, the|select}} left side of the road.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_7.png"></p>'
+		text: '<i class="font-normal">6.</i> {{ Vi<strong>&#124;</strong>, vidste<strong>&#124;</strong>, alle'+"&#44;"+'<strong>&#124;</strong>, at<strong>&#124;</strong>, der<strong>&#124;</strong>, ville opstå<strong>&#124;</strong>, mange skænderier<strong>&#124;</strong>, til<strong>&#124;</strong>, kampen|links-clear}}.',
+		answers: ['mange skænderier<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">mange skænderier</ins> ville opstå...</div></div></div>'
 	}, {
-		text: '7. Only shortly after he had been released from {{, x, the|select}} prison, he was arrested again.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<i class="font-normal">7.</i> {{ Der<strong>&#124;</strong>, viste sig<strong>&#124;</strong>, et smil<strong>&#124;</strong>, på<strong>&#124;</strong>, hans<strong>&#124;</strong>, ansigt|links-clear}}.',
+		answers: ['et smil<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Et smil</ins> viste sig...</div></div></div>'
 	}, {
-		text: '8. She told us to keep straight on for another mile and then turn to {{, x, the|select}} left.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_7.png"></p>'
+		text: '<i class="font-normal">8.</i> {{ Der<strong>&#124;</strong>, er<strong>&#124;</strong>, mange<strong>&#124;</strong>, der<strong>&#124;</strong>, vil møde<strong>&#124;</strong>, min nye kæreste|links-clear}}.',
+		answers: ['mange<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Mange</ins> vil møde...</div></div></div>'
 	}, {
-		text: '9. What did you have for {{, x, the|select}} breakfast when you went to Greece last year?',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"></p>'
+		text: '<i class="font-normal">9.</i> {{ Der<strong>&#124;</strong>, bredte sig<strong>&#124;</strong>, en dejlig duft af kaffe<strong>&#124;</strong>, i huset|links-clear}}.',
+		answers: ['en dejlig duft af kaffe<strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">En dejlig duft af kaffe</ins> bredte sig...</div></div></div>'
 	}, {
-		text: '10. The doctor says that I can visit her at {{, x, the|select}} hospital tomorrow.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '11. He has read {{, x, the|select}} Washington Post every morning for 10 years.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '12. I don’t think I will ever forget {{, x, the|select}} dinner we had at the top of the Eiffel Tower.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"> , NB!</p>'
-	}, {
-		text: '13. My sister lives on {{, x, the|select}} third floor, in an apartment facing the Thames.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> Engelsk har bestemt kendeord ved ’ordenstal’</p>'
-	}, {
-		text: '14. He has gone to {{, x, the|select}} church every Sunday for twenty years.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '15. On April 14, 1912,{{, x, the|select}} Titanic hit an iceberg and less than 3 hours later it had sunk.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '16. {{, x, the|select}} passive voice is often used in scientific writings.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_8.png"></p>'
-	}, {
-		text: '17. She quit {{, x, the|select}} university because she got an interesting job.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '18. We have booked a week at {{, x, the|select}} Intercontinental. It is said to be a nice hotel.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '19. She has just published a number of essays on {{, x, the|select}} man and nature.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_10.png"></p>'
-	}, {
-		text: '20. “We are going to {{, x, the|select}} dinner with the Browns”, he said, “so you’d better hurry!”',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"></p>'
-	
+		text: '<i class="font-normal">10.</i> {{ Den<strong>&#124;</strong>, sommer<strong>&#124;</strong>, skete<strong>&#124;</strong>, der<strong>&#124;</strong>, mange spændende ting|links-clear}}.',
+		answers: ['mange spændende ting'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Mange spændende ting</ins> skete...</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. {{Pigen'+"&#44;"+' der bar en rød frakke'+"&#44;"+' var altid glad., Der kommer altid en bus om søndagen., Pigerne var der altid'+"&#44;"+' når vi åbnede.|radio}} </p>',
+		text: '<p>1. {{Pigen'+"&#44;"+' der bar en rød frakke'+"&#44;"+' var altid glad., Der kommer altid en bus om søndagen., Pigerne var der altid'+"&#44;"+' når vi åbnede.|radio}} </p>',
 		answers: ['Der kommer altid en bus om søndagen.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der kommer al d en bus om søndagen. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">En bus</ins> kommer altid om søndagen.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der kommer altid en bus om søndagen. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">En bus</ins> kommer altid om søndagen.</div></div></div>'
 	}, {
 		text: '<p> 2. {{Der sejlede en båd gennem kanalen., Båden'+"&#44;"+' der kommer fra Panama'+"&#44;"+' er gammel., Ham'+"&#44;"+' der sejlede båden'+"&#44;"+' var fra Australien.|radio}} </p>',
 		answers: ['Der sejlede en båd gennem kanalen.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">En båd</ins> sejlede gennem kanalen.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der sejlede en båd gennem kanalen. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">En båd</ins> sejlede gennem kanalen.</div></div></div>'
 	}, {
 		text: '<p> 3. {{Kvinden i den taxa'+"&#44;"+' der holdt bagerst'+"&#44;"+' var meget vred., Der fandtes ingen grund til at blive så ophidset., Den dame'+"&#44;"+' der råbte højt'+"&#44;"+' er min kones søster.|radio}} </p>',
 		answers: ['Der fandtes ingen grund til at blive så ophidset.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Ingen grund</ins> fandtes til at blive så ophidset.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der fandtes ingen grund til at blive så ophidset. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Ingen grund</ins> fandtes til at blive så ophidset.</div></div></div>'
 	}, {
 		text: '<p> 4. {{Der stod altid mange blomster i stuen., Se! Der er han jo., Kommunen havde købt krukker med blomster'+"&#44;"+' der stod overalt i byen.|radio}} </p>',
 		answers: ['Der stod altid mange blomster i stuen.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Mange blomster</ins> stod altid i stuen.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der stod altid mange blomster i stuen. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Mange blomster</ins> stod altid i stuen.</div></div></div>'
 	}, {
 		text: '<p> 5. {{Tror du'+"&#44;"+' at der ligger mere end fem æbler i køleskabet?, Hun legede med den af sine hunde'+"&#44;"+' der var far til hvalpene., Et vækkeur'+"&#44;"+' der ikke virker'+"&#44;"+' er ikke meget værd.|radio}} </p>',
 		answers: ['Tror du'+"&#44;"+' at der ligger mere end fem æbler i køleskabet?'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Mere end fem æbler</ins> ligger i køleskabet.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Tror du, at der ligger mere end fem æbler i køleskabet? <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Mere end fem æbler</ins> ligger i køleskabet.</div></div></div>'
 	}, {
 		text: '<p> 6. {{Der var en dejlig duft af bacon i køkkenet., Se den der fugl'+"&#44;"+' den fløj lige under tørrestativet., Pigen'+"&#44;"+' der gik over gaden'+"&#44;"+' standsede trafikken. |radio}} </p>',
 		answers: ['Der var en dejlig duft af bacon i køkkenet.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">En dejlig duft af bacon</ins> var i køkkenet.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der var en dejlig duft af bacon i køkkenet. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">En dejlig duft af bacon</ins> var i køkkenet.</div></div></div>'
 	}, {
 		text: '<p> 7. {{Stop lige med det der! Det kan ingen mennesker leve med., Se'+"&#44;"+' der er fem katte på taget., Der'+"&#44;"+' hvor de kommer fra'+"&#44;"+' er det meget tørt.|radio}} </p>',
 		answers: ['Se'+"&#44;"+' der er fem katte på taget.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Fem katte</ins> er på taget.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Se, der er fem katte på taget. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Fem katte</ins> er på taget.</div></div></div>'
 	}, {
 		text: '<p> 8. {{Se der'+"&#44;"+' Kejseren har jo ikke noget tøj på., De kom til en sti'+"&#44;"+' der førte ind i skoven., Der løber altid mange mennesker rundt på skøjtebanen.|radio}} </p>',
 		answers: ['Der løber altid mange mennesker rundt på skøjtebanen.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”<div class="tool-tip"><ins class="not-italic">Mange mennesker</ins> løber rundt på skøjtebanen.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Rigtigt svar: Der løber altid mange mennesker rundt på skøjtebanen. <div class="tool-tip-holder">Det egentlige subjekt kan erstatte ”der”.<div class="tool-tip"><ins class="not-italic">Mange mennesker</ins> løber rundt på skøjtebanen.</div></div></div>'
 	}]);
 </script> 
 

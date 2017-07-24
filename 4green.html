@@ -209,22 +209,6 @@
 		</div> <!-- div id content-->
 	</div> <!-- div style-->
 
-
-
-  <!--<script>
-
-function look(t){
-	p=document.getElementById(t);
-	l=document.getElementById("a-"+t);
-	if(p.style.display=="none"){
-		l.innerHTML="Skjul eksempel";
-		p.style.display="block";}
-	else{
-		l.innerHTML="Vis ekempel";
-		p.style.display="none";}
-}
-	</script>!-->
-
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -233,57 +217,57 @@ function look(t){
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Never before had I seen so many people. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">1.</i> Never before had I seen so many people. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Sætningen indledes af et nægtende eller indskrænkende udtryk.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_5.png"><div class="tool-tip">Nægtende/indskrænkende udtryk.</div></div></div>'
 	}, {
-		text: '2. Only yesterday did I tell him. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået if.|select}}',
+		text: '<i class="font-normal">2.</i> Only yesterday did I tell him. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået if.|select}}',
 		answers: ['Sætningen indledes af et nægtende eller indskrænkende udtryk.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_5.png"><div class="tool-tip">Nægtende/indskrænkende udtryk.</div></div></div>'
 	}, {
-		text: '3. Did you see him? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">3.</i> Did you see him? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Det er en spørgende hovedsætning.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Spørgende hovedsætning.</div></div></div>'
 	}, {
-		text: '4.  Had I known he was such an idiot, I would never have hired him. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">4.</i>  Had I known he was such an idiot, I would never have hired him. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Der er et underforstået if.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"><div class="tool-tip">Der er et underforstået if.</div></div></div>'
 	}, {
-		text: '5. Gene is not really dumb, but seldom have I seen anyone so clumsy. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">5.</i> Gene is not really dumb, but seldom have I seen anyone so clumsy. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Sætningen indledes af et nægtende eller indskrænkende udtryk.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_5.png"><div class="tool-tip">Nægtende/indskrænkende udtryk.</div></div></div>'
 	}, {
-		text: '6. Had she only smiled, he would have asked her. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">6.</i> Had she only smiled, he would have asked her. <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Der er et underforstået if.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"><div class="tool-tip">Der er et underforstået if.</div></div></div>'
 	}, {
-		text: '7. When did Peter leave the office? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">7.</i> When did Peter leave the office? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Det er en spørgende hovedsætning.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Spørgende hovedsætning.</div></div></div>'
 	}, {
-		text: '8. Why did they never marry? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">8.</i> Why did they never marry? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Det er en spørgende hovedsætning.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Spørgende hovedsætning.</div></div></div>'
 	}, {
-		text: '9. Peter never takes out the trash; not until I order him to does he actually do it.<br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">9.</i> Peter never takes out the trash; not until I order him to does he actually do it.<br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Sætningen indledes af et nægtende eller indskrænkende udtryk.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_5.png"><div class="tool-tip">Nægtende/indskrænkende udtryk.</div></div></div>'
 	}, {
-		text: '10. Were these not the only tomatoes you bought? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">10.</i> Were these not the only tomatoes you bought? <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Det er en spørgende hovedsætning.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Spørgende hovedsætning.</div></div></div>'
 	}, {
-		text: '11. Rarely have I been so upset about anything! <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
+		text: '<i class="font-normal">11.</i> Rarely have I been so upset about anything! <br> {{, Det er en spørgende hovedsætning., Sætningen indledes af et nægtende eller indskrænkende udtryk., Der er et underforstået <i>if</i>.|select}}',
 		answers: ['Sætningen indledes af et nægtende eller indskrænkende udtryk.'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_5.png"><div class="tool-tip">Nægtende/indskrænkende udtryk.</div></div></div>'

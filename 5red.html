@@ -337,7 +337,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte sætning.
+								Klik på det ord som giver en korrekt sætning. (8 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -360,7 +360,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-							Vælg det korrekte from af det possessive pronomen. 
+							Marker den del af sætningen, hvor der er fejl. (9 sætninger) 
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -392,111 +392,91 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
-		answers: ['<i>We met at the hairdresser’s.</i>'],
+		text: '<i class="font-normal">1.</i> I bought five {{toys, furnitures, breads|link}} yesterday.',
+		answers: ['toys'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_11.png"> og <img class="link" src="img/roed_12.png"><div class="tool-tip">Kun <span>toys</span> findes i flertal.</div></div></div>'
 	}, {
-		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
-		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		text: '<i class="font-normal">2.</i> How much {{advice, moneys, toys|link}} did you get yesterday?',
+		answers: ['advice'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip"><span>Much</span> bruges kun foran entalsformer.</div></div></div>'
 	}, {
-		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
-		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		text: '<i class="font-normal">3.</i> Did you notice how many {{lightnings, weeds, furnitures|link}} there were?',
+		answers: ['weeds'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Hvor dansk har sammensatte substantiver har engelsk ofte s- genitiv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_11.png"> og <img class="link" src="img/roed_12.png"><div class="tool-tip">Kun <span>weeds</span> findes i flertal.</div></div></div>'
 	}, {
-		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
-		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		text: '<i class="font-normal">4.</i> They needed so many {{news, money, tools|link}} to go through with it that they almost gave up.',
+		answers: ['tools'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">ved tidsbetegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_11.png"> og <img class="link" src="img/roed_12.png"><div class="tool-tip">Kun <span>tools</span> findes i flertal og kan stå efter <span>many</span>.</div></div></div>'
 	}, {
-		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
-		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		text: '<i class="font-normal">5.</i> Peter has so much {{clothes, furnitures, money|link}}.',
+		answers: ['money'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip"><span>Much</span> bruges kun foran entalsformer.</div></div></div>'
 	}, {
-		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
-		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		text: '<i class="font-normal">6.</i> Dave said he had a lot of {{moneys, news, furnitures|link}}.',
+		answers: ['news'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved personer</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip">Kun <span>news</span> er en entalsform. <span>News</span> er altid ental.</div></div></div>'
 	}, {
-		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
-		answers: ['<i>The river Seine runs through Paris.</i>'],
+		text: '<i class="font-normal">7.</i> A lot of {{advices, information, progresses|link}} has been wasted.',
+		answers: ['information'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip">Kun <span>information</span> er en entalsform. <span>Information</span> er altid ental.</div></div></div>'
 	}, {
-		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
-		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		text: '<i class="font-normal">8.</i> He gave her two {{advices, informations, books|link}}.',
+		answers: ['books'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
-	}, {
-		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
-		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
-	}, {
-		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
-		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip">ved årstider, måned og dato</div></div></div>'
-	}, {
-		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
-		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
-	}, {
-		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
-		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_9.png"><div class="tool-tip">ved mål, mængde og antal</div></div></div>'
-	}, {
-		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
-		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip">Kun <span>books</span> kan findes i flertal og stå efter <span>two</span>.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',
-		answers: ['your'],
+		text: '<i class="font-normal">1.</i> {{ <i>I didn’t take</i><strong>&#124;</strong>, <i>any of the advices</i><strong>&#124;</strong>, <i>he gave me</i>.<strong>&#124;</strong>, <i>It was really bad</i>|links-clear}}.',
+		answers: ['<i>any of the advices</i><strong>&#124;</strong>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip"><span>Advice</span> er utælleligt. Kan ikke danne flertal.</div></div></div>'
 	}, {
-		text: '<p> 2. The house you can see in front of you is {{ , their, theirs, their’s|select}}.</p>',
-		answers: ['theirs'],
-		right: '<p><img src="img/right2.png" alt=""/></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 3. Leave that book! It is {{ , mine, my|select}}.</p>',
-		answers: ['mine'],
+		text: '<i class="font-normal">2.</i> {{ <i>There was</i><strong>&#124;</strong>, <i>so many furnitures</i><strong>&#124;</strong>, <i>in the living room</i><strong>&#124;</strong>, <i>that you could hardly see</i><strong>&#124;</strong>, <i>the flowers!</i>|links-clear}}',
+		answers: ['<i>so many furnitures</i><strong>&#124;</strong>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip"><span>Furniture</span> er utælleligt. Kan ikke danne flertal og kan ikke forekomme med <span>many</span>.</div></div></div>'
 	}, {
-		text: '<p> 4. Leave them! It is {{ , my, mine|select}} books.</p>',
-		answers: ['my'],
+		text: '<i class="font-normal">3.</i> {{ <i>Where</i><strong>&#124;</strong>, <i>has</i><strong>&#124;</strong>, <i>all the money</i><strong>&#124;</strong>, <i>gone to?</i><strong>&#124;</strong>, <i>I had left them</i><strong>&#124;</strong>, <i>on the kitchen counter'+"&#44;"+' but</i><strong>&#124;</strong>, <i>there’s nothing there now!</i>|links-clear}}',
+		answers: ['<i>I had left them</i><strong>&#124;</strong>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip"><span>Money</span> er utælleligt og kan ikke danne flertal. Kan ikke omtales som <span>them</span>.</div></div></div>'
 	}, {
-		text: '<p> 5. The responsibility is {{ , our, ours, our’s|select}} No doubt about that.</p>',
-		answers: ['ours'],
+		text: '<i class="font-normal">4.</i> {{ <i>My carpenter has</i><strong>&#124;</strong>, <i>so many tools</i><strong>&#124;</strong>, <i>that he needs a really big van</i><strong>&#124;</strong>, <i>to bring it all with him</i>|links-clear}}.',
+		answers: ['<i>to bring it all with him</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip"><span>Tool</span> er tælleligt, og da det er flertal her, skal det omtales som <span>them</span>.</div></div></div>'
 	}, {
-		text: '<p> 6. Do you see the girl at the counter? The idea was {{ , hers, her, her’s|select}}</p>',
-		answers: ['hers'],
+		text: '<i class="font-normal">5.</i> {{ <i>We have made</i><strong>&#124;</strong>, <i>many progresses</i><strong>&#124;</strong>, <i>over the past few years</i>|links-clear}}.',
+		answers: ['<i>many progresses</i><strong>&#124;</strong>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"> og <img class="link" src="img/roed_13.png"><div class="tool-tip">Progress er utælleligt og kan ikke danne flertal. Man kan sige <span>much progress</span> eller <span>many advances</span>.</div></div></div>'
 	}, {
-		text: '<p> 7. Is the car in the parking lot {{ , your, yours, your’s|select}}</p>',
-		answers: ['yours'],
-		right: '<p><img src="img/right2.png" alt="" /> </p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
-	}, {
-		text: '<p> 8. {{, Its, it’s|select}} fur has been cut far too often.</p>',
-		answers: ['Its'],
+		text: '<i class="font-normal">6.</i> {{ <i>There was</i><strong>&#124;</strong>, <i>a lot of lightning</i><strong>&#124;</strong>, <i>during the storm.</i><strong>&#124;</strong>, <i>I saw at least</i><strong>&#124;</strong>, <i>five that were very close</i>|links-clear}}.',
+		answers: ['<i>five that were very close</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"> og <img class="link" src="img/roed_13.png"><div class="tool-tip"><span>Lightning</span> er utælleligt og kan ikke danne flertal. Man kan derfor ikke tale om <span>five</span>. Man kan sige <span>five flashes (of lightning)</span>.</div></div></div>'
+	}, {
+		text: '<i class="font-normal">7.</i> {{ <i>Some say that</i><strong>&#124;</strong>, <i>there are so many</i><strong>&#124;</strong>, <i>fake news</i><strong>&#124;</strong>, <i>around these days</i>|links-clear}}.',
+		answers: ['<i>there are so many</i><strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip"><span>News</span> er utælleligt. Man kan ikke bruge det sammen med <span>many</span>, og verbet skal også være i ental.</div></div></div>'
+	}, {
+		text: '<i class="font-normal">8.</i> {{<i>Those news</i><strong>&#124;</strong>, <i>really made me sad</i><strong>&#124;</strong>, <i>because I</i><strong>&#124;</strong>, <i>knew what she</i><strong>&#124;</strong>, <i>must feel like</i>|links-clear}}.',
+		answers: ['<i>Those news</i><strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"><div class="tool-tip"><span>News</span> er utælleligt. Man kan ikke bruge <span>those</span> sammen med det. Man kan sige <span>That news</span>.</div></div></div>'
+	}, {
+		text: '<i class="font-normal">9.</i> {{ <i>Not one of</i><strong>&#124;</strong>, <i>the informations available</i><strong>&#124;</strong>, <i>could explain how we could</i><strong>&#124;</strong>, <i>get to the gate</i>|links-clear}}.',
+		answers: ['<i>the informations available</i><strong>&#124;</strong>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_12.png"> og <img class="link" src="img/roed_13.png"><div class="tool-tip"><span>Information</span> er utælleligt og kan ikke danne flertal. Man kan derfor ikke tale om <span>one</span>. Man kan sige <span>one bit of the information</span>.</div></div></div>'
 	}]);
 </script> 
 
