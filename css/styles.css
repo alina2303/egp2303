@@ -679,6 +679,15 @@ a.case {
 	padding-right: 2px;
 	padding-left: 0;
 }
+
+.input-item.links.links-image:after {
+	display: none;
+}
+.input-item.links.links-image input {
+	height: 44px;
+	width: 99px;
+}
+
 .input-item.links:last-child {
 	padding-right: 0;
 }
@@ -986,3 +995,8 @@ padding-top: 0;
 		 .row.topmargin {
 			margin-top: 20px;
 		}
+
+
+.select-italic select {
+	font-style: italic;
+}
