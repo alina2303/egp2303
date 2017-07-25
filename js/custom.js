@@ -151,6 +151,8 @@ $(document).ready(function() {
 				inputs = typeLink(options, id);
 			} else if (type === "links-clear") {
 				inputs = typeLinkCl(options, id);
+			} else if (type === "image") {
+				inputs = typeImage(options, id);
 			} else {
 				inputs = typeSelect(options, id);
 			}
@@ -275,6 +277,32 @@ $(document).ready(function() {
 			return group;
 		}
 
+		function typeImage (data, id) {
+			var group = $('<span>');
+			data.forEach(function (item, i) {
+
+				$inputItem = $('<div>')
+					.addClass('input-item')
+					.addClass('input-item links links-image');
+
+				$('<input>')
+					.attr('type', 'checkbox')
+					.attr('value', item)
+					.attr('name', id)
+					.attr('id', id + '_' + i)
+					.addClass('box-link')
+					// .html(item)
+					.appendTo($inputItem);
+				$('<label>')
+					.attr('for', id + '_' + i)
+					.html(item)
+					.appendTo($inputItem);
+
+				$inputItem.appendTo(group);
+				
+			});
+			return group;
+		}
 
 		// enter point
 		testData.forEach(function (data, i) {
