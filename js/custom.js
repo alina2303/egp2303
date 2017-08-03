@@ -153,6 +153,8 @@ $(document).ready(function() {
 				inputs = typeLinkCl(options, id);
 			} else if (type === "image") {
 				inputs = typeImage(options, id);
+			} else if (type === "cell") {
+				inputs = typeCell(options, id);
 			} else {
 				inputs = typeSelect(options, id);
 			}
@@ -164,7 +166,6 @@ $(document).ready(function() {
 				ans = [ans];
 			}
 			answers[id] = ans;
-			console.log(string)
 			return string;
 		}
 
@@ -301,6 +302,54 @@ $(document).ready(function() {
 				$inputItem.appendTo(group);
 				
 			});
+			return group;
+		}
+
+		function typeCell (data, id) {
+			var tableRow = $('<tr>');
+			var  itemsArr = '';
+
+			data.forEach(function (item, i, array) {
+
+				var isLast = array.length - 1 === i;
+
+				$inputTd = $('<td>');
+
+				$inputItem = $('<div>')
+					.addClass('input-item')
+					.addClass('input-item links links-clear');
+
+				$('<input>')
+					.attr('type', 'checkbox')
+					.attr('value', item)
+					.attr('name', id)
+					.attr('id', id + '_' + i)
+					.addClass('box-link')
+					// .html(item)
+					.appendTo($inputItem);
+				$('<label>')
+					.attr('for', id + '_' + i)
+					.html(item)
+					.appendTo($inputItem);
+
+				$inputItem.appendTo($inputTd);
+				$inputTd.appendTo(tableRow);
+				if (i % 2 && i !== 0) {
+					itemsArr += tableRow.get(0).outerHTML;
+					tableRow = $('<tr>');
+				} else if (isLast) {
+					itemsArr += tableRow.get(0).outerHTML;
+				}
+			});
+			
+			// $inputItem.appendTo(group);
+
+			console.log(wrappByTable(itemsArr));
+			function wrappByTable(data) {
+				return '<div class="table-holder"><table><tbody><tr><th><img src="img/th-1.png" /></th><th><img src="img/th-2.png" /></th></tr>'+data+'</tbody></table><div/>'
+			}
+			group = $.parseHTML( wrappByTable(itemsArr) );
+			// console.log("group", group);
 			return group;
 		}
 

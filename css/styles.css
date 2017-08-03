@@ -659,6 +659,16 @@ a.case {
     left: 100px;
 
 }
+.js-test table {
+	width: 100%;
+}
+.js-test .table-holder {
+	margin-top: 20px;
+}
+.js-test  td,
+.js-test  th {
+	padding: 10px;
+}
 .input-item {
 	padding-left: 20px;
 }
@@ -1000,3 +1010,4 @@ padding-top: 0;
 .select-italic select {
 	font-style: italic;
 }
+
