@@ -76,6 +76,8 @@ $(document).ready(function() {
 		var form = this,
 				answers = {},
 				counter = 0,
+				drugAnswersCounter = 0,
+				drugBloksCounter = 0,
 				rightAnswers = 0,
 				wrongAnswers = 0;
 		
@@ -93,6 +95,7 @@ $(document).ready(function() {
 		}
 
 		form.on('change', function (e) {
+			console.log(1)
 			var targetName = e.target.name,
 					rightAnswers = answers[targetName],
 					$formGroup = $(e.target).closest('.form-group'),
@@ -101,9 +104,9 @@ $(document).ready(function() {
 					checked = [];
 			if (rightAnswers.length === 1) {
 				if (rightAnswers[0] === e.target.value) {
-					makeRight($formGroup, e.target);
+					makeRight(e.target, $formGroup);
 				} else {
-					makeWrong($formGroup, e.target);
+					makeWrong(e.target, $formGroup);
 				}
 			} else {
 				checkboxes = form[0].elements[targetName];
@@ -116,23 +119,26 @@ $(document).ready(function() {
 				checked.sort();
 				rightAnswers.sort();
 				if (checked.length === rightAnswers.length && checked.toString() === rightAnswers.toString()) {
-					makeRight($formGroup, e.target);
+					makeRight(e.target, $formGroup);
 				} else if (checked.length === rightAnswers.length) {
-					makeWrong($formGroup, e.target);
+					makeWrong(e.target, $formGroup);
 				}
 			};
+
 		}).on('submit', function (e) {
 			e.preventDefault();
 		});
 
-		function makeRight($formGroup, target) {
-			console.log(target);
-			$formGroup.addClass('question-right');
+		function makeRight(target, $formGroup) {
+			if ($formGroup) {
+				$formGroup.addClass('question-right');
+			}
 			updateCounters(true, target);
 		}
-		function makeWrong($formGroup, target) {
-			console.log(target);
-			$formGroup.addClass('question-wrong');
+		function makeWrong(target, $formGroup) {
+			if ($formGroup) {
+				$formGroup.addClass('question-wrong');
+			}
 			updateCounters(false, target);
 		}
 
@@ -155,12 +161,16 @@ $(document).ready(function() {
 				inputs = typeImage(options, id);
 			} else if (type === "cell") {
 				inputs = typeCell(options, id);
+			} else if (type === "drugdrop") {
+				inputs = typeDrug(options, id);
 			} else {
 				inputs = typeSelect(options, id);
 			}
 			
 			inputsHtml = inputs[0].outerHTML || inputs[0].innerHTML;
 			string = string.replace(/{{.+}}/, inputsHtml);
+
+			grupDropInit();			
 
 			if (typeof ans === 'string') {
 				ans = [ans];
@@ -344,7 +354,6 @@ $(document).ready(function() {
 			
 			// $inputItem.appendTo(group);
 
-			console.log(wrappByTable(itemsArr));
 			function wrappByTable(data) {
 				return '<div class="table-holder"><table><tbody><tr><th><img src="img/th-1.png" /></th><th><img src="img/th-2.png" /></th></tr>'+data+'</tbody></table><div/>'
 			}
@@ -353,49 +362,129 @@ $(document).ready(function() {
 			return group;
 		}
 
+		function typeDrug(data, id) {
+			var group = $('<div class="answers"></div>');
+			var list = $('<ul></ul>');
+			list.html(data.toString());
+			var input = $('<input>')
+				.attr('type', 'hidden');
+
+			list.appendTo(group);
+			input.appendTo(group);
+			return group;
+		}
+
+		var grupDropInit = function ($question, answers) {
+			if (!answers) {return}
+			$(function () {
+				$question.find(".drug-block").each(function () {
+					$self = $(this);
+					var elStartTopPos = $self.offset().top,
+						elStartLeftPos = $self.offset().left;
+					$self.draggable({ revert: "invalid" });
+				})
+			});
+			$question.find('.drop-block').each(function (i) {
+				var dataDrop = $(this).data('drop').toString();
+				var rightEl = answers[i][dataDrop];
+				var $self = $(this);
+				$self.droppable({
+					// accept: rightEl,
+					drop: function (event, ui) {
+						var $eventTarget = $(ui.draggable[0]);
+						var $question = $eventTarget.closest('.form-group');
+
+						drugAnswersCounter ++;
+
+						if (rightEl === $eventTarget.attr('id')) {
+							$(this)
+								.addClass("valid");
+						
+							makeRight($eventTarget);
+
+							} else {
+								$(this)
+									.addClass("error");
+
+								makeWrong($eventTarget);
+						}
+
+						function nextQuestion() {
+							$question
+								.addClass('hidden')
+								.next()
+								.removeClass('hidden');
+						}
+
+
+						if (drugAnswersCounter === answers.length) {
+
+							$question
+								.addClass('question-wrong');
+
+							drugAnswersCounter = 0;
+							drugBloksCounter ++;
+						}
+
+						if (drugBloksCounter === testData.length) {
+							form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde ' + rightAnswers + ' rigtige ud af ' + testData.length + '.</span>');
+						}
+					}
+				});
+		
+			})
+		}
+		
 		// enter point
 		testData.forEach(function (data, i) {
 			var $question,
-					id = parseInt(Math.random() * 10000000000000),
-					$right = $('<span>'),
-					$wrong = $('<span>'),
-					$icons,
-					$button;
+			id = parseInt(Math.random() * 10000000000000),
+			$right = $('<span>'),
+			$wrong = $('<span>'),
+			$icons,
+			$button;
 			$right
-				.addClass('right-label')
-				.html(data.right);
+			.addClass('right-label')
+			.html(data.right);
 			$wrong
-				.addClass('wrong-label')
-				.html(data.wrong);
+			.addClass('wrong-label')
+			.html(data.wrong);
 			// $icons = $('<img src="http://www.psdgraphics.com/file/right-check-mark.jpg" class="right-icon">')
 			$button = $('<div class="btn-holder"><button>Next</button></div>')
 			$button.on('click', function () {
 				$question
-					.addClass('hidden')
-					.next()
-					.removeClass('hidden');
-
+				.addClass('hidden')
+				.next()
+				.removeClass('hidden');
+				
 				if (counter === testData.length) {
 					form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde '+rightAnswers+' rigtige ud af '+testData.length+'.</span>');
 				}
 			})
+
+			console.log(i);
+			
 			$question = $('<div>')
-				.addClass('form-group')
-				.addClass(i ? 'hidden' : '')
-				.attr('id', id)
-				.html(createInputs(data.text, data.answers, id))
-				// .append($icons)
-				.append($right)
-				.append($wrong)
-				.append($button)
-				.appendTo(form);
+			.addClass('form-group')
+			.addClass(i ? 'hidden' : '')
+			.attr('id', id)
+			.html(createInputs(data.text, data.answers, id))
+			// .append($icons)
+			.append($right)
+			.append($wrong)
+			.append($button)
+			.appendTo(form);
+			
+			grupDropInit($question, data.answers);
 		})
+		
 	}
 })(jQuery);
 
 $(document).on('keypress', function(e) {
 	e.preventDefault();
 })
+
 
 
 // $(document).ready(function(){

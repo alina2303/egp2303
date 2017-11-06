@@ -100,29 +100,37 @@
 	<!-- end header -->
 	<div style="width: 90%; margin: 0 auto 0 auto;">
 
+<h1>1. Den ubestemte artikel</h1>
+
 
 	<div id="content">
 		<img class="headings" src="img/Grammatik_roed.png" alt="">
-			<div class="border-green-ex">
-				<div class="bott-block" id="bott-block">
+		<div class="border-red">
+			<div class="drop-sentenses">
+				<div class="drugg-tests">
 					<div class="head">
-						
-						
-						<form class="js-test-form js-test" action="#"></form>
-						
+						<h5>
+							She was the sister of my aunt who lives in England. x
+						</h5>
 					</div>
-					<div class="result counter">
-						<div class="tru">
-							<img class="res-el" src="img/right2.png">
-							<span class="counter-right">0</span>
-						</div>
-						<div>
-							<img class="res-el" src="img/wrong2.png">
-							<span class="counter-wrong">0</span>
-						</div>
+
+					<div class="drop-field-pink drop-block">
+
+					</div>
+
+					<div class="sentenses-holder">
+						<p class="drug-block">1. She was the sister of my aunt who lives in England.</p>
+						<p class="drug-block">2. She was the sister of my aunt who lives in England.</p>
+						<p class="drug-block">3. She was the sister of my aunt who lives in England.</p>
+						<p class="drug-block">4. She was the sister of my aunt who lives in England.</p>
+						<p class="drug-block">5. She was the sister of my aunt who lives in England.</p>
+						<p class="drug-block">6. She was the sister of my aunt who lives in England.</p>
+						<p class="drug-block">7. She was the sister of my aunt who lives in England.</p>
+						<p class="drug-block">8. She was the sister of my aunt who lives in England.</p>
 					</div>
 				</div>
 			</div>
+		</div><!-- div id border-->
 	</div> <!-- div id content-->
  </div> <!-- div style-->
 
@@ -135,21 +143,22 @@
 	<script src="js/custom.js"></script>
 
 	<script>
-		
-	</script>
+		$(document).on('ready', function() {
 
-	<script>
-		$('.js-test-form').test([{
-			text: '1. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i feltet efer hver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span>She was the sister of my aunt who lives in England.</span><span data-drop="1" class="drop-block"></span></p></div><div class="row"><p><span>The price of the oranges is the same as that of the apples.</span><span data-drop="2" class="drop-block"></span></p></div><div class="row"><p><span>Every Friday at noon they met at the grocers to pick up the latest gossip. </span><span data-drop="3" class="drop-block"></span></p></div><div class="row"><p><span>I will have to give him ten weeks notice if I want to let him go.</span><span data-drop="4" class="drop-block"></span></p></div></div> {{ <li><span>Mål, mængde, antal</span><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div data-answer="2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li>|drugdrop}}',
-			answers: [{'1':'draggable1'}, {'2':'draggable2'}, {'3':'draggable3'}, {'4':'draggable4'} ],
-			right: '',
-			wrong: ''
-		}, {
-			text: '2. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i feltet efer hver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span>She was the sister of my aunt who lives in England.</span><span data-drop="1" class="drop-block"></span></p></div><div class="row"><p><span>The price of the oranges is the same as that of the apples.</span><span data-drop="2" class="drop-block"></span></p></div><div class="row"><p><span>Every Friday at noon they met at the grocers to pick up the latest gossip. </span><span data-drop="3" class="drop-block"></span></p></div><div class="row"><p><span>I will have to give him ten weeks notice if I want to let him go.</span><span data-drop="4" class="drop-block"></span></p></div></div> {{ <li><span>Mål, mængde, antal</span><div id="draggable8" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable9" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div data-answer="2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable10" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable11" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span>Mål, mængde, antal</span><div id="draggable12" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li>|drugdrop}}',
-			answers: [{ '1': 'draggable9' }, { '2': 'draggable10' }, { '3': 'draggable11' }, { '4': 'draggable12' }],
-			right: '',
-			wrong: ''
-		}]);
+			$( function() {
+				$( ".drug-block" ).each(function() {
+					$self = $(this);
+					var elStartTopPos = $self.offset().top,
+						elStartLeftPos = $self.offset().left;
+					$self.draggable({ revert: "invalid" });
+				})
+			} );
+
+			$('.drop-block').each(function() {
+				$self = $(this);
+				$self.droppable();
+			})
+		});
 	</script>
 
 	<style>
