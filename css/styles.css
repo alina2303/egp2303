@@ -18,7 +18,7 @@ table,caption,tbody,tfoot,thead,tr,th,td {
 	text-align: left;
 }
 table {
-	border-collapse: collapse;
+	border-collapse: collaps
 	border-spacing: 0;
 }
 ul {
@@ -1011,3 +1011,28 @@ padding-top: 0;
 	font-style: italic;
 }
 
+
+
+.drop-sentenses {
+	max-width: 700px;
+}
+
+.drop-sentenses .drop-field-pink {
+	height: 10rem;
+	background: #eccfd4;
+	border-radius: 1rem;
+	border: 1px solid #000;
+	margin-bottom: 2rem;
+}
+
+.drop-sentenses  .drop-block {
+	width: 100%;
+}
+
+.drop-block.valid {
+	background: #b9e6ac;
+}
+
+.drop-block.error {
+	background: #f39898;
+}
