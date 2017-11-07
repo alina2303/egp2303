@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 			$(this).find('.ico').removeClass("animated fadeIn");
 			}
 		);
-		
+	
 	(function() {
 
 		var $menu = $('.navigation nav'),
@@ -58,7 +58,7 @@ $(document).ready(function() {
 	$('.arrow').each(function() {
 		$(this).on('click', function() {
 			$(this).closest('.hidden-block').find('.text-holder').toggleClass('open');
-			console.log(1)
+			console.log(1);
 		});
 	});
 });
@@ -120,7 +120,7 @@ $(document).ready(function() {
 				} else if (checked.length === rightAnswers.length) {
 					makeWrong($formGroup, e.target);
 				}
-			};
+			}
 		}).on('submit', function (e) {
 			e.preventDefault();
 		});
@@ -151,6 +151,10 @@ $(document).ready(function() {
 				inputs = typeLink(options, id);
 			} else if (type === "links-clear") {
 				inputs = typeLinkCl(options, id);
+			} else if (type === "image") {
+				inputs = typeImage(options, id);
+			} else if (type === "cell") {
+				inputs = typeCell(options, id);
 			} else {
 				inputs = typeSelect(options, id);
 			}
@@ -162,7 +166,7 @@ $(document).ready(function() {
 				ans = [ans];
 			}
 			answers[id] = ans;
-			console.log(string)
+			console.log(string);
 			return string;
 		}
 
@@ -275,7 +279,79 @@ $(document).ready(function() {
 			return group;
 		}
 
+		function typeImage (data, id) {
+			var group = $('<span>');
+			data.forEach(function (item, i) {
 
+				$inputItem = $('<div>')
+					.addClass('input-item')
+					.addClass('input-item links links-image');
+
+					$('<input>')
+					.attr('type', 'checkbox')
+					.attr('value', item)
+					.attr('name', id)
+					.attr('id', id + '_' + i)
+					.addClass('box-link')
+					// .html(item)
+					.appendTo($inputItem);
+				$('<label>')
+					.attr('for', id + '_' + i)
+					.html(item)
+					.appendTo($inputItem);
+
+					$inputItem.appendTo(group);
+			});
+		return group;
+	}
+		function typeCell (data, id) {
+			var tableRow = $('<tr>');
+			var  itemsArr = '';
+
+			data.forEach(function (item, i, array) {
+				var isLast = array.length - 1 === i;
+
+				$inputTd = $('<td>');
+
+				$inputItem = $('<div>')
+
+					.addClass('input-item')
+					.addClass('input-item links links-clear');
+
+				$('<input>')
+					.attr('type', 'checkbox')
+					.attr('value', item)
+					.attr('name', id)
+					.attr('id', id + '_' + i)
+					.addClass('box-link')
+					// .html(item)
+					.appendTo($inputItem);
+				$('<label>')
+					.attr('for', id + '_' + i)
+					.html(item)
+					.appendTo($inputItem);
+
+				$inputItem.appendTo($inputTd);
+				$inputTd.appendTo(tableRow);
+				if (i % 2 && i !== 0) {
+					itemsArr += tableRow.get(0).outerHTML;
+					tableRow = $('<tr>');
+				} else if (isLast) {
+					itemsArr += tableRow.get(0).outerHTML;
+				}
+			});
+
+			// $inputItem.appendTo(group);
+
+			console.log(wrappByTable(itemsArr));
+			function wrappByTable(data) {
+				return '<div class="table-holder"><table><tbody><tr><th><img src="img/th-1.png" /></th><th><img src="img/th-2.png" /></th></tr>'+data+'</tbody></table><div/>';
+		}
+		group = $.parseHTML( wrappByTable(itemsArr) );
+		// console.log("group", group);
+		return group;
+		}
+ 
 		// enter point
 		testData.forEach(function (data, i) {
 			var $question,
@@ -301,7 +377,7 @@ $(document).ready(function() {
 				if (counter === testData.length) {
 					form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde '+rightAnswers+' rigtige ud af '+testData.length+'.</span>');
 				}
-			})
+			});
 			$question = $('<div>')
 				.addClass('form-group')
 				.addClass(i ? 'hidden' : '')
@@ -312,13 +388,13 @@ $(document).ready(function() {
 				.append($wrong)
 				.append($button)
 				.appendTo(form);
-		})
-	}
+		});
+	};
 })(jQuery);
 
 $(document).on('keypress', function(e) {
 	e.preventDefault();
-})
+});
 
 
 // $(document).ready(function(){

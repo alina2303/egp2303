@@ -222,7 +222,8 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte sætning.
+								Afgør hvilken fremtidsform som skal anvendes, når man oversætter de understregede verbaludtryk  til engelsk. <br>(14 sætninger)
+
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -277,70 +278,75 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
-		answers: ['<i>We met at the hairdresser’s.</i>'],
+		text: '<s>1. Han <ins class="not-italic">skulle til at hoppe</ins> på toget, da han opdagede, at han havde glemt sin mobiltelefon.<s> <br>{{,was about to jump,was going to jump|select}}',
+		answers: ['was about to jump'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Sætningen udtrykker den meget nære fremtid (skulle (lige) til).</div></div></div>'
 	}, {
-		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
-		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		text: '<s>2. Jeg <ins class="not-italic">tager</ins> til Frankrig på torsdag.<s> <br> {{,am to leave,am leaving|select}}',
+		answers: ['am leaving'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Når der indgår et bevægelsesudsagnsord (her <span>to go</span>) bruger man en udvidet tid til at udtrykke fremtid.</div></div></div>'
 	}, {
-		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
-		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		text: '<s>3. De sagde i morges, at det <ins class="not-italic">ville sne</ins> senere på dagen.<s> <br>{{,is snowing,is going to snow|select}}',
+		answers: ['is going to snow'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Hvor dansk har sammensatte substantiver har engelsk ofte s- genitiv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Her udtrykkes noget uundgåeligt I fremtiden, og derfor anvendes formen <span>be going to</span>.</div></div></div>'
 	}, {
-		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
-		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		text: '<s>4. Min brors træner siger, at han <ins class="not-italic">skal deltage</ins> i VM i cykelcross til sommer.<s> <br>{{,is to attend,is going to attend|select}}',
+		answers: ['is to attend'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">ved tidsbetegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">Her udtrykkes en fast plan I fremtiden, og derfor anvender man formen <span>is to</span>.</div></div></div>'
 	}, {
-		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
-		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		text: '<s>5. Jeg <ins class="not-italic">skulle lige til at gå</ins>, da min bror dukkede op.<s> <br>{{,was about to leave,was going to leave|select}}',
+		answers: ['was about to leave'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Sætningen udtrykker den meget nære fremtid (skulle til …) og derfor skal man anvende <span>was about to</span>.</div></div></div>'
 	}, {
-		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
-		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		text: '<s>6. Det er planen, at vi <ins class="not-italic">tager</ins> afsted i morgen inden klokken 8.<s> <br>{{,are to leave,are leaving|select}}',
+		answers: ['are leaving'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved personer</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Når der indgår et bevægelsesudsagnsord (her <span>to leave</sspan>) bruger man en udvidet tid til at udtrykke fremtid.</div></div></div>'
 	}, {
-		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
-		answers: ['<i>The river Seine runs through Paris.</i>'],
+		text: '<s>7. Brøndby og FCK <ins class="not-italic">skal møde</ins> hinanden i pokalfinalen.<s> <br>{{,are to meet,are about to meet|select}}',
+		answers: ['are to meet'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">Her udtrykkes en fast plan I fremtiden, og derfor anvender man formen <span>are to</span>.</div></div></div>'
 	}, {
-		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
-		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		text: '<s>8. Da det havde regnet i 14 dage, <ins class="not-italic">var</ins> druerne på marken <ins class="not-italic">lige ved at mugne</ins>.<s> <br>{{,were going to,were about to|select}}',
+		answers: ['were about to'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Sætningen udtrykker den meget nære fremtid (var lige ved …) og derfor skal man anvende <span>were about to</span>.</div></div></div>'
 	}, {
-		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
-		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
+		text: '<s>9. Der er fluer overalt på terrassen, fordi det <ins class="not-italic">er lige ved at begynde</ins> at tordne.<s> <br>{{,is going to,is about to|select}}',
+		answers: ['is about to'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Sætningen udtrykker den meget nære fremtid (det er lige ved …) og derfor skal man anvende <span>is about to</span>.</div></div></div>'
 	}, {
-		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
-		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
+		text: '<s>10. Jeg <ins class="not-italic">vil mixe</ins> vores egne drinks i aften.<s> <br>{{,am going to mix,am to mix|select}}',
+		answers: ['am going to mix'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip">ved årstider, måned og dato</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Der er tale om den talendes hensigt om noget fremtidigt, og derfor anvendes formen <span>am going to</span>.</div></div></div>'
 	}, {
-		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
-		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
+		text: '<s>11. I morgen <ins class="not-italic">flyver</ins> jeg til London for at besøge min søster i morgen.<s> <br>{{,am flying,am to fly|select}}',
+		answers: ['am flying'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Når der indgår et bevægelsesudsagnsord (her to <span>fly</span>) bruger man en udvidet tid til at udtrykke fremtid.</div></div></div>'
 	}, {
-		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
-		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
+		text: '<s>12. Skynd dig! Der er kun ganske få sekunder, til kampen <ins class="not-italic">begynder</ins>.<s> <br>{{,is going to start,is starting|select}}',
+		answers: ['is going to start'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_9.png"><div class="tool-tip">ved mål, mængde og antal</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Der er tale om noget uundgåeligt i den nære fremtid, og derfor anvendes formen <span>is going to</span>.</div></div></div>'
 	}, {
-		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
-		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
+		text: '<s>13. Jeg <ins class="not-italic">var</ins> på vej ud af toget da jeg opdagede, at det var den forkerte station.<s> <br>{{,was leaving,was about to leave|select}}',
+		answers: ['was leaving'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Når der indgår et bevægelsesudsagnsord (her <span>to leave</span>) bruger man en udvidet tid til at udtrykke fremtid.</div></div></div>'
+	}, {
+		text: '<s>14. Se lige alle de sorte skyer! Tror du ikke, det <ins class="not-italic">regner</ins> om lidt?<s> <br>{{,is to rain,is going to rain|select}}',
+		answers: ['is going to rain'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se </span><div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Der er tale om noget uundgåeligt i den nære fremtid, og derfor anvendes formen <span>am going to</span>.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
 		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',

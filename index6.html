@@ -206,7 +206,8 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Angiv om sætningen står i simpel nutid, udvidet nutid, simpel datid eller udvidet datid.<br>Klik på den rigtige af de fire knapper. (10 sætninger)
+
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -224,31 +225,8 @@
 						</div> 
 					</div> 
 				</div> 
-					<img class="headings-ex" src="img/Ovelse_bla_2.png">
-					<div class="border-blue-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
-							</h5> 
-
-							<form class="js-test-form-1 js-test" action="#"></form>
-
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
-					</div> 
-				</div> 
 			</div>  
-	</div> <!-- div style-->
+		</div> <!-- div style-->
 
     <!-- javascript
     ================================================== -->
@@ -261,168 +239,55 @@
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <a class="tooltip" href="#"><img class="link" src="img/blaa_1.png"><span class="custom help"><img src="Help.png" alt="Помощь" height="48" width="48" /><em>Помощь</em>Это просто пример того, как сделать подсказки с использованием CSS!</span></a></p>'
+		text: '<p>1. <span>The boys were playing hockey.</span> {{<img src="img/pic2s.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic4.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>Were playing</span> er udvidet tid, og <span>were</span> angiver, at tiden er datid.<br> Rigtigt svar: <strong>Udvidet datid</strong>.</div></div></div>'
 	}, {
-		text: '2. He wants to study in  ....... USA. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<p>2. <span>Sailing is a wonderful sport.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic2.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er ikke udvidet tid her. <span>Sailing</span> er her ikke et verbum [udsagnsord], men et substantiv [navneord] (se Værktøjskassen 4.14). Verballedet [udsagnsleddet] er is, og is er <strong>simpel nutid</strong>.</div></div></div>'
 	}, {
-		text: '3. ....... most of the students in our class wanted to go to London. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<p>3. <span>The girls play badminton every Friday.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic2.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Play er <strong>simpel nutid</strong>.</div></div></div>'
 	}, {
-		text: '4. She is   ....... daughter of one of my teachers from high school. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<p>4. <span>Harold and his friends liked to play computer games.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic3.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Liked er <strong>simpel datid</strong>.</div></div></div>'
 	}, {
-		text: '5. This was  ....... third time that she had tried to call him. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<p>5. <span>The Singing Detective was the title of a famous TV series.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic3.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er ikke udvidet tid her. <span>Singing</span> er her ikke et verbum [udsagnsord], men et adjektiv [tillægsord] (se Værktøjskassen 4.14). Verballedet [udsagnsleddet] er <span>was</span>, og <span>was</span> er simpel datid. Rigtigt svar: <strong>Simpel datid</strong>.</div></div></div>'
 	}, {
-		text: '6. ....... author of the novel is still unknown. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<p>6. <span>They are having a great time at the concert.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic1.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>Are having</span> er udvidet tid, og <span>are</span> angiver, at det er nutid. Rigtigt svar: <strong>Udvidet nutid</strong>.</div></div></div>'
 	}, {
-		text: '7. He broke ....... one arm when he was skiing in Aspen. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<p>7. <span>Joe is a working man and proud of it.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic2.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er ikke udvidet tid her. <span>Working</span> er her ikke et verbum [udsagnsord], men et adjektiv [tillægsord] (se Værktøjskassen 4.14). Verballedet [udsagnsleddet] er <span>is</span>, og is er <strong>simpel nutid</strong>.</div></div></div>'
 	}, {
-		text: '8. Have you ever been to ....... Netherlands?. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande i flertal bruger bestemt artikel</p>'
+		text: '<p>8. <span>They wondered if the boys next door were brothers.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic3.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Udsagnet indeholder to sætninger: En hovedsætning hvor <span>wondered</span> er verballed [udsagnsled], og en bisætning hvor <span>were</span> er verballed [udsagnsled]. Begge sætninger står i <strong>simpel datid</strong>.</div></div></div>'
 	}, {
-		text: '9. Yes, we visited ....... Hague last summer. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<p>9. <span>Seeing is understanding.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic2.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip"><span>Understanding</span> (og også <span>seeing</span>) er her ikke verbum [udsagnsord], men en slags substantiv [navneord] (se Værktøjskassen 4.14). Verballedet [udsagnsleddet] er <span>is</span>, og <span>is</span> står i <strong>simpel nutid</strong>.</div></div></div>'
 	}, {
-		text: '10. I think ....... most students do their homework. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
-	}, {
-		text: '11. My best friend lives in ....... United Kingdom. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande med <span>union</span> (her <span>united</span>), <span>state</span>, og <span>republic</span> i navnet har artikel</p>'
-	}, {
-		text: '12. You will find an English version on ....... opposite page. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"> , <span>opposite</span> bruges med bestemt artikel ligesom <span>same</span> og <span>following</span></p>'
-	}, {
-		text: '13. When they came back, ....... one student was missing. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
-	}, {
-		text: '14. ....... same thing happened three years ago. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	}, {
-		text: '15. He is ....... owner of the Franklin Barbecue. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '16. ....... following exercises must be answered before you can go home: 2, 15 and 16. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	
-	}]);
-
-$('.js-test-form-1').test([{
-		text: '1. Do you take {{milk, the milk|link}}in your tea?',
-		answers: ['milk'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '2. {{Life, The life|link}}is full of wonderful surprises, he smiled.',
-		answers: ['Life'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '3. {{Time, The time|link}}I spent working at the factory really taught me a lot.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '4. {{Crime, The crime|link}}is a huge problem in many inner cities.',
-		answers: ['Crime'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '5. They were both very interested in {{history, the history|link}}.',
-		answers: ['history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '6. It was {{first time, the first time|link}}they had ever met.',
-		answers: ['the first time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	}, {
-		text: '7. I think {{nature, the nature|link}}can teach us many valuable things.',
-		answers: ['nature'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '8. During the French Revolution, they fought for {{freedom, the freedom|link}}.',
-		answers: ['freedom'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '9. {{Paintings, The paintings|link}}in the gallery are all very expensive.',
-		answers: ['The paintings'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '10. {{History, The history|link}}of Germany is interesting.',
-		answers: ['The history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '11. It’s time to find {{love, the love|link}}again, she said. Let’s go to Jim’s party!',
-		answers: ['love'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '12. {{Music, The music|link}}of the 90s plays an important role in my life.',
-		answers: ['The music'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '13. {{Time, The time|link}}we spend together is precious, the commercial said.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '14. {{Articles, The articles|link}}are difficult to use.',
-		answers: ['Articles'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '15. {{Water, The water|link}}we bought at the supermarket did not taste good.',
-		answers: ['The water'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '16. Many young people faced {{death, the death|link}}during the First World War.',
-		answers: ['death'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>10. <span>Betty and Suzanne are cooking for their birthdays.</span> {{<img src="img/pic2.png" width="110px" height="50px">, <img src="img/pic1.png" width="110px" height="50px">, <img src="img/pic3.png" width="110px" height="50px">,<img src="img/pic4.png" width="110px" height="50px">|image}}</p>',
+		answers: ['<img src="img/pic1.png" width="110px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Are <span>cooking</span> er udvidet tid, og <span>are</span> angiver nutid. Rigtigt svar: <strong>Udvidet nutid</strong>.</div></div></div>'
 	}]);
 </script> 
 
