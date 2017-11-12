@@ -375,6 +375,8 @@ $(document).ready(function () {
 		}
 
 		var grupDropInit = function ($question, answers) {
+
+			var drugType = $('.js-test-form').data('drug');
 			if (!answers) { return }
 			$(function () {
 				$question.find(".drug-block").each(function () {
@@ -400,13 +402,18 @@ $(document).ready(function () {
 							$(this)
 								.addClass("valid");
 
-							makeRight($eventTarget);
+							if (drugType === 1) {
+									makeRight($eventTarget);
+								}
 
 						} else {
 							$(this)
 								.addClass("error");
 
-							makeWrong($eventTarget);
+							if (drugType === 1) {
+									makeWrong($eventTarget);
+								}
+								
 						}
 
 						function nextQuestion() {
@@ -418,12 +425,24 @@ $(document).ready(function () {
 
 
 						if (drugAnswersCounter === answers.length) {
+							var errors = $(event.target).closest('.row').find('.error').length;
+							if (dataDrop === 1) {
+								$question.addClass('question-wrong');
+							}
 
-							$question
-								.addClass('question-wrong');
+							if (drugType === 2 && errors) {
+								$question.addClass('question-wrong');
+								makeWrong($eventTarget);
+							}
+
+							if (drugType === 2 && !errors) {
+								$question.addClass('question-right');
+								makeRight($eventTarget);
+							}
 
 							drugAnswersCounter = 0;
 							drugBloksCounter++;
+							
 						}
 
 						if (drugBloksCounter === testData.length) {
@@ -461,8 +480,6 @@ $(document).ready(function () {
 					form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde ' + rightAnswers + ' rigtige ud af ' + testData.length + '.</span>');
 				}
 			})
-
-			console.log(i);
 
 			$question = $('<div>')
 				.addClass('form-group')
