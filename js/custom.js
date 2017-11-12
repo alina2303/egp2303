@@ -11,10 +11,10 @@ jQuery(document).ready(function ($) {
 		function () {
 			$(this).find('span.badge').removeClass("animated fadeInLeft");
 			$(this).find('.ico').removeClass("animated fadeIn");
-		}
-	);
-
-	(function () {
+			}
+		);
+	
+	(function() {
 
 		var $menu = $('.navigation nav'),
 			optionsList = '<option value="" selected>Go to..</option>';
@@ -58,7 +58,7 @@ $(document).ready(function () {
 	$('.arrow').each(function () {
 		$(this).on('click', function () {
 			$(this).closest('.hidden-block').find('.text-holder').toggleClass('open');
-			console.log(1)
+			console.log(1);
 		});
 	});
 });
@@ -500,7 +500,7 @@ $(document).ready(function () {
 
 $(document).on('keypress', function (e) {
 	e.preventDefault();
-})
+});
 
 
 

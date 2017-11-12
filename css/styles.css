@@ -18,8 +18,7 @@ table,caption,tbody,tfoot,thead,tr,th,td {
 	text-align: left;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse: collaps;
 }
 ul {
 	list-style: none;
@@ -664,15 +663,8 @@ a.case {
 
 }
 .js-test table {
- 	width: 100%;
- }
- .js-test .table-holder {
- 	margin-top: 20px;
- }
- .js-test  td,
- .js-test  th {
- 	padding: 10px;
- }
+	width: 100%;
+}
 .input-item {
 	padding-left: 20px;
 }
@@ -1007,6 +999,54 @@ padding-top: 0;
 }*/
 		.row.topmargin {
 			margin-top: 25px;
+		}
+		.select-italic select{
+			font-style: italic;
+		}
+		.left-padding {
+			font-style: italic;
+    		padding-left: 15px;
+    		padding-top: 10px;
+		}
+		.withot-borders th, .withot-borders td {
+			border: none;
+			background-color: #bdd0ed;
+			padding: 3px;
+			text-align: center;
+			font-style: italic;
+		}
+		.withot-borders {
+			width: 530px;
+		}
+		 .row.add-margin {
+			margin: 30px 0 20px 0;
+		}
+		.arrow.add-margin {
+			margin-top: 7px;
+		}
+		.arrow.additional-padding {
+			padding-left: 55px;
+		}
+		.arrow.additional-padding.type-1 {
+			padding-left: 27px;
+		}
+		.table-type-2 th, .table-type-2 td {
+			border: none;
+			font-style: italic;
+			padding-right: 60px;
+			
+		}
+		.background-green {
+		 background-color: #98d6a1;
+		 padding: 2px 35px 2px 35px;
+			
+		}
+		.row.add-top-margin {
+		 margin-top: 20px;
+		}
+		.table-type-2 tr td:nth-child(3) {
+		 padding-left: 40px;
+
 		}
 		.select-italic select{
 			font-style: italic;
