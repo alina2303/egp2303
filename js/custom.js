@@ -395,10 +395,12 @@ $(document).ready(function () {
 					drop: function (event, ui) {
 						var $eventTarget = $(ui.draggable[0]);
 						var $question = $eventTarget.closest('.form-group');
+						var $eventTargetId = $eventTarget.attr('id');
+						var $eventTargetDataId = $eventTarget.data('id');
 
 						drugAnswersCounter++;
 
-						if (rightEl === $eventTarget.attr('id')) {
+						if (rightEl === $eventTargetId || rightEl == $eventTargetDataId) {
 							$(this)
 								.addClass("valid");
 
