@@ -663,7 +663,6 @@ a.case {
 
 }
 .js-test table {
-
 	width: 100%;
 }
 .input-item {
@@ -686,15 +685,13 @@ a.case {
 	padding-right: 2px;
 	padding-left: 0;
 }
-
 .input-item.links.links-image:after {
-	display: none;
-}
-.input-item.links.links-image input {
-	height: 44px;
-	width: 99px;
-}
-
+ 	display: none;
+ }
+ .input-item.links.links-image input {
+ 	height: 44px;
+ 	width: 99px;
+ }
 .input-item.links:last-child {
 	padding-right: 0;
 }
@@ -1049,35 +1046,80 @@ padding-top: 0;
 		}
 		.table-type-2 tr td:nth-child(3) {
 		 padding-left: 40px;
+
+		}
+		.select-italic select{
+			font-style: italic;
+		}
+		.left-padding {
+			font-style: italic;
+    		padding-left: 15px;
+    		padding-top: 10px;
+		}
+		.withot-borders th, .withot-borders td {
+			border: none;
+			background-color: #bdd0ed;
+			padding: 3px;
+			text-align: center;
+			font-style: italic;
+		}
+		.withot-borders {
+			width: 530px;
+		}
+		 .row.add-margin {
+			margin: 30px 0 20px 0;
+		}
+		.arrow.add-margin {
+			margin-top: 7px;
+		}
+		.arrow.additional-padding {
+			padding-left: 55px;
+		}
+		.arrow.additional-padding.type-1 {
+			padding-left: 27px;
+		}
+		.table-type-2 th, .table-type-2 td {
+			border: none;
+			font-style: italic;
+			padding-right: 60px;
+		
+	}
+	.drop-sentenses {
+		max-width: 700px;
+	}
+
+	.drop-sentenses .drop-field-pink {
+		height: 10rem;
+		background: #eccfd4;
+		border-radius: 1rem;
+		border: 1px solid #000;
+		margin-bottom: 2rem;
+	}
+		.background-green {
+		 background-color: #98d6a1;
+		 padding: 2px 35px 2px 35px;
+			
 		}
 
-
-.select-italic select {
-	font-style: italic;
-}
-
-
-
-.drop-sentenses {
-	max-width: 700px;
-}
-
-.drop-sentenses .drop-field-pink {
-	height: 10rem;
-	background: #eccfd4;
-	border-radius: 1rem;
-	border: 1px solid #000;
-	margin-bottom: 2rem;
-}
-
-.drop-sentenses  .drop-block {
+.drop-sentenses .drop-block {
 	width: 100%;
 }
-
 .drop-block.valid {
 	background: #b9e6ac;
 }
-
 .drop-block.error {
 	background: #f39898;
 }
+
+.drop-type-2 .drop-block.valid,
+.drop-type-2 .drop-block.error {
+	background: #b6b7fa;
+}
+
+.row.add-top-margin {
+	margin-top: 20px;
+}
+.table-type-2 tr td:nth-child(3) {
+	padding-left: 40px;
+}
+
