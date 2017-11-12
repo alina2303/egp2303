@@ -367,10 +367,10 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte form: possessivt pronomen, bestemt artikel eller ingen artikel (x) (20 spørgsmål)
+								Hvilken regel for simpel/udvidet tid følger sætningen? Klik på den relevante regel i skemaet. (8 sætninger)
 							</h5> 
 
-							<form class="js-test-form js-test" action="#"></form>
+							<form class="js-test-form-3 js-test" action="#"></form>
 
 						</div> 
 						<div class="result counter"> 
@@ -434,107 +434,46 @@ function look(t){
 	<script src="js/custom.js"></script>
 	<script> 
 
-$('.js-test-form').test([{
-		text: '1. She looked annoyed when she stood there waiting with {{, his, her, the, x|select}} coat on.',
-		answers: ['her'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+$('.js-test-form-3').test([{
+		text: '1. He ate all the potatoes. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden., F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig. |cell}}',
+ 		answers: ['E. En handling'+"&#44;"+' der er afsluttet i fortiden.'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_8.png"> simpel tid. <div class="tool-tip">Sætningen udtrykker en afsluttet handling i fortiden, og følger derfor regel E.</div></div></div>'
+ 	}, {
+		text: '2. In the winter, it always snows in Sweden. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden., F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig. |cell}}',
+ 		answers: ['A. Det der gælder i almindelighed (fakta).'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> simpel tid. <div class="tool-tip">Sætningen udtrykker det der gælder i almindelighed (fakta) = A.</div></div></div>'
 	}, {
-		text: '2. He was at a conference on {{, his, her, the, x|select}} artificial intelligence in Florida.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '3. Jennifer is doing her homework. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden., F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig. |cell}}',
+ 		answers: ['D. Noget man er ved/er i færd med.'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"> udvidet tid. <div class="tool-tip">Sætningen udtrykker det Jennifer er i færd med = D.</div></div></div>'
 	}, {
-		text: '3. The guard tapped me on {{, his, her, the, x|select}} shoulder and told me not to touch the painting.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '4. The boys were watching TV while their mother was talking to their neighbour. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden, F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig.|cell}}',
+ 		answers: ['H. Handlinger'+"&#44;"+' der forgår samtidig.'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_9.png"> udvidet tid. <div class="tool-tip">Sætningen indeholder to handlinger som foregår samtidig = H.</div></div></div>'
 	}, {
-		text: '4. The lawyer presented his evidence in {{, his, her, the, x|select}} court and argued for his client’s innocence.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen).</p>'
+		text: '5. From February till June, Joe was working day and night to finish the house. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden, F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig. |cell}}',
+ 		answers: ['F. En handling'+"&#44;"+' der foregik over en periode.'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_8.png"> udvidet tid. <div class="tool-tip">Sætningen udtrykker en handling, der foregik over en begrænset periode = F.</div></div></div>'
 	}, {
-		text: '5. The player felt a little dizzy after the ball had hit him on {{, his, her, the, x|select}} head.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '6. The detective checked the room, looked for fingerprints and examined the broken window closely. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden, F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig.|cell}}',
+ 		answers: ['G. Opremsninger.'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_9.png"> simpel tid. <div class="tool-tip">Sætningen opremser en række handlinger, og følger derfor regel G.</div></div></div>'
 	}, {
-		text: '6. The US President-elect, Donald Trump, raised {{, his, her, the, x|select}} right hand and took the oath.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '7. Look! It is raining with leaflets. They must have been thrown out from that small plane. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden, F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig.|cell}}',
+ 		answers: ['B. Det der foregår over en begrænset periode.'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> udvidet tid. <div class="tool-tip">Folderne falder ned I en begrænset periode, og sætningen følger derfor regel B.</div></div></div>'
 	}, {
-		text: '7. {{, his, her, the, x|select}} water is an extremely valuable resource, which we often take for granted.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '8. He was hit on {{, his, her, the, x|select}} head by a masked person.</p>',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. I passivsætninger bruges altid den bestemte artikel <span>the</span>.'
-	}, {
-		text: '9. {{, his, her, the, x|select}} generosity is a virtue which is appreciated all over the world.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '10. He leaned back in {{, his, her, the, x|select}} seat and really enjoyed the flight.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '11. She got the message when she came back from {{, his, her, the, x|select}} college.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen). </p>'
-	}, {
-		text: '12. The little boy carefully brushed {{, his, her, the, x|select}} teeth twice a day.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '13. The young man’s lawyer made a statement outside {{, his, her, the, x|select}} court.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har bestemt artikel, når man tænker på bygningen og ikke funktionen).</p>'
-	}, {
-		text: '14. The policeman shook {{, his, her, the, x|select}} head in disapproval of the boys’ behavior.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '15. {{, his, her, the, x|select}} first week we spent there was wonderful.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (bestemt artikel foran ordenstal).</p>'
-	}, {
-		text: '16. Here is what you must do {{, his, her, the, x|select}} first, you write your password, then you find the right folder.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel her. Reglen om artikel ved <span>first</span> gælder kun, når det er ordenstal; her er det adverbium.</p>'
-	}, {
-		text: '17. He broke {{, his, her, the, x|select}} arm when he crashed in the sprint in the Tour of Britain.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '18. She is {{, his, her, the, x|select}} one person that I can trust; therefore, I asked her to do the job.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Bestemt artikel i betydningen <span>"the only one"</span>. Det er kun, når <span>one</span> betyder den ene af to, der ikke bruges artikel.</p>'
-	}, {
-		text: '19. “Which way is {{, his, her, the, x|select}} south?” she asked.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel ved verdenshjørner - dog bruges der bestemt artikel ved præposition + verdenshjørne.</p>'
-	}, {
-		text: '20. After years of travelling, he finally settled down in {{, his, her, the, x|select}} north of Spain.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
-	
+		text: '8. Each Sunday the family go to church. {{A. Det der gælder i almindelighed (fakta)., B. Det der foregår over en begrænset periode., C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane., D. Noget man er ved/er i færd med., E. En handling'+"&#44;"+' der er afsluttet i fortiden, F. En handling'+"&#44;"+' der foregik over en periode., G. Opremsninger., H. Handlinger'+"&#44;"+' der forgår samtidig.|cell}}',
+ 		answers: ['C. Det der sker regelmæssigt'+"&#44;"+' gentaget'+"&#44;"+' eller er en vane.'],
+ 		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"> simpel tid. <div class="tool-tip">Familien går I kirke hver søndag. Der er tale om en regelmæssig handling, og sætningen følger derfor regel C.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
 		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',

@@ -1,32 +1,32 @@
 /*global jQuery:false */
-jQuery(document).ready(function($) {
-"use strict";
+jQuery(document).ready(function ($) {
+	"use strict";
 
-		//add some elements with animate effect
-		$(".box").hover(
-			function () {
+	//add some elements with animate effect
+	$(".box").hover(
+		function () {
 			$(this).find('span.badge').addClass("animated fadeInLeft");
 			$(this).find('.ico').addClass("animated fadeIn");
-			},
-			function () {
+		},
+		function () {
 			$(this).find('span.badge').removeClass("animated fadeInLeft");
 			$(this).find('.ico').removeClass("animated fadeIn");
-			}
-		);
-		
-	(function() {
+		}
+	);
+
+	(function () {
 
 		var $menu = $('.navigation nav'),
 			optionsList = '<option value="" selected>Go to..</option>';
 
-		$menu.find('li').each(function() {
-			var $this   = $(this),
+		$menu.find('li').each(function () {
+			var $this = $(this),
 				$anchor = $this.children('a'),
-				depth   = $this.parents('ul').length - 1,
-				indent  = '';
+				depth = $this.parents('ul').length - 1,
+				indent = '';
 
-			if( depth ) {
-				while( depth > 0 ) {
+			if (depth) {
+				while (depth > 0) {
 					indent += ' - ';
 					depth--;
 				}
@@ -36,27 +36,27 @@ jQuery(document).ready(function($) {
 
 			optionsList += '<option value="' + $anchor.attr('href') + '">' + indent + ' ' + $anchor.text() + '</option>';
 		}).end()
-		.after('<select class="selectmenu">' + optionsList + '</select>');
-		
-		$('select.selectmenu').on('change', function() {
+			.after('<select class="selectmenu">' + optionsList + '</select>');
+
+		$('select.selectmenu').on('change', function () {
 			window.location = $(this).val();
 		});
-		
+
 	})();
 
-		//Navi hover
-		$('ul.nav li.dropdown').hover(function () {
-			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
-		}, function () {
-			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
-		});
-		
+	//Navi hover
+	$('ul.nav li.dropdown').hover(function () {
+		$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+	}, function () {
+		$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+	});
+
 
 });
 
-$(document).ready(function() {
-	$('.arrow').each(function() {
-		$(this).on('click', function() {
+$(document).ready(function () {
+	$('.arrow').each(function () {
+		$(this).on('click', function () {
 			$(this).closest('.hidden-block').find('.text-holder').toggleClass('open');
 			console.log(1)
 		});
@@ -69,19 +69,19 @@ $(document).ready(function() {
 
 (function ($) {
 	$.fn.test = function (testData) {
-		if ( !(testData instanceof Array) ) {
+		if (!(testData instanceof Array)) {
 			console.warn(testData + ' is not an Array');
 			return;
 		}
 		var form = this,
-				answers = {},
-				counter = 0,
-				drugAnswersCounter = 0,
-				drugBloksCounter = 0,
-				rightAnswers = 0,
-				wrongAnswers = 0;
-		
-		function updateCounters (status, target) {
+			answers = {},
+			counter = 0,
+			drugAnswersCounter = 0,
+			drugBloksCounter = 0,
+			rightAnswers = 0,
+			wrongAnswers = 0;
+
+		function updateCounters(status, target) {
 			var $counter = $(target).closest('.bott-block').find('.counter');
 			counter++;
 			if (status) {
@@ -97,11 +97,11 @@ $(document).ready(function() {
 		form.on('change', function (e) {
 			console.log(1)
 			var targetName = e.target.name,
-					rightAnswers = answers[targetName],
-					$formGroup = $(e.target).closest('.form-group'),
-					checkboxes,
-					i = 0,
-					checked = [];
+				rightAnswers = answers[targetName],
+				$formGroup = $(e.target).closest('.form-group'),
+				checkboxes,
+				i = 0,
+				checked = [];
 			if (rightAnswers.length === 1) {
 				if (rightAnswers[0] === e.target.value) {
 					makeRight(e.target, $formGroup);
@@ -142,11 +142,11 @@ $(document).ready(function() {
 			updateCounters(false, target);
 		}
 
-		function createInputs (string, ans, id) {
+		function createInputs(string, ans, id) {
 			var type = string.match(/\|(.+)}}/)[1],
-					options = string.match(/{{(.+)\|/)[1],
-					inputs,
-					inputsHtml;
+				options = string.match(/{{(.+)\|/)[1],
+				inputs,
+				inputsHtml;
 			options = options.split(/\,\s?/);
 			type = $.trim(type.toLowerCase());
 			if (type === "radio") {
@@ -166,11 +166,11 @@ $(document).ready(function() {
 			} else {
 				inputs = typeSelect(options, id);
 			}
-			
+
 			inputsHtml = inputs[0].outerHTML || inputs[0].innerHTML;
 			string = string.replace(/{{.+}}/, inputsHtml);
 
-			grupDropInit();			
+			grupDropInit();
 
 			if (typeof ans === 'string') {
 				ans = [ans];
@@ -180,10 +180,10 @@ $(document).ready(function() {
 		}
 
 		// inputs constructors
-		function typeSelect (data, id) {
+		function typeSelect(data, id) {
 			var select = $('<select>');
 			select
-					.attr('name', id);
+				.attr('name', id);
 			data.forEach(function (item) {
 				$('<option>')
 					.html(item)
@@ -191,7 +191,7 @@ $(document).ready(function() {
 			});
 			return select;
 		}
-		function typeCheckbox (data, id) {
+		function typeCheckbox(data, id) {
 			var group = $('<span>');
 			data.forEach(function (item, i) {
 				$inputItem = $('<div>').addClass('input-item');
@@ -212,12 +212,12 @@ $(document).ready(function() {
 			});
 			return group;
 		}
-		function typeRadio (data, id) {
+		function typeRadio(data, id) {
 			var group = $('<div>');
 			data.forEach(function (item, i) {
 
 				$inputItem = $('<div>').addClass('input-item');
-					
+
 				$('<input>')
 					.attr('type', 'radio')
 					.attr('name', id)
@@ -235,7 +235,7 @@ $(document).ready(function() {
 			});
 			return group;
 		}
-		function typeLink (data, id) {
+		function typeLink(data, id) {
 			var group = $('<span>');
 			data.forEach(function (item, i) {
 
@@ -257,11 +257,11 @@ $(document).ready(function() {
 					.appendTo($inputItem);
 
 				$inputItem.appendTo(group);
-				
+
 			});
 			return group;
 		}
-		function typeLinkCl (data, id) {
+		function typeLinkCl(data, id) {
 			var group = $('<span>');
 			data.forEach(function (item, i) {
 
@@ -283,12 +283,12 @@ $(document).ready(function() {
 					.appendTo($inputItem);
 
 				$inputItem.appendTo(group);
-				
+
 			});
 			return group;
 		}
 
-		function typeImage (data, id) {
+		function typeImage(data, id) {
 			var group = $('<span>');
 			data.forEach(function (item, i) {
 
@@ -310,14 +310,14 @@ $(document).ready(function() {
 					.appendTo($inputItem);
 
 				$inputItem.appendTo(group);
-				
+
 			});
 			return group;
 		}
 
-		function typeCell (data, id) {
+		function typeCell(data, id) {
 			var tableRow = $('<tr>');
-			var  itemsArr = '';
+			var itemsArr = '';
 
 			data.forEach(function (item, i, array) {
 
@@ -351,13 +351,13 @@ $(document).ready(function() {
 					itemsArr += tableRow.get(0).outerHTML;
 				}
 			});
-			
+
 			// $inputItem.appendTo(group);
 
 			function wrappByTable(data) {
-				return '<div class="table-holder"><table><tbody><tr><th><img src="img/th-1.png" /></th><th><img src="img/th-2.png" /></th></tr>'+data+'</tbody></table><div/>'
+				return '<div class="table-holder"><table><tbody><tr><th><img src="img/th-1.png" /></th><th><img src="img/th-2.png" /></th></tr>' + data + '</tbody></table><div/>'
 			}
-			group = $.parseHTML( wrappByTable(itemsArr) );
+			group = $.parseHTML(wrappByTable(itemsArr));
 			// console.log("group", group);
 			return group;
 		}
@@ -375,7 +375,7 @@ $(document).ready(function() {
 		}
 
 		var grupDropInit = function ($question, answers) {
-			if (!answers) {return}
+			if (!answers) { return }
 			$(function () {
 				$question.find(".drug-block").each(function () {
 					$self = $(this);
@@ -394,19 +394,19 @@ $(document).ready(function() {
 						var $eventTarget = $(ui.draggable[0]);
 						var $question = $eventTarget.closest('.form-group');
 
-						drugAnswersCounter ++;
+						drugAnswersCounter++;
 
 						if (rightEl === $eventTarget.attr('id')) {
 							$(this)
 								.addClass("valid");
-						
+
 							makeRight($eventTarget);
 
-							} else {
-								$(this)
-									.addClass("error");
+						} else {
+							$(this)
+								.addClass("error");
 
-								makeWrong($eventTarget);
+							makeWrong($eventTarget);
 						}
 
 						function nextQuestion() {
@@ -423,7 +423,7 @@ $(document).ready(function() {
 								.addClass('question-wrong');
 
 							drugAnswersCounter = 0;
-							drugBloksCounter ++;
+							drugBloksCounter++;
 						}
 
 						if (drugBloksCounter === testData.length) {
@@ -431,57 +431,57 @@ $(document).ready(function() {
 						}
 					}
 				});
-		
+
 			})
 		}
-		
+
 		// enter point
 		testData.forEach(function (data, i) {
 			var $question,
-			id = parseInt(Math.random() * 10000000000000),
-			$right = $('<span>'),
-			$wrong = $('<span>'),
-			$icons,
-			$button;
+				id = parseInt(Math.random() * 10000000000000),
+				$right = $('<span>'),
+				$wrong = $('<span>'),
+				$icons,
+				$button;
 			$right
-			.addClass('right-label')
-			.html(data.right);
+				.addClass('right-label')
+				.html(data.right);
 			$wrong
-			.addClass('wrong-label')
-			.html(data.wrong);
+				.addClass('wrong-label')
+				.html(data.wrong);
 			// $icons = $('<img src="http://www.psdgraphics.com/file/right-check-mark.jpg" class="right-icon">')
 			$button = $('<div class="btn-holder"><button>Next</button></div>')
 			$button.on('click', function () {
 				$question
-				.addClass('hidden')
-				.next()
-				.removeClass('hidden');
-				
+					.addClass('hidden')
+					.next()
+					.removeClass('hidden');
+
 				if (counter === testData.length) {
-					form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde '+rightAnswers+' rigtige ud af '+testData.length+'.</span>');
+					form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde ' + rightAnswers + ' rigtige ud af ' + testData.length + '.</span>');
 				}
 			})
 
 			console.log(i);
-			
+
 			$question = $('<div>')
-			.addClass('form-group')
-			.addClass(i ? 'hidden' : '')
-			.attr('id', id)
-			.html(createInputs(data.text, data.answers, id))
-			// .append($icons)
-			.append($right)
-			.append($wrong)
-			.append($button)
-			.appendTo(form);
-			
+				.addClass('form-group')
+				.addClass(i ? 'hidden' : '')
+				.attr('id', id)
+				.html(createInputs(data.text, data.answers, id))
+				// .append($icons)
+				.append($right)
+				.append($wrong)
+				.append($button)
+				.appendTo(form);
+
 			grupDropInit($question, data.answers);
 		})
-		
+
 	}
 })(jQuery);
 
-$(document).on('keypress', function(e) {
+$(document).on('keypress', function (e) {
 	e.preventDefault();
 })
 

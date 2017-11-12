@@ -230,7 +230,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Afgør om det understregede verballed i sætningen udtrykker præsens eller futurum. (14 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -285,86 +285,75 @@
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <a class="tooltip" href="#"><img class="link" src="img/blaa_1.png"><span class="custom help"><img src="Help.png" alt="Помощь" height="48" width="48" /><em>Помощь</em>Это просто пример того, как сделать подсказки с использованием CSS!</span></a></p>'
+		text: '<p>1. <span>De <ins>spiller</ins> badminton.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Præsens_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er her tale om en handling, som er i gang i nutiden.</div></div></div>'
 	}, {
-		text: '2. He wants to study in  ....... USA. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<p>2. <span>De <ins>spiller</ins> badminton på torsdag.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om en handling, som finder sted i fremtiden.</div></div></div>'
 	}, {
-		text: '3. ....... most of the students in our class wanted to go to London. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<p>3. <span>Min tante <ins>ankommer</ins> med færgen i morgen.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om en handling, som finder sted i fremtiden.</div></div></div>'
 	}, {
-		text: '4. She is   ....... daughter of one of my teachers from high school. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<p>4. <span>Min søster <ins>tager</ins> færgen til Odden i morgen, når hun får fri.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om en handling, som finder sted i fremtiden.</div></div></div>'
 	}, {
-		text: '5. This was  ....... third time that she had tried to call him. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<p>5. <span>Børnene <ins>løber</ins> ude i haven og leger.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Præsens_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er her tale om en handling, som er i gang i nutiden.</div></div></div>'
 	}, {
-		text: '6. ....... author of the novel is still unknown. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<p>6. <span>Om ikke så lang tid <ins>kommer</ins> min fætter på besøg.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om en handling, som finder sted i fremtiden.</div></div></div>'
 	}, {
-		text: '7. He broke ....... one arm when he was skiing in Aspen. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<p>7. <span><ins>Ser</ins> du ofte dine venner?</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Præsens_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om et spørgsmål, som  refererer til et forhold i al almindelighed.</div></div></div>'
 	}, {
-		text: '8. Have you ever been to ....... Netherlands?. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande i flertal bruger bestemt artikel</p>'
+		text: '<p>8. <span>Jeg <ins>glemmer</ins> aldrig min første isbjørnejagt.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Præsens_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om et spørgsmål, som  refererer til en begivenhed, som har fundet sted.</div></div></div>'
 	}, {
-		text: '9. Yes, we visited ....... Hague last summer. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<p>9. <span>Jeg er sikker på, at Ole <ins>er</ins> her senest klokken 10.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om en handling, som finder sted i fremtiden.</div></div></div>'
 	}, {
-		text: '10. I think ....... most students do their homework. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<p>10. <span>Jeg tror ikke, min bror <ins>er</ins> hjemme i aften.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om én situation, som finder sted i fremtiden.</div></div></div>'
 	}, {
-		text: '11. My best friend lives in ....... United Kingdom. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande med <span>union</span> (her <span>united</span>), <span>state</span>, og <span>republic</span> i navnet har artikel</p>'
+		text: '<p>11. <span>Se nu at blive færdige! Vi <ins>skal</ins> i Brugsen lige om lidt.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om en handling, som refererer til fremtiden.</div></div></div>'
 	}, {
-		text: '12. You will find an English version on ....... opposite page. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"> , <span>opposite</span> bruges med bestemt artikel ligesom <span>same</span> og <span>following</span></p>'
+		text: '<p>12. <span>Hver mandag <ins>mødes</ins> vi og <ins>spiller</ins> musik.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Præsens_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er her ikke fokus på noget fremtidigt, men om en begivenhed som gentager sig.</div></div></div>'
 	}, {
-		text: '13. When they came back, ....... one student was missing. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<p>13. <span>Jeg <ins>kommer</ins> helt sikkert for sent, hvis du ikke stopper nu.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om handlinger, som refererer til fremtiden.</div></div></div>'
 	}, {
-		text: '14. ....... same thing happened three years ago. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	}, {
-		text: '15. He is ....... owner of the Franklin Barbecue. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '16. ....... following exercises must be answered before you can go home: 2, 15 and 16. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	
+		text: '<p>14. <span>Du skal ikke græde! Jeg <ins>kommer</ins> hjem igen om to uger.</span> {{<img src="img/Præsens_knap.png" width="140px" height="50px">, <img src="img/Futurum_knap.png" width="140px" height="50px">|image}}</p>',
+		answers: ['<img src="img/Futurum_knap.png" width="140px" height="50px">'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">flagene<div class="tool-tip">Der er tale om handlinger, som refererer til fremtiden.</div></div></div>'
 	}]);
 
 $('.js-test-form-1').test([{

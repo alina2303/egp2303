@@ -204,7 +204,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte form: possessivt pronomen, bestemt artikel eller ingen artikel (x) (20 spørgsmål)
+								Afgør om sætningen skal stå i almindelig <abbr title="datid"><strong>præteritum</strong></abbr> eller <abbr title="førnutid"><strong>perfektum</strong></abbr> (13 sætninger).
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -248,22 +248,6 @@
 		</div> <!-- div id content-->
 	</div> <!-- div style-->
 
-
-
-  <!--<script>
-
-function look(t){
-	p=document.getElementById(t);
-	l=document.getElementById("a-"+t);
-	if(p.style.display=="none"){
-		l.innerHTML="Skjul eksempel";
-		p.style.display="block";}
-	else{
-		l.innerHTML="Vis ekempel";
-		p.style.display="none";}
-}
-	</script>!-->
-
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -272,106 +256,70 @@ function look(t){
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. She looked annoyed when she stood there waiting with {{, his, her, the, x|select}} coat on.',
-		answers: ['her'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>1.</s> The moment we left school, we {{, started, have started|select}} to study on our own.',
+		answers: ['started'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden.</div></div></div>'
 	}, {
-		text: '2. He was at a conference on {{, his, her, the, x|select}} artificial intelligence in Florida.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>2.</s> Where {{, have you bought, did you buy|select}} that shirt?',
+		answers: ['did you buy'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden. (Der er fokus på købstidspunktet.)</div></div></div>'
 	}, {
-		text: '3. The guard tapped me on {{, his, her, the, x|select}} shoulder and told me not to touch the painting.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>3.</s> As soon as we {{, got, have got|select}} the tickets, we called the babysitter.',
+		answers: ['got'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden.</div></div></div>'
 	}, {
-		text: '4. The lawyer presented his evidence in {{, his, her, the, x|select}} court and argued for his client’s innocence.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen).</p>'
+		text: '<s>4.</s> Until two weeks ago, I {{, thought, have thought|select}} that trees were not important for our planet.',
+		answers: ['thought'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden. Det gælder ikke længere.</div></div></div>'
 	}, {
-		text: '5. The player felt a little dizzy after the ball had hit him on {{, his, her, the, x|select}} head.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>5.</s> Last year, I {{, went, have gone|select}} to India for three months.',
+		answers: ['went'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden.</div></div></div>'
 	}, {
-		text: '6. The US President-elect, Donald Trump, raised {{, his, her, the, x|select}} right hand and took the oath.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>6.</s> Ollie {{, had, has had|select}} three extra tennis lessons for the past three months in order to win the championship.',
+		answers: ['has had'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er startet i fortiden, men gælder stadig i nutiden. Han får stadig timer.</div></div></div>'
 	}, {
-		text: '7. {{, his, her, the, x|select}} water is an extremely valuable resource, which we often take for granted.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>7.</s> My boss {{, assisted, has assisted|select}} me in reaching these amazing results.',
+		answers: ['has assisted'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er startet i fortiden, men gælder stadig i nutiden. Det, han har gjort, er relevant for nutidens resultater.</div></div></div>'
 	}, {
-		text: '8. He was hit on {{, his, her, the, x|select}} head by a masked person.</p>',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. I passivsætninger bruges altid den bestemte artikel <span>the</span>.'
+		text: '<s>8.</s> When I was five, I {{, loved, have loved|select}} animals.',
+		answers: ['loved'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden. Taleren elsker ikke dyr længere.</div></div></div>'
 	}, {
-		text: '9. {{, his, her, the, x|select}} generosity is a virtue which is appreciated all over the world.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>9.</s> Over the past three months, my vocabulary {{, improved, has improved|select}} considerably.',
+		answers: ['has improved'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er startet i fortiden, men gælder stadig i nutiden.</div></div></div>'
 	}, {
-		text: '10. He leaned back in {{, his, her, the, x|select}} seat and really enjoyed the flight.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>10.</s> Since I moved away from home three months ago, my cooking {{, got, has got|select}} much better.',
+		answers: ['has got'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er startet i fortiden, men gælder stadig i nutiden.</div></div></div>'
 	}, {
-		text: '11. She got the message when she came back from {{, his, her, the, x|select}} college.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen). </p>'
+		text: '<s>11.</s> Since last Monday, I {{, was looking, have been looking|select}} for a new and better phone.',
+		answers: ['have been looking'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er startet i fortiden, men gælder stadig i nutiden.</div></div></div>'
 	}, {
-		text: '12. The little boy carefully brushed {{, his, her, the, x|select}} teeth twice a day.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>12.</s> When Peter first started learning French, he {{, thought, has thought|select}} that it was horribly difficult.',
+		answers: ['thought'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden. Der er fokus på dengang, han startede.</div></div></div>'
 	}, {
-		text: '13. The young man’s lawyer made a statement outside {{, his, her, the, x|select}} court.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har bestemt artikel, når man tænker på bygningen og ikke funktionen).</p>'
-	}, {
-		text: '14. The policeman shook {{, his, her, the, x|select}} head in disapproval of the boys’ behavior.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '15. {{, his, her, the, x|select}} first week we spent there was wonderful.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (bestemt artikel foran ordenstal).</p>'
-	}, {
-		text: '16. Here is what you must do {{, his, her, the, x|select}} first, you write your password, then you find the right folder.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel her. Reglen om artikel ved <span>first</span> gælder kun, når det er ordenstal; her er det adverbium.</p>'
-	}, {
-		text: '17. He broke {{, his, her, the, x|select}} arm when he crashed in the sprint in the Tour of Britain.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '18. She is {{, his, her, the, x|select}} one person that I can trust; therefore, I asked her to do the job.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Bestemt artikel i betydningen <span>"the only one"</span>. Det er kun, når <span>one</span> betyder den ene af to, der ikke bruges artikel.</p>'
-	}, {
-		text: '19. “Which way is {{, his, her, the, x|select}} south?” she asked.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel ved verdenshjørner - dog bruges der bestemt artikel ved præposition + verdenshjørne.</p>'
-	}, {
-		text: '20. After years of travelling, he finally settled down in {{, his, her, the, x|select}} north of Spain.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
-	
+		text: '<s>13.</s> Before I got my new bike, I always {{, took, have taken|select}} the bus to school.',
+		answers: ['took'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_2.png"><div class="tool-tip">Handlingen er afsluttet i fortiden.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
 		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',

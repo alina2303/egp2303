@@ -280,7 +280,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Vælg den rigtige form af <span><strong>to do</strong></span>.<br> (12 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -335,86 +335,66 @@
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <a class="tooltip" href="#"><img class="link" src="img/blaa_1.png"><span class="custom help"><img src="Help.png" alt="Помощь" height="48" width="48" /><em>Помощь</em>Это просто пример того, как сделать подсказки с использованием CSS!</span></a></p>'
+		text: '<i class="font-normal">1.</i> {{, Do, Does, Did|select}} you understand what they are saying?',
+		answers: ['Do'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præsens. Grundledet <span>you</span> er 2. person singularis. Den korrekte form er derfor <span>do</span>.</div></div></div>'
 	}, {
-		text: '2. He wants to study in  ....... USA. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<i class="font-normal">2.</i> {{, Do, Does, Did|select}} your father let you sleep late yesterday?',
+		answers: ['Did'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præteritum. Den korrekte form er derfor <span>did</span>.</div></div></div>'
 	}, {
-		text: '3. ....... most of the students in our class wanted to go to London. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<i class="font-normal">3.</i> Jean {{, do, does, did|select}} not want to work so hard anymore, so she has changed jobs.',
+		answers: ['did'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præteritum. Den korrekte form er derfor <span>did</span>.</div></div></div>'
 	}, {
-		text: '4. She is   ....... daughter of one of my teachers from high school. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<i class="font-normal">4.</i> My friend and I {{, do, does, did|select}} not arrive until quite late last night.',
+		answers: ['did'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præteritum. Den korrekte form er derfor <span>did</span>.</div></div></div>'
 	}, {
-		text: '5. This was  ....... third time that she had tried to call him. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<i class="font-normal">5.</i> When {{, do, does, did|select}} you decide that it was time to start playing?',
+		answers: ['did'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præteritum. Den korrekte form er derfor <span>did</span>.</div></div></div>'
 	}, {
-		text: '6. ....... author of the novel is still unknown. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<i class="font-normal">6.</i> Go away! And {{, do, does, did|select}} not come back until you have made up your mind.',
+		answers: ['do'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præsens. Subjektet <span>you</span> er 2. person singularis. Den korrekte form er derfor <span>do</span>.</div></div></div>'
 	}, {
-		text: '7. He broke ....... one arm when he was skiing in Aspen. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<i class="font-normal">7.</i> My car {{, do, does, did|select}} not look very fast, but it is.',
+		answers: ['does'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præsens. Subjektet <span>my car</span> er 3. person singularis. Den korrekte form er derfor <span>does</span>.</div></div></div>'
 	}, {
-		text: '8. Have you ever been to ....... Netherlands?. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande i flertal bruger bestemt artikel</p>'
+		text: '<i class="font-normal">8.</i> {{, Do, Does, Did|select}} she tell you about the concert last night?',
+		answers: ['Did'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præteritum. Den korrekte form er derfor <span>did</span>.</div></div></div>'
 	}, {
-		text: '9. Yes, we visited ....... Hague last summer. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		
+		text: '<i class="font-normal">9.</i> {{, Do, Does, Did|select}} your teacher look forward to your exams next month?',
+		answers: ['Does'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præsens. Subjektet <span>your teacher</span> er 3. person singularis. Den korrekte form er derfor <span>does</span>.</div></div></div>'
 	}, {
-		text: '10. I think ....... most students do their homework. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<i class="font-normal">10.</i> If you break my chair, I {{, do, does, did|select}} not know what I will do.',
+		answers: ['do'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præsens. Subjektet <span>I</span> er 1. person singularis. Den korrekte form er derfor <span>do</span>.</div></div></div>'
 	}, {
-		text: '11. My best friend lives in ....... United Kingdom. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande med <span>union</span> (her <span>united</span>), <span>state</span>, og <span>republic</span> i navnet har artikel</p>'
+		text: '<i class="font-normal">11.</i> Try asking them again. We {{, do, does, did|select}} not know If they will accept this time around.',
+		answers: ['do'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præsens. Subjektet <span>we</span> er 1. person pluralis. Den korrekte form er derfor <span>do</span>.</div></div></div>'
 	}, {
-		text: '12. You will find an English version on ....... opposite page. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"> , <span>opposite</span> bruges med bestemt artikel ligesom <span>same</span> og <span>following</span></p>'
-	}, {
-		text: '13. When they came back, ....... one student was missing. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
-	}, {
-		text: '14. ....... same thing happened three years ago. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	}, {
-		text: '15. He is ....... owner of the Franklin Barbecue. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '16. ....... following exercises must be answered before you can go home: 2, 15 and 16. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	
+		text: '<i class="font-normal">12.</i> {{, Do, Does, Did|select}} your dog always come when you call him?',
+		answers: ['Does'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se værktøjskassen <div class="tool-tip-holder blue">regel 22.<div class="tool-tip">Sætningen står i præsens. Subjektet <span>he</span> er 3. person singularis. Den korrekte form er derfor <span>does</span>.</div></div></div>'
 	}]);
 
 $('.js-test-form-1').test([{

@@ -242,7 +242,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Herunder har du to sætninger: En sætning på dansk, og en oversættelse til engelsk. 
+								<br>
+								I den engelske sætning mangler oversættelsen af det danske <abbr title="udsagnsled"><strong>verballed</strong></abbr> at blive indsat. Vælg den rigtige oversættelse. (11 sætninger)
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -357,85 +359,60 @@ $('.js-test-form').test([{
 	}]);
 
 $('.js-test-form-1').test([{
-		text: '1. Do you take {{milk, the milk|link}}in your tea?',
-		answers: ['milk'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>1. Pigen var begyndt i skolen.</s> <br> <p class="left-padding">The girl {{ ,was started, had started|select}} school.</p>',
+		answers: ['had started'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '2. {{Life, The life|link}}is full of wonderful surprises, he smiled.',
-		answers: ['Life'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>2. Hendes far var død året før.</s> <br> <p class="left-padding">Her father {{ ,was died, had died|select}} the year before.</p>',
+		answers: ['had died'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '3. {{Time, The time|link}}I spent working at the factory really taught me a lot.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<s>3. Peter er vokset to centimeter i år!</s> <br> <p class="left-padding">Peter {{ ,is grown, has grown|select}} two centimeters this year.</p>',
+		answers: ['has grown'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '4. {{Crime, The crime|link}}is a huge problem in many inner cities.',
-		answers: ['Crime'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>4. Hun er rejst til England.</s> <br> <p class="left-padding">She {{ ,is gone, has gone|select}} to England.</p>',
+		answers: ['has gone'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '5. They were both very interested in {{history, the history|link}}.',
-		answers: ['history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>5. Han var blevet nomineret til en Oscar.</s> <br> <p class="left-padding">He {{ ,was been, had been|select}} nominated for an Oscar.</p>',
+		answers: ['had been'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '6. It was {{first time, the first time|link}}they had ever met.',
-		answers: ['the first time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<s>6. Ursula er endelig kommet!</s> <br> <p class="left-padding">Ursula {{ ,is finally arrived, has finally arrived|select}}!</p>',
+		answers: ['has finally arrived'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '7. I think {{nature, the nature|link}}can teach us many valuable things.',
-		answers: ['nature'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>7. Sæt dig ned! Timen er begyndt!</s> <br> <p class="left-padding">Sit down, please! Class {{ ,is started, has started|select}}!</p>',
+		answers: ['has started'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '8. During the French Revolution, they fought for {{freedom, the freedom|link}}.',
-		answers: ['freedom'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>8. Børnene er gået ned til stranden.</s> <br> <p class="left-padding">The children {{ ,are gone, have gone|select}} down to the beach.</p>',
+		answers: ['have gone'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '9. {{Paintings, The paintings|link}}in the gallery are all very expensive.',
-		answers: ['The paintings'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<s>9. Da vi kom ned til stationen, var toget desværre lige kørt.</s> <br> <p class="left-padding">When we arrived at the station, unfortunately, the train {{ ,was just left, had just left|select}}.</p>',
+		answers: ['had just left'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '10. {{History, The history|link}}of Germany is interesting.',
-		answers: ['The history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>10. Min mor er taget på ferie.</s> <br> <p class="left-padding">My mother {{ ,is gone, has gone|select}} on vacation.</p>',
+		answers: ['has gone'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}, {
-		text: '11. It’s time to find {{love, the love|link}}again, she said. Let’s go to Jim’s party!',
-		answers: ['love'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '12. {{Music, The music|link}}of the 90s plays an important role in my life.',
-		answers: ['The music'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '13. {{Time, The time|link}}we spend together is precious, the commercial said.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '14. {{Articles, The articles|link}}are difficult to use.',
-		answers: ['Articles'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '15. {{Water, The water|link}}we bought at the supermarket did not taste good.',
-		answers: ['The water'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '16. Many young people faced {{death, the death|link}}during the First World War.',
-		answers: ['death'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>11. Han er blevet forfremmet til overtjener.</s> <br> <p class="left-padding">He {{ ,is been, has been|select}} promoted to head waiter.</p>',
+		answers: ['has been'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Engelsk bruger altid <span>to have</span> som hjælpeverbum i perfektum og pluskvamperfektum.</div></div></div>'
 	}]);
 </script> 
 
