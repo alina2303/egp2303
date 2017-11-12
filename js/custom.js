@@ -123,12 +123,8 @@ $(document).ready(function() {
 				} else if (checked.length === rightAnswers.length) {
 					makeWrong(e.target, $formGroup);
 				}
-<<<<<<< HEAD
-			}
-=======
 			};
 
->>>>>>> bab30efc9f26b2ea361683f794c9fe9b816436fa
 		}).on('submit', function (e) {
 			e.preventDefault();
 		});
@@ -165,11 +161,8 @@ $(document).ready(function() {
 				inputs = typeImage(options, id);
 			} else if (type === "cell") {
 				inputs = typeCell(options, id);
-<<<<<<< HEAD
-=======
 			} else if (type === "drugdrop") {
 				inputs = typeDrug(options, id);
->>>>>>> bab30efc9f26b2ea361683f794c9fe9b816436fa
 			} else {
 				inputs = typeSelect(options, id);
 			}
@@ -183,10 +176,6 @@ $(document).ready(function() {
 				ans = [ans];
 			}
 			answers[id] = ans;
-<<<<<<< HEAD
-			console.log(string);
-=======
->>>>>>> bab30efc9f26b2ea361683f794c9fe9b816436fa
 			return string;
 		}
 
@@ -307,11 +296,7 @@ $(document).ready(function() {
 					.addClass('input-item')
 					.addClass('input-item links links-image');
 
-<<<<<<< HEAD
-					$('<input>')
-=======
 				$('<input>')
->>>>>>> bab30efc9f26b2ea361683f794c9fe9b816436fa
 					.attr('type', 'checkbox')
 					.attr('value', item)
 					.attr('name', id)
@@ -324,69 +309,17 @@ $(document).ready(function() {
 					.html(item)
 					.appendTo($inputItem);
 
-<<<<<<< HEAD
-					$inputItem.appendTo(group);
-			});
-		return group;
-	}
-=======
 				$inputItem.appendTo(group);
 				
 			});
 			return group;
 		}
 
->>>>>>> bab30efc9f26b2ea361683f794c9fe9b816436fa
 		function typeCell (data, id) {
 			var tableRow = $('<tr>');
 			var  itemsArr = '';
 
 			data.forEach(function (item, i, array) {
-<<<<<<< HEAD
-				var isLast = array.length - 1 === i;
-
-				$inputTd = $('<td>');
-
-				$inputItem = $('<div>')
-
-					.addClass('input-item')
-					.addClass('input-item links links-clear');
-
-				$('<input>')
-					.attr('type', 'checkbox')
-					.attr('value', item)
-					.attr('name', id)
-					.attr('id', id + '_' + i)
-					.addClass('box-link')
-					// .html(item)
-					.appendTo($inputItem);
-				$('<label>')
-					.attr('for', id + '_' + i)
-					.html(item)
-					.appendTo($inputItem);
-
-				$inputItem.appendTo($inputTd);
-				$inputTd.appendTo(tableRow);
-				if (i % 2 && i !== 0) {
-					itemsArr += tableRow.get(0).outerHTML;
-					tableRow = $('<tr>');
-				} else if (isLast) {
-					itemsArr += tableRow.get(0).outerHTML;
-				}
-			});
-
-			// $inputItem.appendTo(group);
-
-			console.log(wrappByTable(itemsArr));
-			function wrappByTable(data) {
-				return '<div class="table-holder"><table><tbody><tr><th><img src="img/th-1.png" /></th><th><img src="img/th-2.png" /></th></tr>'+data+'</tbody></table><div/>';
-		}
-		group = $.parseHTML( wrappByTable(itemsArr) );
-		// console.log("group", group);
-		return group;
-		}
- 
-=======
 
 				var isLast = array.length - 1 === i;
 
@@ -502,7 +435,6 @@ $(document).ready(function() {
 			})
 		}
 		
->>>>>>> bab30efc9f26b2ea361683f794c9fe9b816436fa
 		// enter point
 		testData.forEach(function (data, i) {
 			var $question,
@@ -528,21 +460,6 @@ $(document).ready(function() {
 				if (counter === testData.length) {
 					form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde '+rightAnswers+' rigtige ud af '+testData.length+'.</span>');
 				}
-<<<<<<< HEAD
-			});
-			$question = $('<div>')
-				.addClass('form-group')
-				.addClass(i ? 'hidden' : '')
-				.attr('id', id)
-				.html(createInputs(data.text, data.answers, id))
-				// .append($icons)
-				.append($right)
-				.append($wrong)
-				.append($button)
-				.appendTo(form);
-		});
-	};
-=======
 			})
 
 			console.log(i);
@@ -562,7 +479,6 @@ $(document).ready(function() {
 		})
 		
 	}
->>>>>>> bab30efc9f26b2ea361683f794c9fe9b816436fa
 })(jQuery);
 
 $(document).on('keypress', function(e) {
