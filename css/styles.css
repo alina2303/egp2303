@@ -18,8 +18,7 @@ table,caption,tbody,tfoot,thead,tr,th,td {
 	text-align: left;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse: collaps;
 }
 ul {
 	list-style: none;
@@ -664,15 +663,9 @@ a.case {
 
 }
 .js-test table {
- 	width: 100%;
- }
- .js-test .table-holder {
- 	margin-top: 20px;
- }
- .js-test  td,
- .js-test  th {
- 	padding: 10px;
- }
+
+	width: 100%;
+}
 .input-item {
 	padding-left: 20px;
 }
@@ -693,13 +686,15 @@ a.case {
 	padding-right: 2px;
 	padding-left: 0;
 }
+
 .input-item.links.links-image:after {
- 	display: none;
- }
- .input-item.links.links-image input {
- 	height: 44px;
- 	width: 99px;
- }
+	display: none;
+}
+.input-item.links.links-image input {
+	height: 44px;
+	width: 99px;
+}
+
 .input-item.links:last-child {
 	padding-right: 0;
 }
@@ -1055,3 +1050,34 @@ padding-top: 0;
 		.table-type-2 tr td:nth-child(3) {
 		 padding-left: 40px;
 		}
+
+
+.select-italic select {
+	font-style: italic;
+}
+
+
+
+.drop-sentenses {
+	max-width: 700px;
+}
+
+.drop-sentenses .drop-field-pink {
+	height: 10rem;
+	background: #eccfd4;
+	border-radius: 1rem;
+	border: 1px solid #000;
+	margin-bottom: 2rem;
+}
+
+.drop-sentenses  .drop-block {
+	width: 100%;
+}
+
+.drop-block.valid {
+	background: #b9e6ac;
+}
+
+.drop-block.error {
+	background: #f39898;
+}
