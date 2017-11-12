@@ -1070,10 +1070,16 @@ padding-top: 0;
 .drop-block.error {
 	background: #f39898;
 }
-		.row.add-top-margin {
-		 margin-top: 20px;
-		}
-		.table-type-2 tr td:nth-child(3) {
-		 padding-left: 40px;
-		}
+
+.drop-type-2 .drop-block.valid,
+.drop-type-2 .drop-block.error {
+	background: #b6b7fa;
+}
+
+.row.add-top-margin {
+	margin-top: 20px;
+}
+.table-type-2 tr td:nth-child(3) {
+	padding-left: 40px;
+}
 

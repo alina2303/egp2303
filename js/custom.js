@@ -426,7 +426,7 @@ $(document).ready(function () {
 
 						if (drugAnswersCounter === answers.length) {
 							var errors = $(event.target).closest('.row').find('.error').length;
-							if (dataDrop === 1) {
+							if (drugType === 1) {
 								$question.addClass('question-wrong');
 							}
 
