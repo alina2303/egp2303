@@ -1090,7 +1090,7 @@ padding-top: 0;
 
 	.drop-sentenses .drop-field-pink {
 		height: 10rem;
-		background: #eccfd4;
+		background: #eccfd4 !important;
 		border-radius: 1rem;
 		border: 1px solid #000;
 		margin-bottom: 2rem;
