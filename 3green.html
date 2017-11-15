@@ -222,29 +222,27 @@
 					</div>
 				</div>
 			</div> <!-- div id border-->
-			<img class="headings-ex" src="img/Ovelse_groen_1.png">
-				<div class="border-green-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-								Vælg den korrekte form: possessivt pronomen, bestemt artikel eller ingen artikel (x) (20 spørgsmål)
-							</h5> 
-
-							<form class="js-test-form js-test" action="#"></form>
-
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
-					</div> 
-				</div> 
+			<img class="headings" src="img/Ovelse_groen_1.png" alt="">
+			<div class="border-green-ex">
+				<div class="bott-block" id="bott-block">
+					<div class="head">
+						
+						
+						<form class="js-test-form js-test" data-drug="1" action="#"></form>
+						
+					</div>
+					<div class="result counter">
+						<div class="tru">
+							<img class="res-el" src="img/right2.png">
+							<span class="counter-right">0</span>
+						</div>
+						<div>
+							<img class="res-el" src="img/wrong2.png">
+							<span class="counter-wrong">0</span>
+						</div>
+					</div>
+				</div>
+			</div>
 					<img class="headings-ex" src="img/Ovelse_groen_2.png">
 					<div class="border-green-ex">
 					<div class="bott-block" id="bott-block"> 
@@ -290,112 +288,33 @@ function look(t){
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 	<script src="js/custom.js"></script>
-	<script> 
 
-$('.js-test-form').test([{
-		text: '1. She looked annoyed when she stood there waiting with {{, his, her, the, x|select}} coat on.',
-		answers: ['her'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '2. He was at a conference on {{, his, her, the, x|select}} artificial intelligence in Florida.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '3. The guard tapped me on {{, his, her, the, x|select}} shoulder and told me not to touch the painting.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
-	}, {
-		text: '4. The lawyer presented his evidence in {{, his, her, the, x|select}} court and argued for his client’s innocence.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen).</p>'
-	}, {
-		text: '5. The player felt a little dizzy after the ball had hit him on {{, his, her, the, x|select}} head.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
-	}, {
-		text: '6. The US President-elect, Donald Trump, raised {{, his, her, the, x|select}} right hand and took the oath.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '7. {{, his, her, the, x|select}} water is an extremely valuable resource, which we often take for granted.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '8. He was hit on {{, his, her, the, x|select}} head by a masked person.</p>',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. I passivsætninger bruges altid den bestemte artikel <span>the</span>.'
-	}, {
-		text: '9. {{, his, her, the, x|select}} generosity is a virtue which is appreciated all over the world.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '10. He leaned back in {{, his, her, the, x|select}} seat and really enjoyed the flight.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '11. She got the message when she came back from {{, his, her, the, x|select}} college.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen). </p>'
-	}, {
-		text: '12. The little boy carefully brushed {{, his, her, the, x|select}} teeth twice a day.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '13. The young man’s lawyer made a statement outside {{, his, her, the, x|select}} court.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har bestemt artikel, når man tænker på bygningen og ikke funktionen).</p>'
-	}, {
-		text: '14. The policeman shook {{, his, her, the, x|select}} head in disapproval of the boys’ behavior.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '15. {{, his, her, the, x|select}} first week we spent there was wonderful.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (bestemt artikel foran ordenstal).</p>'
-	}, {
-		text: '16. Here is what you must do {{, his, her, the, x|select}} first, you write your password, then you find the right folder.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel her. Reglen om artikel ved <span>first</span> gælder kun, når det er ordenstal; her er det adverbium.</p>'
-	}, {
-		text: '17. He broke {{, his, her, the, x|select}} arm when he crashed in the sprint in the Tour of Britain.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '18. She is {{, his, her, the, x|select}} one person that I can trust; therefore, I asked her to do the job.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Bestemt artikel i betydningen <span>"the only one"</span>. Det er kun, når <span>one</span> betyder den ene af to, der ikke bruges artikel.</p>'
-	}, {
-		text: '19. “Which way is {{, his, her, the, x|select}} south?” she asked.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel ved verdenshjørner - dog bruges der bestemt artikel ved præposition + verdenshjørne.</p>'
-	}, {
-		text: '20. After years of travelling, he finally settled down in {{, his, her, the, x|select}} north of Spain.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
-	
-	}]);
+	<script>
+		
+	</script>
+	<script>
+			$('.js-test-form').test([{
+				text: '1. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i feltet efer hver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span>She was the sister of my aunt who lives in England.</span><span data-drop="1" class="drop-block"></span></p></div><div class="row"><p><span>The price of the oranges is the same as that of the apples.</span><span data-drop="2" class="drop-block"></span></p></div><div class="row"><p><span>Every Friday at noon they met at the grocers to pick up the latest gossip. </span><span data-drop="3" class="drop-block"></span></p></div><div class="row"><p><span>I will have to give him ten weeks notice if I want to let him go.</span><span data-drop="4" class="drop-block"></span></p></div></div> {{ <li><span><s>Omskrivning med</s> that of/those of</span><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/gron_14.png" alt=""></div><div class="flag opacity"><img src="img/gron_14.png" alt=""></div></li> <li><span><s>Årstider, måneder, tidsangivelser</s></span><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_11.png" alt=""></div><div class="flag opacity"><img src="img/roed_11.png" alt=""></div></li> <li><span><s>Mål, mængde, antal</s></span><div data-answer="2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li> <li><span><s>Person efterfulgt af henførende sætning</s></span><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/gron_13.png" alt=""></div><div class="flag opacity"><img src="img/gron_13.png" alt=""></div></li> <li><span><s>Betegnelse for sted eller erhverv</s></span><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_7.png" alt=""></div><div class="flag opacity"><img src="img/roed_7.png" alt=""></div></li> <li><span><s>Tidsbetegnelser</s></span><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_5.png" alt=""></div><div class="flag opacity"><img src="img/roed_5.png" alt=""></div></li>|drugdrop}}',
+				answers: [{'1':'draggable4'}, {'2':'draggable2'}, {'3':'draggable5'}, {'4':'draggable6'} ],
+				right: '',
+				wrong: ''
+			}, {
+				text: '2. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i feltet efer hver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span>The predicaments of the deaf are hard to imagine.</span><span data-drop="1" class="drop-block"></span></p></div><div class="row"><p><span>Who´s that guy? Is he a friend of yours?</span><span data-drop="2" class="drop-block"></span></p></div><div class="row"><p><span>Isn´t this the coat of the woman who just left? She must have taken mine!</span><span data-drop="3" class="drop-block"></span></p></div><div class="row"><p><span>Precisely that melody was the most popular of the summer of 2016.</span><span data-drop="4" class="drop-block"></span></p></div></div> {{ <li><span><s>Dobbelt ejefald</s></span><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/gron_15.png" alt=""></div><div class="flag opacity"><img src="img/gron_15.png" alt=""></div></li> <li><span><s>Person sfterfulgt af henførende sætning</s></span><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/gron_13.png" alt=""></div><div class="flag opacity"><img src="img/gron_13.png" alt=""></div></li> <li><span><s>The og tillægsord</s></span><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/blaa_4.png" alt=""></div><div class="flag opacity"><img src="img/blaa_4.png" alt=""></div></li> <li><span><s>Sammensat navneord</s></span><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_8.png" alt=""></div><div class="flag opacity"><img src="img/roed_8.png" alt=""></div></li> <li><span><s>Geografiske betegnelser</s></span><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_10.png" alt=""></div><div class="flag opacity"><img src="img/roed_10.png" alt=""></div></li> <li><span><s>Årstider, måneder, tidsangivelser</s></span><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_11.png" alt=""></div><div class="flag opacity"><img src="img/roed_11.png" alt=""></div></li>|drugdrop}}',
+				answers: [{'1':'draggable4'}, {'2':'draggable2'}, {'3':'draggable3'}, {'4':'draggable7'} ],
+				right: '',
+				wrong: ''
+			}, {
+				text: '3. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i feltet efer hver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span>In the Middle Ages, the island of Greenland was much warmer than today.</span><span data-drop="1" class="drop-block"></span></p></div><div class="row"><p><span>Today´s America is bound to change considerably in the next ten years.</span><span data-drop="2" class="drop-block"></span></p></div><div class="row"><p><span>She always got her cookie recipes from thr ladies´ magazines.</span><span data-drop="3" class="drop-block"></span></p></div><div class="row"><p><span>When Nelson fought the French at Trafalgar, his ships´cannons performed perfectly.</span><span data-drop="4" class="drop-block"></span></p></div></div> {{ <li><span><s>Tidsbetegnelser</s></span><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/blaa_5.png" alt=""></div><div class="flag opacity"><img src="img/blaa_5.png" alt=""></div></li> <li><span><s>Sammensat navneord</s></span><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_8.png" alt=""></div><div class="flag opacity"><img src="img/roed_8.png" alt=""></div></li> <li><span><s>Geografiske betegnelser</s></span><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_10.png" alt=""></div><div class="flag opacity"><img src="img/roed_10.png" alt=""></div></li> <li><span><s>Årstider, måneder, tidsangivelser</s></span><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_11.png" alt=""></div><div class="flag opacity"><img src="img/roed_11.png" alt=""></div></li> <li><span>The <s>og tillægsord</s></span><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/blaa_4.png" alt=""></div><div class="flag opacity"><img src="img/blaa_4.png" alt=""></div></li> <li><span><s>Skibe og både</s></span><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_6.png" alt=""></div><div class="flag opacity"><img src="img/roed_6.png" alt=""></div></li>|drugdrop}}',
+				answers: [{'1':'draggable4'}, {'2':'draggable2'}, {'3':'draggable3'}, {'4':'draggable7'} ],
+				right: '',
+				wrong: ''
+			}]);
+		</script>
+		<script>
+			
 $('.js-test-form-1').test([{
 		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',
 		answers: ['med artikel'],
