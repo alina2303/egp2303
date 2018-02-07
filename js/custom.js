@@ -448,7 +448,7 @@ $(document).ready(function () {
 						}
 
 						if (drugBloksCounter === testData.length) {
-							form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde ' + rightAnswers + ' rigtige ud af ' + testData.length + '.</span>');
+							form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde ' + rightAnswers + ' rigtige.</span>');
 						}
 					}
 				});

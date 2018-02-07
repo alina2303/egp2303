@@ -13,7 +13,7 @@ body {
   font-family:'Open Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
+  color:  #000000;
   background-color: #ffffff;
 }
 .bold {
@@ -22,8 +22,7 @@ body {
 
 /* --- header -- */
 header{
-  background: url(../img/8.jpg) repeat;
-	background: url(../img/header-pattern-150.png) repeat;
+  background-color:  rgb(25, 50, 95);
 	margin:0;
 	padding:0 0 20px;
 	position:relative;
@@ -136,7 +135,7 @@ header ul.nav li a i {
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  color: #333333;
+  color: #2B477D;;
   text-decoration: none;
   background-color: transparent;
 }
@@ -228,9 +227,9 @@ header ul.nav li a i {
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;	
-  border:2px solid #302f2f;
+  border:1px solid #302f2f;
   padding:4px 10px 4px 10px;
-   background: #343434;
+   background: #2B477D;;
 	-webkit-border-radius: 6px;
 		-moz-border-radius: 6px;
 			border-radius: 6px;
@@ -296,7 +295,7 @@ ul.nav li.dropdown ul li i {
   padding: 0;
   margin: 2px 0 0;
   list-style: none;
-	background: #343434;
+	background: #2B477D;;
   border: none;
   border: none;
   -webkit-box-shadow: none;
@@ -317,7 +316,7 @@ border-top:none;
 }
 
 .dropdown-menu li  a {
-  color: #ddd;
+  color: #fff;
   font-size:15px;
   padding:5px 15px 5px 15px;
   margin:0;

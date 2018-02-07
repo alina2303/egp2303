@@ -160,11 +160,11 @@ h1 {
 	text-align: center;
 	padding: 30px 0 30px 0;
 	font-size: 2em;
-	text-shadow: 1px 3px #000;
-	color: #fff; /*#23415c*/
+	text-shadow: 1px 2px #000;
+	color:#a2adce; /*#23415c*/
 	font-weight: bold;
 	font-family: Arial, serif;
-	letter-spacing: 1px;
+	letter-spacing: 4px;
 }
 
 h2 {
@@ -197,7 +197,7 @@ h4  {
 }
 
 body {
-	background-image: url("../img/clouds.jpg");
+	background-image: url("../img/metal.jpg");
 	/* background-image: url("../img/11.jpg");
 	background: url(http://37.media.tumblr.com/f6c67ec2821a91051e4175f8a102e1e2/tumblr_n6rzpcsMk41st5lhmo1_1280.jpg) 50% 50% / cover;*/
 	background-size: cover;
@@ -1084,6 +1084,7 @@ padding-top: 0;
 			padding-right: 60px;
 		
 	}
+/*styles for drop sentenses */
 	.drop-sentenses {
 		max-width: 700px;
 	}
@@ -1171,6 +1172,9 @@ padding-top: 0;
 	border: 1px solid #afa6a6;
 	border-radius: 10px;
 }
+.drop-block.wide {
+	width: 60px;
+} 
 
 /*.drug-block {
 	text-align: center;
@@ -1187,4 +1191,5 @@ padding-top: 0;
 .flag.opacity {
 	opacity: 0.4;
 }
+
 
