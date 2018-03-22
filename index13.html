@@ -280,7 +280,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								I sætningen nedenfor er der et biord, som er markeret med fed.<br>Vælg hvad biordet beskriver eller lægger sig til. (13 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -335,86 +335,70 @@
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <a class="tooltip" href="#"><img class="link" src="img/blaa_1.png"><span class="custom help"><img src="Help.png" alt="Помощь" height="48" width="48" /><em>Помощь</em>Это просто пример того, как сделать подсказки с использованием CSS!</span></a></p>'
+		text: '<s>1.</s> The wolves howl <strong>terribly</strong> loud. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et andet biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Terribly</span> beskriver biordet <span>howl</span>.</div></div></div>'
 	}, {
-		text: '2. He wants to study in  ....... USA. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<s>2.</s> <strong>Fortunately</strong>, John remembered his mother’s birthday. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Hele sætningen'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Fortunately</span> beskriver hele sætningen.</div></div></div>'
 	}, {
-		text: '3. ....... most of the students in our class wanted to go to London. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<s>3.</s> She played tennis <strong>extremely</strong> well. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et andet biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Extremely</span> beskriver biordet <span>well</span>.</div></div></div>'
 	}, {
-		text: '4. She is   ....... daughter of one of my teachers from high school. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>4.</s> <strong>Luckily</strong>, the vase didn’t break. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Hele sætningen'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Luckily</span> beskriver hele sætningen.</div></div></div>'
 	}, {
-		text: '5. This was  ....... third time that she had tried to call him. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<s>5.</s> Johnny felt <strong>very</strong> strongly for Susan. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et andet biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Very</span> beskriver biordet <span>strongly</span>.</div></div></div>'
 	}, {
-		text: '6. ....... author of the novel is still unknown. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>6.</s> The blackbirds in our garden sing so <strong>beautifully</strong> each morning. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et udsagnsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Beautifully</span> beskriver udsagnsordet <span>sing</span>.</div></div></div>'
 	}, {
-		text: '7. He broke ....... one arm when he was skiing in Aspen. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<s>7.</s> You have to play <strong>really</strong> well to win the Champions league. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et andet biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Really</span> beskriver biordet <span>well</span>.</div></div></div>'
 	}, {
-		text: '8. Have you ever been to ....... Netherlands?. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande i flertal bruger bestemt artikel</p>'
+		text: '<s>8.</s> Einstein was no doubt a <strong>very</strong> wise man. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Very</span> beskriver tillægsordet <span>wise</span>.</div></div></div>'
 	}, {
-		text: '9. Yes, we visited ....... Hague last summer. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<s>9.</s> An <strong>extremely</strong> cold wind blew from the north. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Extremely</span> beskriver tillægsordet <span>cold</span>.</div></div></div>'
 	}, {
-		text: '10. I think ....... most students do their homework. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<s>10.</s> She walked <strong>slowly</strong> down the hallway. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et udsagnsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Slowly</span> beskriver udsagnsordet <span>walked</span>.</div></div></div>'
 	}, {
-		text: '11. My best friend lives in ....... United Kingdom. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande med <span>union</span> (her <span>united</span>), <span>state</span>, og <span>republic</span> i navnet har artikel</p>'
+		text: '<s>11.</s> Jimmy and Joan lived <strong>happily</strong> ever after. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et udsagnsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Happily</span> beskriver udsagnsordet <span>lived</span>.</div></div></div>'
 	}, {
-		text: '12. You will find an English version on ....... opposite page. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"> , <span>opposite</span> bruges med bestemt artikel ligesom <span>same</span> og <span>following</span></p>'
+		text: '<s>12.</s> At first, the police drove <strong>rather</strong> slowly; later it was full speed ahead. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Et andet biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Rather</span> beskriver biordet <span>slowly</span>.</div></div></div>'
 	}, {
-		text: '13. When they came back, ....... one student was missing. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
-	}, {
-		text: '14. ....... same thing happened three years ago. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	}, {
-		text: '15. He is ....... owner of the Franklin Barbecue. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '16. ....... following exercises must be answered before you can go home: 2, 15 and 16. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	
+		text: '<s>13.</s> <strong>Suddenly</strong>, everything seemed wonderful. {{ , Et tillægsord, Et andet biord, Et udsagnsord, Hele sætningen|select}}',
+		answers: ['Hele sætningen'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue">grammatik indledningen<div class="tool-tip"><span>Suddenly</span> beskriver hele sætningen.</div></div></div>'
 	}]);
 
 $('.js-test-form-1').test([{

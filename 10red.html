@@ -187,8 +187,8 @@
 				<div class="border-red-ex">
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
-							<h5> 
-								Vælg den korrekte sætning.
+							<h5> 								
+  								Sætningen er passiv, men hvilken tid står den i? (12 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -211,11 +211,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-							Vælg det korrekte from af det possessive pronomen. 
+								Hvis du skulle oversætte teksten herunder, hvordan ville du så oversætte ordet ’af’? (12 sætninger)
 							</h5> 
-
 							<form class="js-test-form-1 js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -243,111 +241,126 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
-		answers: ['<i>We met at the hairdresser’s.</i>'],
+		text: '<s>1.</s> The boxer was heavily injured. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['datid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>was injured. Was</span> angiver, at sætningen står i datid.</div></div></div>'
 	}, {
-		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
-		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		text: '<s>2.</s> The footballer has been seriously injured. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['førnutid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>has been injured. Has been</span> viser, at sætningen står i førnutid.</div></div></div>'
 	}, {
-		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
-		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		text: '<s>3.</s> My sister’s ideas are welcomed by many people. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['nutid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Hvor dansk har sammensatte substantiver har engelsk ofte s- genitiv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>are welcomed. Are</span> angiver, at sætningen står i nutid.</div></div></div>'
 	}, {
-		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
-		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		text: '<s>4.</s> No matter what, they will always be misunderstood. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['fremtid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">ved tidsbetegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>will be misunderstood. Will be</span> viser, at sætningen står i fremtid.</div></div></div>'
 	}, {
-		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
-		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		text: '<s>5.</s> He had already been given an Oscar a few years previously. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['førdatid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>had been given. Had been</span> viser, at sætningen står i førdatid.</div></div></div>'
 	}, {
-		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
-		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		text: '<s>6.</s> The players were introduced to the new coach during the summer break. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['datid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved personer</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>were introduced. Were</span> viser, at sætningen står i datid.</div></div></div>'
 	}, {
-		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
-		answers: ['<i>The river Seine runs through Paris.</i>'],
+		text: '<s>7.</s> We will be guided through the park later this afternoon. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['fremtid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>will be guided. Will be</span> viser, at sætningen står i fremtid.</div></div></div>'
 	}, {
-		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
-		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		text: '<s>8.</s> It has always been seen as rude not to say hello. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['førnutid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>has been seen. Has seen</span> viser, at sætningen står i førnutid.</div></div></div>'
 	}, {
-		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
-		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
+		text: '<s>9.</s> So far, it has been considered impossible to break the world record. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['førnutid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>has been considered. Has been</span> viser, at sætningen står i førnutid.</div></div></div>'
 	}, {
-		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
-		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
+		text: '<s>10.</s> It will no doubt be regarded as incredibly rude. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['fremtid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip">ved årstider, måned og dato</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>will be regarded. Will be</span> viser, at sætningen står i fremtid.</div></div></div>'
 	}, {
-		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
-		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
+		text: '<s>11.</s> He is frequently ignored by his teachers. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['nutid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>is ignored. Is</span> viser, at sætningen står i nutid.</div></div></div>'
 	}, {
-		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
-		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
+		text: '<s>12.</s> The jet ski had been driven far too close to the shore. {{nutid, datid, førnutid, førdatid, fremtid|radio}}',
+		answers: ['førdatid'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_9.png"><div class="tool-tip">ved mål, mængde og antal</div></div></div>'
-	}, {
-		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
-		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_2.png"><div class="tool-tip">Udsagnsleddet er: <span>had been driven. Had been</span> viser, at sætningen står i førdatid.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',
-		answers: ['your'],
+		text: '<s>1. Kokken på restauranten havde lavet en ret som bestod af {{ , by, of|select}} kål og kød.</s>',
+		answers: ['of'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Her er er der tale om det materiale, retten er lavet af, og derfor skal man bruge <span>of</span>.</div></div></div>'
 	}, {
-		text: '<p> 2. The house you can see in front of you is {{ , their, theirs, their’s|select}}.</p>',
-		answers: ['theirs'],
-		right: '<p><img src="img/right2.png" alt=""/></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 3. Leave that book! It is {{ , mine, my|select}}.</p>',
-		answers: ['mine'],
+		text: '<s>2. Opskriften var første gang blevet introduceret af {{ , by, of|select}} en berømt fransk kok.</s>',
+		answers: ['by'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Den der udfører handlingen er kokken, og derfor skal man bruge <span>by</span>.</div></div></div>'
 	}, {
-		text: '<p> 4. Leave them! It is {{ , my, mine|select}} books.</p>',
-		answers: ['my'],
+		text: '<s>3. Han havde ladet sig inspirere af {{ , by, of|select}} det lokale køkken i Jura bjergene.</s>',
+		answers: ['by'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Det er det lokale køkken i Jurabjergene, der udfører handlingen ’at inspirere’. Man skal derfor bruge <span>by</span>.</div></div></div>'
 	}, {
-		text: '<p> 5. The responsibility is {{ , our, ours, our’s|select}} No doubt about that.</p>',
-		answers: ['ours'],
+		text: '<s>4. I mange år havde han påstået, at rettens specielle smag kun kunne opnås hvis den blev tilberedt i en ovn lavet af {{ , by, of|select}} ler.</s>',
+		answers: ['of'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Her er der tale om det materiale, ovnen er lavet af, så derfor bruges <span>of</span>.</div></div></div>'
 	}, {
-		text: '<p> 6. Do you see the girl at the counter? The idea was {{ , hers, her, her’s|select}}</p>',
-		answers: ['hers'],
+		text: '<s>5. Det viste sig dog, at han i sin egen restaurant faktisk brugte en ovn lavet af {{ , by, of|select}} jern.</s>',
+		answers: ['of'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Her er der tale om det materiale, ovnen er lavet af, så derfor bruges <span>of</span>.</div></div></div>'
 	}, {
-		text: '<p> 7. Is the car in the parking lot {{ , your, yours, your’s|select}}</p>',
-		answers: ['yours'],
-		right: '<p><img src="img/right2.png" alt="" /> </p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
-	}, {
-		text: '<p> 8. {{, Its, it’s|select}} fur has been cut far too often.</p>',
-		answers: ['Its'],
+		text: '<s>6. Det havde udviklet sig til en stor sag, og kokken var af {{ , by, of|select}} mange blevet kritiseret kraftigt.</s>',
+		answers: ['by'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Det er mange (mennesker), der udfører handlingen ’at kritisere’, og derfor skal man bruge <span>by</span>.</div></div></div>'
+	}, {
+		text: '<s>7. Fra da af bestod hans karriere kun af {{ , by, of|select}} stadig dårligere jobs.</s>',
+		answers: ['of'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Her er der tale om, at hans karriere består af dårlige jobs, og derfor skal man anvende <span>of</span>.</div></div></div>'
+	}, {
+		text: '<s> 8. En dag blev han også bedt om at sælge sin restaurant af {{ , by, of|select}} banken.</s>',
+		answers: ['by'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Det er banken, som udfører handlingen ’at bede’, så derfor skal der bruges <span>by</span>.</div></div></div>'
+	}, {
+		text: '<s> 9. Han blev dog tilsmilet af {{ , by, of|select}} lykken igen, da han 10 år senere opfandt en dessert, som kongen i et TV program havde rost til skyerne.</s>',
+		answers: ['by'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Det er lykken, som udfører handlingen ’at tilsmile’, så derfor skal man bruge <span>by</span>.</div></div></div>'
+	}, {
+		text: '<s> 10. Desserten var lavet af {{ , by, of|select}} frosne tranebær og marengs.</s>',
+		answers: ['of'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Der er her tale om at desserten bestod af flere lag, og derfor skal der bruges <span>of</span>.</div></div></div>'
+	}, {
+		text: '<s> 11. Fra den dag blev han igen opfattet af {{ , by, of|select}} madskribenter og kollegaer, som en af de største mestre.</s>',
+		answers: ['by'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Det er madskribenter og kollegaer, som udfører handlingen ’at opfatte’, og derfor skal man bruge <span>by</span>.</div></div></div>'
+	}, {
+		text: '<s> 12. Han blev senere udpeget som kongelig kok af {{ , by, of|select}} kongen selv.</s>',
+		answers: ['by'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_3.png"><div class="tool-tip">Det er kongen, som har udnævnt kokken, og derfor skal man bruge <span>by</span>.</div></div></div>'
 	}]);
 </script> 
 

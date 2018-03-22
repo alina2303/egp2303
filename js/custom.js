@@ -216,7 +216,8 @@ $(document).ready(function () {
 			var group = $('<div>');
 			data.forEach(function (item, i) {
 
-				$inputItem = $('<div>').addClass('input-item');
+				$inputItem = $('<div>').addClass('input-item')
+				.addClass('input-item radio');
 
 				$('<input>')
 					.attr('type', 'radio')

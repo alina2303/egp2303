@@ -181,7 +181,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte form: possessivt pronomen, bestemt artikel eller ingen artikel (x) (20 spørgsmål)
+								Afgør om det ord, der er fremhævet med fed, er anvendt som tillægsord eller biord. (10 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -232,106 +232,55 @@
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. She looked annoyed when she stood there waiting with {{, his, her, the, x|select}} coat on.',
-		answers: ['her'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>1.</s> My father had an <strong>early</strong> lunch. {{ , Tillægsord, Biord|select}}',
+		answers: ['Tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"><div class="tool-tip"><span>Early</span> er her et tillægsord, som beskriver navneordet <span>lunch</span>.</div></div></div>'
 	}, {
-		text: '2. He was at a conference on {{, his, her, the, x|select}} artificial intelligence in Florida.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>2.</s> Magnussen is a very <strong>fast</strong> driver. {{ , Tillægsord, Biord|select}}',
+		answers: ['Tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"><div class="tool-tip"><span>Fast</span> er her et tillægsord, som beskriver navneordet <span>driver</span>.</div></div></div>'
 	}, {
-		text: '3. The guard tapped me on {{, his, her, the, x|select}} shoulder and told me not to touch the painting.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>3.</s> The boxer was hit extremely <strong>hard</strong> in the beginning of the match. {{ , Tillægsord, Biord|select}}',
+		answers: ['Biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"><div class="tool-tip"><span>Hard</span> er her et biord, som beskriver udsagnsordet <span>hit</span>.</div></div></div>'
 	}, {
-		text: '4. The lawyer presented his evidence in {{, his, her, the, x|select}} court and argued for his client’s innocence.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen).</p>'
+		text: '<s>4.</s> His brother was standing on the <strong>near</strong> side of the house. {{ , Tillægsord, Biord|select}}',
+		answers: ['Tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"><div class="tool-tip"><span>Near</span> er her et tillægsord, som beskriver navneordet <span>side</span>.</div></div></div>'
 	}, {
-		text: '5. The player felt a little dizzy after the ball had hit him on {{, his, her, the, x|select}} head.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>5.</s> He used to come here <strong>daily</strong>. {{ , Tillægsord, Biord|select}}',
+		answers: ['Biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"><div class="tool-tip"><span>Daily</span> er her et biord, som beskriver udsagnsordet <span>come</span>.</div></div></div>'
 	}, {
-		text: '6. The US President-elect, Donald Trump, raised {{, his, her, the, x|select}} right hand and took the oath.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>6.</s> His favourite paper is The <strong>Daily</strong> News. {{ , Tillægsord, Biord|select}}',
+		answers: ['Tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"><div class="tool-tip"><span>Daily</span> er her et tillægsord, som beskriver navneordet <span>News</span>.</div></div></div>'
 	}, {
-		text: '7. {{, his, her, the, x|select}} water is an extremely valuable resource, which we often take for granted.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>7.</s> It is so <strong>hard</strong> to understand math. {{ , Tillægsord, Biord|select}}',
+		answers: ['Tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"><div class="tool-tip"><span>Hard</span> er her et tillægsord, og er omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '8. He was hit on {{, his, her, the, x|select}} head by a masked person.</p>',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. I passivsætninger bruges altid den bestemte artikel <span>the</span>.'
+		text: '<s>8.</s> He earns at least £2,000 <strong>monthly</strong>. {{ , Tillægsord, Biord|select}}',
+		answers: ['Biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"><div class="tool-tip"><span>Monthly</span> er her et biord, som beskriver udsagnsordet <span>earns</span>.</div></div></div>'
 	}, {
-		text: '9. {{, his, her, the, x|select}} generosity is a virtue which is appreciated all over the world.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>9.</s> My father may be a <strong>hard</strong> man, but he is also emotional. {{ , Tillægsord, Biord|select}}',
+		answers: ['Tillægsord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"><div class="tool-tip"><span>Hard</span> er her et tillægsord, som beskriver navneordet <span>man</span>.</div></div></div>'
 	}, {
-		text: '10. He leaned back in {{, his, her, the, x|select}} seat and really enjoyed the flight.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '11. She got the message when she came back from {{, his, her, the, x|select}} college.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen). </p>'
-	}, {
-		text: '12. The little boy carefully brushed {{, his, her, the, x|select}} teeth twice a day.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '13. The young man’s lawyer made a statement outside {{, his, her, the, x|select}} court.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har bestemt artikel, når man tænker på bygningen og ikke funktionen).</p>'
-	}, {
-		text: '14. The policeman shook {{, his, her, the, x|select}} head in disapproval of the boys’ behavior.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '15. {{, his, her, the, x|select}} first week we spent there was wonderful.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (bestemt artikel foran ordenstal).</p>'
-	}, {
-		text: '16. Here is what you must do {{, his, her, the, x|select}} first, you write your password, then you find the right folder.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel her. Reglen om artikel ved <span>first</span> gælder kun, når det er ordenstal; her er det adverbium.</p>'
-	}, {
-		text: '17. He broke {{, his, her, the, x|select}} arm when he crashed in the sprint in the Tour of Britain.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '18. She is {{, his, her, the, x|select}} one person that I can trust; therefore, I asked her to do the job.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Bestemt artikel i betydningen <span>"the only one"</span>. Det er kun, når <span>one</span> betyder den ene af to, der ikke bruges artikel.</p>'
-	}, {
-		text: '19. “Which way is {{, his, her, the, x|select}} south?” she asked.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel ved verdenshjørner - dog bruges der bestemt artikel ved præposition + verdenshjørne.</p>'
-	}, {
-		text: '20. After years of travelling, he finally settled down in {{, his, her, the, x|select}} north of Spain.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
-	
+		text: '<s>10.</s> Don´t throw the ball so <strong>high</strong>. I have a headache. {{ , Tillægsord, Biord|select}}',
+		answers: ['Biord'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"><div class="tool-tip"><span>High</span> er her et biord, som beskriver udsagnsordet <span>throw</span>.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
 		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',

@@ -301,7 +301,7 @@ ul.nav li.dropdown ul li i {
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
-border:2px solid #302f2f;
+border:1px solid #302f2f;
 border-top:none;
   -webkit-background-clip: none;
      -moz-background-clip: none;
@@ -361,7 +361,7 @@ border-top:none;
 		display:none;
 	}
     select.selectmenu  {    
-      display: block;
+    display: block;
 	  width:100%;
 	  margin-top:0;
 	  color:#111;
@@ -391,11 +391,11 @@ border-top:none;
 	header .navigation {
 		margin:0 auto;
 		text-align:center;
-		  width:90%;
-		  float:none;
+		width:90%;
+		float:none;
 	}
     select.selectmenu  {    
-      display: block;
+    display: block;
 	  width:100%;
 	  float:left;
 	  margin-bottom:20px;

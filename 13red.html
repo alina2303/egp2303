@@ -232,10 +232,10 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
-		answers: ['<i>We met at the hairdresser’s.</i>'],
+		text: '<s>1.</s> He had been able to ride the distance in only 10 minutes. {{Navneform, Kort tillægsform, Ingen erstatningsord|radio}}',
+		answers: ['Kort tillægsform'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip"><span>been able to</span> udtrykker evne og fungerer som kort tillægsform for et mådesudsagnsord.</div></div></div>'
 	}, {
 		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
 		answers: ['<i>The cruise ship’s bell was very old.</i>'],
