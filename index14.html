@@ -258,7 +258,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Vælg den korrekte sætning. (14 sætninger)
 							</h5> 
 
 							<form class="js-test-form-1 js-test" action="#"></form>
@@ -373,85 +373,75 @@ $('.js-test-form').test([{
 	}]);
 
 $('.js-test-form-1').test([{
-		text: '1. Do you take {{milk, the milk|link}}in your tea?',
-		answers: ['milk'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>1.</s> {{<i>I read often aloud to myself</i>., <i>I often read aloud to myself</i>., <i>I read aloud often to myself</i>.|radio}}',
+		answers: ['<i>I often read aloud to myself</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Biordet skal foran udsagnsledet. Det består af ét ord, som ikke er <span>to be</span>.</div></div></div>'
 	}, {
-		text: '2. {{Life, The life|link}}is full of wonderful surprises, he smiled.',
-		answers: ['Life'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>2.</s> {{<i>She hardly had time to talk to me</i>., <i>She had hardly time to talk to me</i>., <i>Hardly she had time to talk to me</i>.|radio}}',
+		answers: ['<i>She hardly had time to talk to me</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Biordet skal foran udsagnsledet. Det består af ét ord, som ikke er <span>to be</span>.</div></div></div>'
 	}, {
-		text: '3. {{Time, The time|link}}I spent working at the factory really taught me a lot.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<s>3.</s> {{<i>He had won finally a first prize</i>., <i>He finally had won a first prize</i>., <i>He had finally won a first prize</i>.|radio}}',
+		answers: ['<i>He had finally won a first prize</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '4. {{Crime, The crime|link}}is a huge problem in many inner cities.',
-		answers: ['Crime'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>4.</s> {{<i>My sister had often been seen at the shop</i>., <i>My sister often had been seen at the shop</i>., <i>My sister had been seen often at the shop</i>.|radio}}',
+		answers: ['<i>My sister had often been seen at the shop</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '5. They were both very interested in {{history, the history|link}}.',
-		answers: ['history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>5.</s> {{<i>His new shirt never had been washed</i>., <i>Never his new shirt had been washed</i>., <i>His new shirt had never been washed</i>.|radio}}',
+		answers: ['<i>His new shirt had never been washed</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '6. It was {{first time, the first time|link}}they had ever met.',
-		answers: ['the first time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<s>6.</s> {{<i>When I came they already had started playing</i>., <i>When I came'+"&#44;"+' they had already started playing</i>., <i>When I already came they had started playing</i>.|radio}}',
+		answers: ['<i>When I came'+"&#44;"+' they had already started playing</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '7. I think {{nature, the nature|link}}can teach us many valuable things.',
-		answers: ['nature'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>7.</s> {{<i>I will certainly be there for dinner</i>., <i>I will be certainly there for dinner</i>., <i>I will be there certainly for dinner</i>.|radio}}',
+		answers: ['<i>I will certainly be there for dinner</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '8. During the French Revolution, they fought for {{freedom, the freedom|link}}.',
-		answers: ['freedom'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>8.</s> {{<i>Never the children had seen their teacher angry</i>., <i>The children had never seen their teacher angry</i>., <i>The children had seen never their teacher angry</i>.|radio}}',
+		answers: ['<i>The children had never seen their teacher angry</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '9. {{Paintings, The paintings|link}}in the gallery are all very expensive.',
-		answers: ['The paintings'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<s>9.</s> {{<i>We just signed the document</i>., <i>We signed just the document</i>., <i>We signed the document just</i>.|radio}}',
+		answers: ['<i>We just signed the document</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Biordet skal foran udsagnsledet. Det består af ét ord, som ikke er <span>to be</span>.</div></div></div>'
 	}, {
-		text: '10. {{History, The history|link}}of Germany is interesting.',
-		answers: ['The history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>10.</s> {{<i>My mother frequently has cooked that dish</i>., <i>My mother has cooked frequently that dish</i>., <i>My mother has frequently cooked that dish</i>.|radio}}',
+		answers: ['<i>My mother has frequently cooked that dish</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '11. It’s time to find {{love, the love|link}}again, she said. Let’s go to Jim’s party!',
-		answers: ['love'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>11.</s> {{<i>My father is always singing while having a bath</i>., <i>My father always is singing while having a bath</i>., <i>Always my father is singing while having a bath</i>.|radio}}',
+		answers: ['<i>My father is always singing while having a bath</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '12. {{Music, The music|link}}of the 90s plays an important role in my life.',
-		answers: ['The music'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>12.</s> {{<i>I will visit you presumably when I am in town</i>., <i>I presumably will visit you when I am in town</i>., <i>I will presumably visit you when I am in town</i>.|radio}}',
+		answers: ['<i>I will presumably visit you when I am in town</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}, {
-		text: '13. {{Time, The time|link}}we spend together is precious, the commercial said.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<s>13.</s> {{<i>They often meet for lunch at Christmas</i>., <i>They meet often for lunch at Christmas</i>., <i>They meet for lunch often at Christmas</i>.|radio}}',
+		answers: ['<i>They often meet for lunch at Christmas</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Biordet skal foran udsagnsledet. Det består af ét ord, som ikke er <span>to be</span>.</div></div></div>'
 	}, {
-		text: '14. {{Articles, The articles|link}}are difficult to use.',
-		answers: ['Articles'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '15. {{Water, The water|link}}we bought at the supermarket did not taste good.',
-		answers: ['The water'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '16. Many young people faced {{death, the death|link}}during the First World War.',
-		answers: ['death'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>14.</s> {{<i>A few days later'+"&#44;"+' he had read already the book</i>., <i>A few days later'+"&#44;"+' he already had read the book</i>., <i>A few days later'+"&#44;"+' he had already read the book</i>.|radio}}',
+		answers: ['<i>A few days later'+"&#44;"+' he had already read the book</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Udsagnsleddet består af flere ord, så biordet skal stå efter det første.</div></div></div>'
 	}]);
 </script> 
 
