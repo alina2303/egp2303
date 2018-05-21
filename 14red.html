@@ -164,7 +164,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte sætning.
+								Efter sætningen er der et biord i parentes. Vælg hvor i sætningen biordet skal stå. (11 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -219,70 +219,60 @@ $(document).on('click', function(e) {
 	console.log(e.target);
 });
 $('.js-test-form').test([{
-		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
-		answers: ['<i>We met at the hairdresser’s.</i>'],
+		text: '<s>1.</s> The coach had shouted at the goalkeeper. <strong>(angrily)</strong> {{, Foran had, Foran shouted, Efter shouted|select}}',
+		answers: ['Efter shouted'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Mådesbiordet placeres efter det udsagnsord, det hører til.</div></div></div>'
 	}, {
-		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
-		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		text: '<s>2.</s> The goalkeeper kicked the ball. <strong>(furiously)</strong> {{, Efter kicked, Efter the ball|select}}',
+		answers: ['Efter kicked'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">Da der er et genstandsled, skal mådesudsagnsordet stå efter (evt. foran) dette.</div></div></div>'
 	}, {
-		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
-		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		text: '<s>3.</s> My sister slammed the door. <strong>(violently)</strong> {{, Efter slammed, Foran my sister|select}}',
+		answers: ['Efter slammed'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Hvor dansk har sammensatte substantiver har engelsk ofte s- genitiv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">Da der er et genstandsled, skal mådesudsagnsordet stå efter (evt. foran) dette.</div></div></div>'
 	}, {
-		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
-		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		text: '<s>4.</s> When we left our house, it was raining. <strong>(heavily)</strong> {{, Foran was, Efter was, Efter raining|select}}',
+		answers: ['Efter raining'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">ved tidsbetegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Mådesbiordet placeres efter det udsagnsord, det hører til.</div></div></div>'
 	}, {
-		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
-		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		text: '<s>5.</s> His mother had opened the window. <strong>(carefully)</strong> {{, Efter opened, Efter the window|select}}',
+		answers: ['Efter the window'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">Da der er et genstandsled, skal mådesudsagnsordet stå efter (evt. foran) dette.</div></div></div>'
 	}, {
-		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
-		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		text: '<s>6.</s> My cat sleeps on top of the radiator. <strong>(lazily)</strong> {{, Før sleeps, Efter sleeps, Foran my|select}}',
+		answers: ['Efter sleeps'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved personer</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Mådesbiordet placeres efter det udsagnsord, det hører til.</div></div></div>'
 	}, {
-		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
-		answers: ['<i>The river Seine runs through Paris.</i>'],
+		text: '<s>7.</s> The president spoke to the crowd. <strong>(silently)</strong> {{, Før spoke, Efter spoke, Før the president|select}}',
+		answers: ['Efter spoke'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Mådesbiordet placeres efter det udsagnsord, det hører til.</div></div></div>'
 	}, {
-		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
-		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		text: '<s>8.</s> My father kissed my mother. <strong>(passionately)</strong> {{, Efter mother, Efter kissed|select}}',
+		answers: ['Efter mother'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">Da der er et genstandsled, skal mådesudsagnsordet stå efter (evt. foran) dette.</div></div></div>'
 	}, {
-		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
-		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
+		text: '<s>9.</s> He examined his new car. <strong>(closely)</strong> {{, Efter examined, Efter car|select}}',
+		answers: ['Efter car'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">Da der er et genstandsled, skal mådesudsagnsordet stå efter (evt. foran) dette.</div></div></div>'
 	}, {
-		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
-		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
+		text: '<s>10.</s> The footballer walked towards the ball. <strong>(slowly)</strong> {{, Før walked, Efter walked, Efter the ball|select}}',
+		answers: ['Efter walked'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip">ved årstider, måned og dato</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Mådesbiordet placeres efter det udsagnsord, det hører til.</div></div></div>'
 	}, {
-		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
-		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
+		text: '<s>11.</s> My classmates played for more than two hours. <strong>(happily)</strong> {{, Før played, Efter played, Efter two hours|select}}',
+		answers: ['Efter played'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
-	}, {
-		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
-		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_9.png"><div class="tool-tip">ved mål, mængde og antal</div></div></div>'
-	}, {
-		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
-		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip">Mådesbiordet placeres efter det udsagnsord, det hører til.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
 		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',

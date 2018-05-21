@@ -82,6 +82,7 @@ $(document).ready(function () {
 			wrongAnswers = 0;
 
 		function updateCounters(status, target) {
+			console.log(status,target)
 			var $counter = $(target).closest('.bott-block').find('.counter');
 			counter++;
 			if (status) {
@@ -94,8 +95,8 @@ $(document).ready(function () {
 			// console.log('total', counter);
 		}
 
+		
 		form.on('change', function (e) {
-			console.log(1)
 			var targetName = e.target.name,
 				rightAnswers = answers[targetName],
 				$formGroup = $(e.target).closest('.form-group'),
@@ -456,7 +457,6 @@ $(document).ready(function () {
 
 			})
 		}
-
 		// enter point
 		testData.forEach(function (data, i) {
 			var $question,
