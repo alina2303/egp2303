@@ -479,7 +479,7 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte form: possessivt pronomen, bestemt artikel eller ingen artikel (x) (20 spørgsmål)
+								Vælg det rigtige forholdsord til den tomme plads i sætningen. (20 sætninger)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -497,47 +497,8 @@
 						</div> 
 					</div> 
 				</div> 
-					<img class="headings-ex" src="img/Ovelse_groen_2.png">
-					<div class="border-green-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-								Afgør om disse ord/grupper som hovedregel bruges med eller uden den bestemte artikel? (20 spørgsmål)
-							</h5> 
-
-							<form class="js-test-form-1 js-test" action="#"></form>
-
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
-					</div> 
-				</div> 
 		</div> <!-- div id content-->
 	</div> <!-- div style-->
-
-
-
-  <!--<script>
-
-function look(t){
-	p=document.getElementById(t);
-	l=document.getElementById("a-"+t);
-	if(p.style.display=="none"){
-		l.innerHTML="Skjul eksempel";
-		p.style.display="block";}
-	else{
-		l.innerHTML="Vis ekempel";
-		p.style.display="none";}
-}
-	</script>!-->
 
     <!-- javascript
     ================================================== -->
@@ -547,208 +508,105 @@ function look(t){
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. She looked annoyed when she stood there waiting with {{, his, her, the, x|select}} coat on.',
-		answers: ['her'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>1.</s> We all hope {{, for, at, of, on|select}} better weather.',
+		answers: ['for'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '2. He was at a conference on {{, his, her, the, x|select}} artificial intelligence in Florida.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>2.</s> The professor was an expert {{, on, in, of, for|select}} mathematics.',
+		answers: ['on'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_43.png"><div class="tool-tip">Fast udtryk med navneord.</div></div></div></p>'
 	}, {
-		text: '3. The guard tapped me on {{, his, her, the, x|select}} shoulder and told me not to touch the painting.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>3.</s> Joan was a brilliant teacher {{, on, in, of, for|select}} mathematics.',
+		answers: ['of'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_43.png"><div class="tool-tip">Fast udtryk med navneord.</div></div></div></p>'
 	}, {
-		text: '4. The lawyer presented his evidence in {{, his, her, the, x|select}} court and argued for his client’s innocence.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen).</p>'
+		text: '<s>4.</s> I don’t know the answer {{, in, to, for, on|select}} all the questions.',
+		answers: ['to'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_43.png"><div class="tool-tip">Fast udtryk med navneord.</div></div></div></p>'
 	}, {
-		text: '5. The player felt a little dizzy after the ball had hit him on {{, his, her, the, x|select}} head.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>5.</s> There’s a severe lack {{, from, on, of, by|select}} genius in this class!',
+		answers: ['of'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_43.png"><div class="tool-tip">Fast udtryk med navneord.</div></div></div></p>'
 	}, {
-		text: '6. The US President-elect, Donald Trump, raised {{, his, her, the, x|select}} right hand and took the oath.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>6.</s> A lot depends {{, on, of, with, from|select}} you in today’s game!',
+		answers: ['on'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '7. {{, his, her, the, x|select}} water is an extremely valuable resource, which we often take for granted.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>7.</s> You can always stay {{, at, by, with, to|select}} me when you’re in town!',
+		answers: ['with'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '8. He was hit on {{, his, her, the, x|select}} head by a masked person.</p>',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. I passivsætninger bruges altid den bestemte artikel <span>the</span>.'
+		text: '<s>8.</s> She never said no; she just shook {{,[none], on, with, by|select}} her head.',
+		answers: ['[none]'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_40.png"><div class="tool-tip">Fast udtryk med udsagnsord: følges af forholdsord på dansk, men ikke på engelsk.</div></div></div></p>'
 	}, {
-		text: '9. {{, his, her, the, x|select}} generosity is a virtue which is appreciated all over the world.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>9.</s> She reminds me {{, about, on, of, to|select}} my younger sister at that age!',
+		answers: ['of'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '10. He leaned back in {{, his, her, the, x|select}} seat and really enjoyed the flight.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>10.</s> Theodore was shocked {{, at, over, on, about|select}} the lies of his mother.',
+		answers: ['at'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_42.png"><div class="tool-tip">Fast udtryk med tillægsord.</div></div></div></p>'
 	}, {
-		text: '11. She got the message when she came back from {{, his, her, the, x|select}} college.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen). </p>'
+		text: '<s>11.</s> We must find a solution {{, of, on, at, to|select}} our energy problems.',
+		answers: ['to'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_43.png"><div class="tool-tip">Fast udtryk med navneord.</div></div></div></p>'
 	}, {
-		text: '12. The little boy carefully brushed {{, his, her, the, x|select}} teeth twice a day.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>12.</s> She smiled {{, to, for, at, towards|select}} him with great love in her eyes.',
+		answers: ['at'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '13. The young man’s lawyer made a statement outside {{, his, her, the, x|select}} court.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har bestemt artikel, når man tænker på bygningen og ikke funktionen).</p>'
+		text: '<s>13.</s> It is clear {{, for, at, to, towards|select}} me that he’s been here too long!',
+		answers: ['to'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_42.png"><div class="tool-tip">Fast udtryk med tillægsord.</div></div></div></p>'
 	}, {
-		text: '14. The policeman shook {{, his, her, the, x|select}} head in disapproval of the boys’ behavior.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>14.</s> Who are you going to vote {{, on, of, towards, for|select}} in the next election?',
+		answers: ['for'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '15. {{, his, her, the, x|select}} first week we spent there was wonderful.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (bestemt artikel foran ordenstal).</p>'
+		text: '<s>15.</s> Joe is not guilty {{, in, of, to, for|select}} this crime!',
+		answers: ['of'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_42.png"><div class="tool-tip">Fast udtryk med tillægsord.</div></div></div></p>'
 	}, {
-		text: '16. Here is what you must do {{, his, her, the, x|select}} first, you write your password, then you find the right folder.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel her. Reglen om artikel ved <span>first</span> gælder kun, når det er ordenstal; her er det adverbium.</p>'
+		text: '<s>16.</s> Fortunately, Chris was not aiming {{, on, to, for, at|select}} anyone when his gun went off.',
+		answers: ['at'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '17. He broke {{, his, her, the, x|select}} arm when he crashed in the sprint in the Tour of Britain.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>17.</s> Jeannie is very jealous {{, for, on, of, at|select}} her sister’s luck.',
+		answers: ['of'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_42.png"><div class="tool-tip">Fast udtryk med tillægsord.</div></div></div></p>'
 	}, {
-		text: '18. She is {{, his, her, the, x|select}} one person that I can trust; therefore, I asked her to do the job.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Bestemt artikel i betydningen <span>"the only one"</span>. Det er kun, når <span>one</span> betyder den ene af to, der ikke bruges artikel.</p>'
+		text: '<s>18.</s> Do not push {{, on, at, [none], against|select}} the big red button!',
+		answers: ['[none]'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_40.png"><div class="tool-tip">Fast udtryk med udsagnsord: følges af forholdsord på dansk, men ikke på engelsk.</div></div></div></p>'
 	}, {
-		text: '19. “Which way is {{, his, her, the, x|select}} south?” she asked.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel ved verdenshjørner - dog bruges der bestemt artikel ved præposition + verdenshjørne.</p>'
+		text: '<s>19.</s> Don’t lie {{, for, to, against, from|select}} me!',
+		answers: ['to'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_39.png"><div class="tool-tip">Fast udtryk med udsagnsord.</div></div></div></p>'
 	}, {
-		text: '20. After years of travelling, he finally settled down in {{, his, her, the, x|select}} north of Spain.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
-	
-	}]);
-$('.js-test-form-1').test([{
-		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Enkelte lande bruges med bestemt artikel, bl. a. lande hvor <span>union, kingdom</span> eller <span>state</span> indgår i navnet).</p>'
-	}, {
-		text: '2. The word “most” <span class="not-normal">(det meste/de fleste)</span> {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"> (Ved ordet <span>most</span> (det meste/de fleste) bruges ikke artikel).</p>'
-	}, {
-		text: '3. Ordinal numbers (e.g. first, second) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (Ved ordenstal bruges bestemt artikel).</p>'
-	}, {
-		text: '4. Rivers and seas {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> Ved floder og have bruges bestemt artikel, men ikke ved søer.</p>'
-	}, {
-		text: '5. Countries in the singular {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Reglen siger, at ved nogle få lande bruges bestemt artikel, men hovedreglen for lande siger ingen artikel; så lande i singularis bruges uden artikel).</p>'
-	}, {
-		text: '6. Preposition + left or right {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_7.png"> (Ved forholdsord + <span>left</span> eller <span>right</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '7. Ships and cars {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Både skibe og biler bruges som hovedregel med bestemt artikel).</p>'
-	}, {
-		text: '8. Nouns for means of transportation or institutions (-about their main purpose) {{med artikel, uden artikel|radio}}</p>',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (Substantiver der betegner transportmidler og institutioner har ingen artikel, når man tænker på funktionen; man bruger derimod artikel om den konkrete bygning/ting).</p>'
-	}, {
-		text: '9. Newspapers {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Ved aviser bruges som hovedregel bestemt artikel).</p>'
-	}, {
-		text: '10. Countries in the plural {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Reglen siger ved nogle få lande bruges bestemt artikel og disse er blandt andet lande i flertal. Men hovedreglen for lande siger ingen artikel).</p>'
-	}, {
-		text: '11. Abstract nouns (e.g. life, death) {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (Ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '12. Theatres and cinemas {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Ved teatre og biografer bruges som hovedregel bestemt artikel).</p>'
-	}, {
-		text: '13. Days, months and seasons {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (ved dage, måneder og ved årstider bruges ikke artikel).</p>'
-	}, {
-		text: '14. Preposition + the corners of the world {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (Ved præpositioner + verdenshjørnerne bruges bestemt artikel).</p>'
-	}, {
-		text: '15. Meals {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_11.png"> (Ved måltider bruges som hovedregel ikke bestemt artikel).</p>'
-	}, {
-		text: '16. Certain adjectives (e.g. following, same, opposite) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (Ved visse adjektiver som <span>following, same</span> og <span>opposite</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '17. The word “one” <span class="not-normal">(den ene)</span> {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_5.png"> (Ved ordet <span>one</span> (den ene) bruges ikke artikel).</p>'
-	}, {
-		text: '18. of-constructions {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_2.png"> (Foran ord som følges af et <span>of</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '19. Hotels and restaurants {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png">  (Hoteller og restauranter bruges med artikel).</p>'
-	}, {
-		text: '20. Nouns for institutions (-about the building, e.g. church) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (Substantiver der betegner transportmidler og institutioner har ingen artikel, når man tænker på funktionen; man bruger derimod artikel om den konkrete bygning/ting).</p>'
-	
+		text: '<s>20.</s> Don’t forget to pay {{, [none], for, by, at|select}} your bread before you leave.',
+		answers: ['for'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_41.png"><div class="tool-tip">Fast udtryk med udsagnsord: følges af forholdsord på engelsk, men ikke på dansk.</div></div></div></p>'
 	}]);
 </script> 
 
