@@ -238,9 +238,10 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								På engelsk skal man sætte komma mellem to hovedsætninger, men kun hvis hver hovedsætning har grundled og udsagnsled.
+								<br>
+								Afgør om sætningen skal have komma. (12 sætninger)
 							</h5> 
-
 							<form class="js-test-form js-test" action="#"></form>
 
 						</div> 
@@ -261,11 +262,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Afgør om sætningen skal have komma. (11 sætninger)
 							</h5> 
-
 							<form class="js-test-form-1 js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -288,173 +287,126 @@
     <script src="js/jquery.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/pointer_events_polyfill.js"></script>
-	
 
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <a class="tooltip" href="#"><img class="link" src="img/blaa_1.png"><span class="custom help"><img src="Help.png" alt="Помощь" height="48" width="48" /><em>Помощь</em>Это просто пример того, как сделать подсказки с использованием CSS!</span></a></p>'
+		text: '<s>1.</s> The band played wonderfully {{, Komma, Intet komma|select}} and Christine and I danced all night.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '2. He wants to study in  ....... USA. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<s>2.</s> The band played wonderfully {{, Komma, Intet komma|select}} but stopped after only one hour.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to udsagnsled, men kun et grundled.</div></div></div>'
 	}, {
-		text: '3. ....... most of the students in our class wanted to go to London. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<s>3.</s> My Best friend visited me {{, Komma, Intet komma|select}} and brought a parcel from back home.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to udsagnsled, men kun et grundled.</div></div></div>'
 	}, {
-		text: '4. She is   ....... daughter of one of my teachers from high school. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>4.</s> You must show up for the exam {{, Komma, Intet komma|select}} or risk waiting another year.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to udsagnsled, men kun et grundled.</div></div></div>'
 	}, {
-		text: '5. This was  ....... third time that she had tried to call him. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<s>5.</s> Either you come down now {{, Komma, Intet komma|select}} or the match will be cancelled.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '6. ....... author of the novel is still unknown. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>6.</s> The car hit a lamp post {{, Komma, Intet komma|select}} but I was okay.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '7. He broke ....... one arm when he was skiing in Aspen. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<s>7.</s> This summer my family will go to England {{, Komma, Intet komma|select}} and later watch a mountain stage in the Tour de France.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to udsagnsled, men kun et grundled.</div></div></div>'
 	}, {
-		text: '8. Have you ever been to ....... Netherlands?. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande i flertal bruger bestemt artikel</p>'
+		text: '<s>8.</s> He worked very hard {{, Komma, Intet komma|select}} but did not finish until late in the evening.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to udsagnsled, men kun et grundled.</div></div></div>'
 	}, {
-		text: '9. Yes, we visited ....... Hague last summer. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '<s>9.</s> My friend and I plan to go to Spain {{, Komma, Intet komma|select}} and we also plan to visit Frankfurt.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '10. I think ....... most students do their homework. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '<s>10.</s> You need to stop showering now {{, Komma, Intet komma|select}} or we will never make it on time.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '11. My best friend lives in ....... United Kingdom. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande med <span>union</span> (her <span>united</span>), <span>state</span>, og <span>republic</span> i navnet har artikel</p>'
+		text: '<s>11.</s> They wanted to participate {{, Komma, Intet komma|select}} but could not find the time.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to udsagnsled, men kun et grundled.</div></div></div>'
 	}, {
-		text: '12. You will find an English version on ....... opposite page. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"> , <span>opposite</span> bruges med bestemt artikel ligesom <span>same</span> og <span>following</span></p>'
-	}, {
-		text: '13. When they came back, ....... one student was missing. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
-	}, {
-		text: '14. ....... same thing happened three years ago. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	}, {
-		text: '15. He is ....... owner of the Franklin Barbecue. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '16. ....... following exercises must be answered before you can go home: 2, 15 and 16. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	
+		text: '<s>12.</s> During WW II, Germany and Austria were allies {{, Komma, Intet komma|select}} and England and France were allies.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}]);
 
 $('.js-test-form-1').test([{
-		text: '1. Do you take {{milk, the milk|link}}in your tea?',
-		answers: ['milk'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>1.</s> William thought {{, Komma, Intet komma|select}} that he had seen her before.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_4.png"><div class="tool-tip">Aldrig komma foran et genstandsled.</div></div></div>'
 	}, {
-		text: '2. {{Life, The life|link}}is full of wonderful surprises, he smiled.',
-		answers: ['Life'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>2.</s> The train arrived {{, Komma, Intet komma|select}} but it was not exactly on time.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '3. {{Time, The time|link}}I spent working at the factory really taught me a lot.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<s>3.</s> The journalist described {{, Komma, Intet komma|select}} what he saw.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Aldrig komma foran et genstandsled.</div></div></div>'
 	}, {
-		text: '4. {{Crime, The crime|link}}is a huge problem in many inner cities.',
-		answers: ['Crime'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>4.</s> Her best friend suggested {{, Komma, Intet komma|select}} that she should take a couple of days off.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Aldrig komma foran et genstandsled.</div></div></div>'
 	}, {
-		text: '5. They were both very interested in {{history, the history|link}}.',
-		answers: ['history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>5.</s> Should I call her {{, Komma, Intet komma|select}} or will you.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '6. It was {{first time, the first time|link}}they had ever met.',
-		answers: ['the first time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<s>6.</s> Would you prefer pork, beef {{, Komma, Intet komma|select}} or lamb?',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Opremsning.</div></div></div>'
 	}, {
-		text: '7. I think {{nature, the nature|link}}can teach us many valuable things.',
-		answers: ['nature'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>7.</s> He believed {{, Komma, Intet komma|select}} that he was a genius.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Aldrig komma foran et genstandsled.</div></div></div>'
 	}, {
-		text: '8. During the French Revolution, they fought for {{freedom, the freedom|link}}.',
-		answers: ['freedom'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>8.</s> He would never understand {{, Komma, Intet komma|select}} why she refused his offer.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Aldrig komma foran et genstandsled.</div></div></div>'
 	}, {
-		text: '9. {{Paintings, The paintings|link}}in the gallery are all very expensive.',
-		answers: ['The paintings'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<s>9.</s> I love Sundays {{, Komma, Intet komma|select}} and I love vacations.',
+		answers: ['Komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Der er to grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '10. {{History, The history|link}}of Germany is interesting.',
-		answers: ['The history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<s>10.</s> Her husband asked her {{, Komma, Intet komma|select}} if they should go to Italy this Christmas.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Aldrig komma foran et genstandsled.</div></div></div>'
 	}, {
-		text: '11. It’s time to find {{love, the love|link}}again, she said. Let’s go to Jim’s party!',
-		answers: ['love'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '12. {{Music, The music|link}}of the 90s plays an important role in my life.',
-		answers: ['The music'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '13. {{Time, The time|link}}we spend together is precious, the commercial said.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '14. {{Articles, The articles|link}}are difficult to use.',
-		answers: ['Articles'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '15. {{Water, The water|link}}we bought at the supermarket did not taste good.',
-		answers: ['The water'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '16. Many young people faced {{death, the death|link}}during the First World War.',
-		answers: ['death'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<s>11.</s> I promised them {{, Komma, Intet komma|select}} that we would be there before five.',
+		answers: ['Intet komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"><div class="tool-tip">Aldrig komma foran et genstandsled.</div></div></div>'
 	}]);
 </script> 
 
