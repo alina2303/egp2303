@@ -222,11 +222,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte form: possessivt pronomen, bestemt artikel eller ingen artikel (x) (20 spørgsmål)
+								Sætningen mangler enten et komma, et semikolon eller et kolon på den angivne plads.  Vælg det rigtige.  (12 sætninger)
 							</h5> 
-
 							<form class="js-test-form js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -266,22 +264,6 @@
 		</div> <!-- div id content-->
 	</div> <!-- div style-->
 
-
-
-  <!--<script>
-
-function look(t){
-	p=document.getElementById(t);
-	l=document.getElementById("a-"+t);
-	if(p.style.display=="none"){
-		l.innerHTML="Skjul eksempel";
-		p.style.display="block";}
-	else{
-		l.innerHTML="Vis ekempel";
-		p.style.display="none";}
-}
-	</script>!-->
-
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -290,106 +272,65 @@ function look(t){
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. She looked annoyed when she stood there waiting with {{, his, her, the, x|select}} coat on.',
-		answers: ['her'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>1.</s> They were left with two options {{,komma, kolon, semikolon|select}} to stay until tomorrow or see if they could get a taxi.',
+		answers: ['kolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_10.png"><div class="tool-tip">Kolon, fordi sætningen indeholder et underforstået ”nemlig/enten”.</div></div></div>'
 	}, {
-		text: '2. He was at a conference on {{, his, her, the, x|select}} artificial intelligence in Florida.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>2.</s> I love to play the violin {{,komma, kolon, semikolon|select}} in fact, I could play for hours each day.',
+		answers: ['semikolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_9.png"><div class="tool-tip">Semikolon, fordi tegnet angiver en større pause.</div></div></div>'
 	}, {
-		text: '3. The guard tapped me on {{, his, her, the, x|select}} shoulder and told me not to touch the painting.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>3.</s> The teacher shouted {{,komma, kolon, semikolon|select}} ”Don’t forget your mobiles when you leave!”',
+		answers: ['komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_12.png"><div class="tool-tip">Komma foran direkte tale.</div></div></div>'
 	}, {
-		text: '4. The lawyer presented his evidence in {{, his, her, the, x|select}} court and argued for his client’s innocence.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen).</p>'
+		text: '<s>4.</s> I know precisely what will happen {{,komma, kolon, semikolon|select}} the referee will pull a red card.',
+		answers: ['kolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_10.png"><div class="tool-tip">Sætningen indeholder et underforstået ”nemlig”. Altså kolon.</div></div></div>'
 	}, {
-		text: '5. The player felt a little dizzy after the ball had hit him on {{, his, her, the, x|select}} head.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>5.</s> The boys were told to stop {{,komma, kolon, semikolon|select}} but they would not listen.',
+		answers: ['komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Komma mellem to hovedsætninger med hver sit grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '6. The US President-elect, Donald Trump, raised {{, his, her, the, x|select}} right hand and took the oath.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>6.</s> The front wheel was losing air {{,komma, kolon, semikolon|select}} but they figured that they could make it home.',
+		answers: ['komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Komma mellem to hovedsætninger med hver sit grundled og udsagnsled.</div></div></div>'
 	}, {
-		text: '7. {{, his, her, the, x|select}} water is an extremely valuable resource, which we often take for granted.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>7.</s> What do you want to eat {{,komma, kolon, semikolon|select}} steak, chicken or pork?',
+		answers: ['kolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_10.png"><div class="tool-tip">Kolon, fordi sætningen indeholder et underforstået ”her kommer mulighederne”.</div></div></div>'
 	}, {
-		text: '8. He was hit on {{, his, her, the, x|select}} head by a masked person.</p>',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. I passivsætninger bruges altid den bestemte artikel <span>the</span>.'
+		text: '<s>8.</s> My brother was more than disappointed {{,komma, kolon, semikolon|select}} he simply could not accept the result.',
+		answers: ['semikolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_9.png"><div class="tool-tip">Semikolon, fordi tegnet angiver en større pause.</div></div></div>'
 	}, {
-		text: '9. {{, his, her, the, x|select}} generosity is a virtue which is appreciated all over the world.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>9.</s> When the game was over, the coach looked to the sky and shouted {{,komma, kolon, semikolon|select}} “Thank you all so much for coming!”',
+		answers: ['komma'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_12.png"><div class="tool-tip">Komma foran direkte tale.</div></div></div>'
 	}, {
-		text: '10. He leaned back in {{, his, her, the, x|select}} seat and really enjoyed the flight.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>10.</s> The young bike rider had three goals {{,komma, kolon, semikolon|select}} to be the world champion, to be the Olympic champion, and to win the Tour de France.',
+		answers: ['kolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_10.png"><div class="tool-tip">Kolon, fordi sætningen indeholder et underforstået ”nemlig”</div></div></div>'
 	}, {
-		text: '11. She got the message when she came back from {{, his, her, the, x|select}} college.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen). </p>'
+		text: '<s>11.</s> My family were all invited {{,komma, kolon, semikolon|select}} Joe’s was not.',
+		answers: ['semikolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_9.png"><div class="tool-tip">Semikolon, fordi tegnet angiver en større pause.</div></div></div>'
 	}, {
-		text: '12. The little boy carefully brushed {{, his, her, the, x|select}} teeth twice a day.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '13. The young man’s lawyer made a statement outside {{, his, her, the, x|select}} court.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har bestemt artikel, når man tænker på bygningen og ikke funktionen).</p>'
-	}, {
-		text: '14. The policeman shook {{, his, her, the, x|select}} head in disapproval of the boys’ behavior.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '15. {{, his, her, the, x|select}} first week we spent there was wonderful.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (bestemt artikel foran ordenstal).</p>'
-	}, {
-		text: '16. Here is what you must do {{, his, her, the, x|select}} first, you write your password, then you find the right folder.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel her. Reglen om artikel ved <span>first</span> gælder kun, når det er ordenstal; her er det adverbium.</p>'
-	}, {
-		text: '17. He broke {{, his, her, the, x|select}} arm when he crashed in the sprint in the Tour of Britain.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '18. She is {{, his, her, the, x|select}} one person that I can trust; therefore, I asked her to do the job.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Bestemt artikel i betydningen <span>"the only one"</span>. Det er kun, når <span>one</span> betyder den ene af to, der ikke bruges artikel.</p>'
-	}, {
-		text: '19. “Which way is {{, his, her, the, x|select}} south?” she asked.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel ved verdenshjørner - dog bruges der bestemt artikel ved præposition + verdenshjørne.</p>'
-	}, {
-		text: '20. After years of travelling, he finally settled down in {{, his, her, the, x|select}} north of Spain.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
-	
+		text: '<s>12.</s> The American flag has three colours {{,komma, kolon, semikolon|select}} red, white, and blue.',
+		answers: ['kolon'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_10.png"><div class="tool-tip">Kolon, fordi sætningen indeholder et underforstået ”nemlig”.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
 		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',

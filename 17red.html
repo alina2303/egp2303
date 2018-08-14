@@ -273,11 +273,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte sætning.
+								// will come later
 							</h5> 
-
 							<form class="js-test-form js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -296,11 +294,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-							Vælg det korrekte from af det possessive pronomen. 
+								Hvilken regel følger kommaet i sætningen? (12 sætninger) 
 							</h5> 
-
 							<form class="js-test-form-1 js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -324,115 +320,127 @@
 	<script src="js/custom.js"></script>
 	<script> 
 
-$(document).on('click', function(e) {
-	console.log(e.target);
-});
 $('.js-test-form').test([{
-		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
-		answers: ['<i>We met at the hairdresser’s.</i>'],
+		text: '<s>1.</s> When I play football, I always perform a small ritual before a game. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 7'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">Komma efter indledende bisætning.</div></div></div>'
 	}, {
-		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
-		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		text: '<s>2.</s> We meet ones a week, which everyone thinks is great. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 5'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Which</span> fører tilbage til en hel sætning.</div></div></div>'
 	}, {
-		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
-		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		text: '<s>3.</s> However, I will not say no to the offer. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 6'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Hvor dansk har sammensatte substantiver har engelsk ofte s- genitiv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Komma efter <span>However</span>.</div></div></div>'
 	}, {
-		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
-		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		text: '<s>4.</s> In the early 1900s, cars were very few and far between. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">ved tidsbetegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biled.</div></div></div>'
 	}, {
-		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
-		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		text: '<s>5.</s> Luckily, they all came to the party. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biord.</div></div></div>'
 	}, {
-		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
-		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		text: '<s>6.</s> They always supported each other, which all families ought to do. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 5'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved personer</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Which</span> fører tilbage til en hel sætning.</div></div></div>'
 	}, {
-		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
-		answers: ['<i>The river Seine runs through Paris.</i>'],
+		text: '<s>7.</s> On their way back to London, they stopped for gas. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biled.</div></div></div>'
 	}, {
-		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
-		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		text: '<s>8.</s> Although the sun was shining from a clear sky, he wore long jeans. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 7'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">Komma efter indledende bisætning.</div></div></div>'
 	}, {
-		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
-		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
+		text: '<s>9.</s> Whenever they come to visit, they always bring a small present. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 7'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">Komma efter indledende bisætning.</div></div></div>'
 	}, {
-		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
-		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
+		text: '<s>10.</s> My teacher asked me to sit at the back of the room, which I accepted. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 5'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip">ved årstider, måned og dato</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Which</span> fører tilbage til en hel sætning.</div></div></div>'
 	}, {
-		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
-		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
+		text: '<s>11.</s> I, too, attended the meeting. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 6'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Kommaer rundt om <span>too</span>.</div></div></div>'
 	}, {
-		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
-		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
+		text: '<s>12.</s> In the mountains, the wind is calm most of the time. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_9.png"><div class="tool-tip">ved mål, mængde og antal</div></div></div>'
-	}, {
-		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
-		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biled.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',
-		answers: ['your'],
+		text: '<s>1.</s> When I play football, I always perform a small ritual before a game. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 7'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">Komma efter indledende bisætning.</div></div></div>'
 	}, {
-		text: '<p> 2. The house you can see in front of you is {{ , their, theirs, their’s|select}}.</p>',
-		answers: ['theirs'],
-		right: '<p><img src="img/right2.png" alt=""/></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 3. Leave that book! It is {{ , mine, my|select}}.</p>',
-		answers: ['mine'],
+		text: '<s>2.</s> We meet ones a week, which everyone thinks is great. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 5'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Which</span> fører tilbage til en hel sætning.</div></div></div>'
 	}, {
-		text: '<p> 4. Leave them! It is {{ , my, mine|select}} books.</p>',
-		answers: ['my'],
+		text: '<s>3.</s> However, I will not say no to the offer. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 6'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Komma efter <span>However</span>.</div></div></div>'
 	}, {
-		text: '<p> 5. The responsibility is {{ , our, ours, our’s|select}} No doubt about that.</p>',
-		answers: ['ours'],
+		text: '<s>4.</s> In the early 1900s, cars were very few and far between. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biled.</div></div></div>'
 	}, {
-		text: '<p> 6. Do you see the girl at the counter? The idea was {{ , hers, her, her’s|select}}</p>',
-		answers: ['hers'],
+		text: '<s>5.</s> Luckily, they all came to the party. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biord.</div></div></div>'
 	}, {
-		text: '<p> 7. Is the car in the parking lot {{ , your, yours, your’s|select}}</p>',
-		answers: ['yours'],
-		right: '<p><img src="img/right2.png" alt="" /> </p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
-	}, {
-		text: '<p> 8. {{, Its, it’s|select}} fur has been cut far too often.</p>',
-		answers: ['Its'],
+		text: '<s>6.</s> They always supported each other, which all families ought to do. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 5'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Which</span> fører tilbage til en hel sætning.</div></div></div>'
+	}, {
+		text: '<s>7.</s> On their way back to London, they stopped for gas. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biled.</div></div></div>'
+	}, {
+		text: '<s>8.</s> Although the sun was shining from a clear sky, he wore long jeans. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 7'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">Komma efter indledende bisætning.</div></div></div>'
+	}, {
+		text: '<s>9.</s> Whenever they come to visit, they always bring a small present. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 7'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">Komma efter indledende bisætning.</div></div></div>'
+	}, {
+		text: '<s>10.</s> My teacher asked me to sit at the back of the room, which I accepted. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 5'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Which</span> fører tilbage til en hel sætning.</div></div></div>'
+	}, {
+		text: '<s>11.</s> I, too, attended the meeting. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 6'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">Kommaer rundt om <span>too</span>.</div></div></div>'
+	}, {
+		text: '<s>12.</s> In the mountains, the wind is calm most of the time. {{,Regel 5, Regel 6, Regel 7, Regel 8|select}}',
+		answers: ['Regel 8'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Sætningen indledes med et biled.</div></div></div>'
 	}]);
 </script> 
 

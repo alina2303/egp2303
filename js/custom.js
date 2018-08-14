@@ -506,6 +506,32 @@ $(document).on('keypress', function (e) {
 });
 
 
+// test with clickable words in a text
+
+$(document).ready(function(){
+    $(".click-me").each(function(){
+     $(this).on("click",function(){
+     $(this).closest(".clickable-words").find("span").addClass("hidden-answer");
+     });
+     
+    });
+});
+
+var count = 0;
+var cnt = 0;
+
+$(".right").on("click",function(event) {
+    count++;
+    $(".click-right").html(+count);
+    $(this).off(event);
+});
+
+
+$(".wrong").click(function(event) {
+    cnt ++; 
+    $(".click-wrong").html(+cnt);
+    $(this).off(event);
+});
 
 // $(document).ready(function(){
 //   PointerEventsPolyfill.initialize({});

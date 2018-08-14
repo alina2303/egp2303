@@ -177,11 +177,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte sætning.
+								Vælg den af sætningerne, som indeholder et biord. (20 sætninger)
 							</h5> 
-
 							<form class="js-test-form js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -226,76 +224,110 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
 	<script src="js/custom.js"></script>
+
 	<script> 
 
-$(document).on('click', function(e) {
-	console.log(e.target);
-});
+
 $('.js-test-form').test([{
-		text: '<s>1.</s> He had been able to ride the distance in only 10 minutes. {{Navneform, Kort tillægsform, Ingen erstatningsord|radio}}',
-		answers: ['Kort tillægsform'],
+		text: '<s>1.</s> {{<i>I think you are silly.</i>, <i>She sings beautifully.</i>|radio}}',
+		answers: ['<i>She sings beautifully.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip"><span>been able to</span> udtrykker evne og fungerer som kort tillægsform for et mådesudsagnsord.</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip"><span>Silly</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
-		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		text: '<s>2.</s> {{<i>She is pretty.</i>, <i>He walked slowly towards the door.</i>|radio}}',
+		answers: ['<i>He walked slowly towards the door.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Pretty</span> er omsagnsled til grundled og derfor et tillægsord</div></div></div>'
 	}, {
-		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
-		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		text: '<s>3.</s> {{<i>To put it mildly: Beer is a favourite of mine.</i>, <i>Dinner smells nice.</i>|radio}}',
+		answers: ['<i>To put it mildly: Beer is a favourite of mine.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Hvor dansk har sammensatte substantiver har engelsk ofte s- genitiv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Nice</span> er omsagnsled til grundled og er derfor et tillægsord.</div></div></div>'
 	}, {
-		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
-		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		text: '<s>4.</s> {{<i>They lived happily for many years.</i>, <i>The Indians were friendly.</i>|radio}}',
+		answers: ['<i>They lived happily for many years.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">ved tidsbetegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip"><span>Friendly</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
-		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		text: '<s>5.</s> {{<i>When an apple hit the teacher'+"&#44;"+' he became angry.</i>, <i>My sister is extremely happy.</i>|radio}} ',
+		answers: ['<i>My sister is extremely happy.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Angry</span> er omsagnsled til grundled og er derfor et tillægsord.</div></div></div>'
 	}, {
-		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
-		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		text: '6. {{<i>He joined the singing'+"&#44;"+' enthusiastically.</i>, <i>The children were lively.</i>|radio}}',
+		answers: ['<i>He joined the singing, enthusiastically.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved personer</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/blaa_4.png"><div class="tool-tip"><span>Lively</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
-		answers: ['<i>The river Seine runs through Paris.</i>'],
+		text: '7. {{<i>Luckily'+"&#44;"+' Joan accepted his proposal.</i>, <i>He drives an ugly car.</i>|radio}}',
+		answers: ['<i>Luckily, Joan accepted his proposal.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip"><span>Ugly</span> er altid et tillægsord.</div></div></div>'
 	}, {
-		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
-		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		text: '8. {{<i>He furiously threw the cup unto the floor.</i>, <i>The dish smelled good.</i>|radio}}.',
+		answers: ['<i>He furiously threw the cup unto the floor.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Good</span> er omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
-		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
+		text: '9.  {{<i>I think she is lovely.</i>, <i>The girl danced in a wonderfully relaxed manner.</i>|radio}}',
+		answers: ['<i>The girl danced in a wonderfully relaxed manner.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Lovely</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
-		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
+		text: '10. {{<i>They were happy to see him.</i>, <i>They happily welcomed the offer.</i>|radio}}',
+		answers: ['<i>They happily welcomed the offer.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip">ved årstider, måned og dato</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Happy</span> er omsagnsled til grundled (<span>they</span>)</div></div></div>'
 	}, {
-		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
-		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
+		text: '11. {{<i>They looked curiously towards the door.</i>, <i>The woman looked curious.</i>|radio}}',
+		answers: ['<i>They looked curiously towards the door.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Curious</span> er omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
-		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
+		text: '12. {{<i>I like him – he is friendly.</i>, <i>He examined the paper closely.</i>|radio}}',
+		answers: ['<i>He examined the paper closely.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_9.png"><div class="tool-tip">ved mål, mængde og antal</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Friendly</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
 	}, {
-		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
-		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
+		text: '13. {{<i>The band played well.</i>, <i>He felt lonely when the last guest had left.</i>|radio}}',
+		answers: ['<i>The band played well.</i>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"> <div class="tool-tip"><span>Lonely</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
+	}, {
+		text: '14. {{<i>My silly wife would not leave the boat.</i>, <i>Hopefully'+"&#44;"+' they will also get off at the next station.</i>|radio}}',
+		answers: ['<i>Hopefully, they will also get off at the next station.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip"><span>Silly</span> er altid et tillægsord.</div></div></div>'
+	}, {
+		text: '15. {{<i>Fish do not smell very good.</i>, <i>Fish are good at smelling.</i>|radio}}',
+		answers: ['<i>Fish do not smell very good.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Good</span> er omsagnsled til grundled.</div></div></div>'
+	}, {
+		text: '16. {{<i>She kissed him passionately.</i>, <i>The girl looked lovely last night.</i>|radio}}',
+		answers: ['<i>She kissed him passionately.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip"><span>Lovely</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
+	}, {
+		text: '17. {{<i>She walked slowly down the street.</i>, <i>The moment he left the party'+"&#44;"+' he felt lonely.</i>|radio}}',
+		answers: ['<i>She walked slowly down the street.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip"><span>Lonely</span> er altid et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
+	}, {
+		text: '18. {{<i>She sent me a friendly look.</i>, <i>The boy looked sadly at the broken toy.</i>|radio}}',
+		answers: ['<i>The boy looked sadly at the broken toy.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_4.png"><div class="tool-tip"><span>Friendly</span> er altid et tillægsord.</div></div></div>'
+	}, {
+		text: '19. {{<i>The dog stretched lazily in the sun.</i>, <i>My new teacher seems nice.</i>|radio}}',
+		answers: ['<i>The dog stretched lazily in the sun.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Nice</span> er et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
+	}, {
+		text: '20. {{<i>Regrettably'+"&#44;"+' the movie was taken off yesterday.</i>, <i>My father got angry when he saw the car.</i>|radio}}',
+		answers: ['<i>Regrettably, the movie was taken off yesterday.</i>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Angry</span> er et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
 		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',

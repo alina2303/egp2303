@@ -286,11 +286,11 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Vælg den korrekte sætning.
+								I alle sætningerne indgår en henførende sætning. 
+								<br>
+								Vælg de sætninger, hvor der skal være komma foran og efter den henførende sætning. (12 sætninger)
 							</h5> 
-
 							<form class="js-test-form js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -309,11 +309,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-							Vælg det korrekte from af det possessive pronomen. 
+								Vælg de sætninger hvor det henførende stedord kan erstattes med <span class="bold-italic">that</span>. (11 sætninger) 
 							</h5> 
-
 							<form class="js-test-form-1 js-test" action="#"></form>
-
 						</div> 
 						<div class="result counter"> 
 							<div class="tru"> 
@@ -337,115 +335,122 @@
 	<script src="js/custom.js"></script>
 	<script> 
 
-$(document).on('click', function(e) {
-	console.log(e.target);
-});
 $('.js-test-form').test([{
-		text: '1. {{<i>We met at the hairdresser.</i>, <i>We met at the hairdresser’s.</i>|radio}}',
-		answers: ['<i>We met at the hairdresser’s.</i>'],
+		text: '<s>1.</s> People who have what they need are usually satisfied with life. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Ingen komma'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"> og <img class="link" src="img/roed_7.png"><div class="tool-tip">Relativsætningen definerer hvilke personer, der tales om. Der skal derfor ikke være kommaer.</div></div></div>'
 	}, {
-		text: '2. {{<i>The cruise ship’s bell was very old.</i>, <i>The bell of the cruise ship was very old.</i>|radio}}',
-		answers: ['<i>The cruise ship’s bell was very old.</i>'],
+		text: '<s>2.</s> The boat that John bought is fantastic. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Ingen komma'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"> og <img class="link" src="img/roed_7.png"><div class="tool-tip">Relativsætningen definerer hvilken båd, der er tale om. Der skal derfor ikke være kommaer.</div></div></div>'
 	}, {
-		text: '3. {{<i>The old house was full of spiders’ webs.</i>, <i>The old house was full of webs of spiders.</i>|radio}}',
-		answers: ['<i>The old house was full of spiders’ webs.</i>'],
+		text: '<s>3.</s> His house which he bought two years ago is very modern. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Kommaer'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_8.png"><div class="tool-tip">Hvor dansk har sammensatte substantiver har engelsk ofte s- genitiv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Her skal være komma foran og efter den henførende sætning.</div>'
 	}, {
-		text: '4. {{<i>An hours’ nap after dinner is nice.</i>, <i>An hour of nap after dinner is nice.</i>|radio}}',
-		answers: ['<i>An hours’ nap after dinner is nice.</i>'],
+		text: '<s>4.</s> My oldest friends who I met on Barbados are such good company. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Kommaer'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip">ved tidsbetegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Her skal være komma foran og efter den henførende sætning.</div>'
 	}, {
-		text: '5. {{<i>He lives in the city Copenhagen.</i>, <i>He lives in the city of Copenhagen.</i>|radio}} ',
-		answers: ['<i>He lives in the city of Copenhagen.</i>'],
+		text: '<s>5.</s> The girl who is wearing the red dress is my brother’s girlfriend. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Ingen komma'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"> og <img class="link" src="img/roed_7.png"><div class="tool-tip">Relativsætningen definerer hvilken pige, der er tale om. Der skal derfor ikke være kommaer.</div></div></div>'
 	}, {
-		text: '6. {{<i>The winter of 1940 was the war’s first winter.</i>, <i>The winter of 1940 was the first winter of the war.</i>|radio}}',
-		answers: ['<i>The winter of 1940 was the first winter of the war.</i>'],
+		text: '<s>6.</s> The president who had once participated in the Olympics was re-elected. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Kommaer'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/blaa_3.png"><div class="tool-tip">ved personer</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Her skal være komma foran og efter den henførende sætning.</div>'
 	}, {
-		text: '7. {{<i>The river of Seine runs through Paris.</i>, <i>The river Seine runs through Paris.</i>|radio}}',
-		answers: ['<i>The river Seine runs through Paris.</i>'],
+		text: '<s>7.</s> For dinner, I would like the fish whose fins are yellow. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Ingen komma'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"> og <img class="link" src="img/roed_7.png"><div class="tool-tip">Relativsætningen definerer hvilken fisk, der er tale om. Der skal derfor ikke være komma.</div></div></div>'
 	}, {
-		text: '8. {{<i>Jesus was born in the old Jewish town Bethlehem.</i>, <i>Jesus was born in the old Jewish town of Bethlehem.</i>|radio}} left.',
-		answers: ['<i>Jesus was born in the old Jewish town of Bethlehem.</i>'],
+		text: '<s>8.</s> The painting that was painted by Picasso was put on auction, but Miró’s was not. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Ingen komma'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"><div class="tool-tip">ved geografiske betegnelser</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"> og <img class="link" src="img/roed_7.png"><div class="tool-tip">Relativsætningen definerer hvilket maleri, der er tale om. Der skal derfor ikke være kommaer.</div></div></div>'
 	}, {
-		text: '9.  {{<i>Every afternoon, the old guys sat talking at the barber.</i>, <i>Every afternoon, the old guys sat talking at the barber’s.</i>|radio}}',
-		answers: ['<i>Every afternoon, the old guys sat talking at the barber’s.</i>'],
+		text: '<s>9.</s> My sister who lives in London was married last year, but her twin is still unmarried. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Ingen komma'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">ved betegnelser for sted og erhverv</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"> og <img class="link" src="img/roed_7.png"><div class="tool-tip">Relativsætningen definerer hvilken søster, der er tale om. Der skal derfor ikke være kommaer.</div></div></div>'
 	}, {
-		text: '10. {{<i>The summer of 2016, was the warmest of the decade.</i>, <i>The summer 2016 was the warmest of the decade.</i>|radio}}',
-		answers: ['<i>The summer of 2016, was the warmest of the decade.</i>'],
+		text: '<s>10.</s> I handed the key to my father who is very proud of his new car. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Kommaer'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_11.png"><div class="tool-tip">ved årstider, måned og dato</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Her skal være komma foran og efter den henførende sætning.</div>'
 	}, {
-		text: '11. {{<i>The dragon of the Viking ship was painted yellow.</i>, <i>The Viking ship’s dragon was painted yellow.</i>|radio}}',
-		answers: ['<i>The Viking ship’s dragon was painted yellow.</i>'],
+		text: '<s>11.</s> The British PM who is currently visiting our country gave a speech on economics. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Kommaer'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_6.png"><div class="tool-tip">ved skibe og både</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Her skal være komma foran og efter den henførende sætning.</div>'
 	}, {
-		text: '12. {{<i>The number of teenagers at the concert was incredible.</i>, <i>The teenagers’ number at the concert was incredible.</i>|radio}}',
-		answers: ['<i>The number of teenagers at the concert was incredible.</i>'],
+		text: '<s>12.</s> The car which is parked next to mine belongs to my father in law. {{Kommaer, Ingen komma|radio}}',
+		answers: ['Ingen komma'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_9.png"><div class="tool-tip">ved mål, mængde og antal</div></div></div>'
-	}, {
-		text: '13. {{<i>Lake Michigan is one of North America’s biggest lakes.</i>, <i>The lake of Michigan is one of North America’s biggest lakes.</i>|radio}}',
-		answers: ['<i>Lake Michigan is one of North America’s biggest lakes.</i>'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_10.png"> NB<div class="tool-tip">Dette gælder dog ikke ved ordene lake og river</div></div></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_7.png"><div class="tool-tip">Relativsætningen definerer hvilken bil, der er tale om. Der skal derfor ikke være kommaer.</div></div></div>'
 	}]);
 $('.js-test-form-1').test([{
-		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',
-		answers: ['your'],
+		text: '<s>1.</s> The woman who just gave me the drink is my wife. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan erstattes med <span>that</span>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. ’who’ kan erstattes med ’that’</div>'
 	}, {
-		text: '<p> 2. The house you can see in front of you is {{ , their, theirs, their’s|select}}.</p>',
-		answers: ['theirs'],
-		right: '<p><img src="img/right2.png" alt=""/></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 3. Leave that book! It is {{ , mine, my|select}}.</p>',
-		answers: ['mine'],
+		text: '<s>2.</s> Have you seen my new, blue Chanel coat, which I bought yesterday. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan ikke erstattes med <span>that</span>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_9.png"> og <img class="link" src="img/roed_10.png"><div class="tool-tip">Relativsætningen er parentetisk. Man kan derfor ikke anvende <span>that</span>.</div></div></div>'
 	}, {
-		text: '<p> 4. Leave them! It is {{ , my, mine|select}} books.</p>',
-		answers: ['my'],
+		text: '<s>3.</s> My old cat Bob, which I got years ago, sleeps 18 hours a day. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan ikke erstattes med <span>that</span>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_9.png"> og <img class="link" src="img/roed_10.png"><div class="tool-tip">Relativsætningen er parentetisk. Man kan derfor ikke anvende <span>that</span>.</div></div></div>'
 	}, {
-		text: '<p> 5. The responsibility is {{ , our, ours, our’s|select}} No doubt about that.</p>',
-		answers: ['ours'],
+		text: '<s>4.</s> The Indians who fought at Little Big Horn were sent to reservations. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan erstattes med <span>that</span>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. ’who’ kan erstattes med ’that’</div>'
 	}, {
-		text: '<p> 6. Do you see the girl at the counter? The idea was {{ , hers, her, her’s|select}}</p>',
-		answers: ['hers'],
+		text: '<s>5.</s> The bridge which starts in Battersea and ends in Chelsea needs to be repaired. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan erstattes med <span>that</span>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. ’who’ kan erstattes med ’that’</div>'
 	}, {
-		text: '<p> 7. Is the car in the parking lot {{ , your, yours, your’s|select}}</p>',
-		answers: ['yours'],
-		right: '<p><img src="img/right2.png" alt="" /> </p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
-	}, {
-		text: '<p> 8. {{, Its, it’s|select}} fur has been cut far too often.</p>',
-		answers: ['Its'],
+		text: '<s>6.</s> I went to get my new car, which was parked in Marcilly Road. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan ikke erstattes med <span>that</span>'],
 		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_9.png"> og <img class="link" src="img/roed_10.png"><div class="tool-tip">Relativsætningen er parentetisk. Man kan derfor ikke anvende <span>that</span>.</div></div></div>'
+	}, {
+		text: '<s>7.</s> The dog which is constantly barking should be told off. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan erstattes med <span>that</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. ’which’ kan erstattes med ’that’</div>'
+	}, {
+		text: '<s>8.</s> Martin Luther King, who was a Baptist minister, was a very important figure in the Civil Rights movement. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan ikke erstattes med <span>that</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_9.png"> og <img class="link" src="img/roed_10.png"><div class="tool-tip">Relativsætningen er parentetisk. Man kan derfor ikke anvende <span>that</span>.</div></div></div>'
+	}, {
+		text: '<s>9.</s> Quite a lot of those who fought in WW2 were given a medal. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan erstattes med <span>that</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. ’who’ kan erstattes med ’that’</div>'
+	}, {
+		text: '<s>10.</s> In his opinion, the Great Gatsby, which he had seen several times, was one of the greatest films ever made. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan ikke erstattes med <span>that</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder"><img class="link" src="img/roed_9.png"> og <img class="link" src="img/roed_10.png"><div class="tool-tip">Relativsætningen er parentetisk. Man kan derfor ikke anvende <span>that</span>.</div></div></div>'
+	}, {
+		text: '<s>11.</s> When he entered the restaurant, he looked for the woman who he knew often visited it. For years, she had dreamt of buying a car which was exactly like the one she had when she lived in London. {{Kan erstattes med <span>that</span>, Kan ikke erstattes med <span>that</span>|radio}}',
+		answers: ['Kan erstattes med <span>that</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. ’who’ og ’which’ kan erstattes med ’that’</div>'
 	}]);
 </script> 
 

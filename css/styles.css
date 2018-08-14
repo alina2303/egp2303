@@ -297,54 +297,6 @@ i {
 	padding-left: 60px;
 	 }
    	
-/*Style for hide and show
-.wrapper {
-  overflow: hidden;
-
-
-}
-
-.title:before {
-  content:'';
-  display: inline-block;
-  position: relative;s
-  left: 3px;
-  border: 6px solid transparent;
-  border-left-color: #000;
-}
-.title.active:before {
-  left: 0;
-  top: 3px;
-  border-color: #000 transparent transparent;
-}
-.title:hover {
-  cursor: pointer;
-}
-.content {
-  margin-left: 50px;
-  
-
-}
-
-.content {
-  transition: transform .5s;
-  transform: translateY(-100%);
-
-}
-.content.show {
-  transform: translateY(0);
-}
-.title {
-  margin-left: 20px;
-
-}
-/*.border {
-	border: 1px solid black;
-	margin: 0px 20px 20px 20px;
-  
-}
-Style for hide and show*/
-
 
 .content-holder {
 	padding: 20px;
@@ -1200,4 +1152,126 @@ padding-top: 0;
     padding: 10px;
 }
 
+/* styles for a test with clicable words in a text*/
+
+.hidden-answer {
+    display:none;
+    color: red;
+}
+.clickable-words {
+	display: inline;
+}
+.click-me {
+	cursor: pointer;
+}
+
+.gp-1 {
+	display: none;
+	font-style: normal;
+	color: red;
+}
+
+.touched .gp-1 {
+	display: inline-block;
+	pointer-events: none;
+}
+.touched .gp-1.click-in-box {
+	display: block;
+	
+}
+.touched {
+	pointer-events: none;
+}
+.form-group strong {
+	cursor: pointer;
+}
+.bott-block .test-result {
+	animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.form-group.disabled-click {
+	pointer-events: none;
+}
+.form-group .test-result {
+	text-align: center;
+	padding-top: 15px;
+	color: #0033cc;
+	font-weight: bold;
+}
+.form-group .click-question .click-answers{
+	display: inline-block;
+}
+.test-box{
+	padding-bottom: 10px;
+}
+
+.test-box .answer-box li{
+	display: inline-block;
+	padding-right: 5px;
+
+}
+.test-box .answer-box li:hover{
+	cursor: pointer;
+	
+}
+
+.test-box .answer-box li:after{
+	content: " -";
+}
+.test-box .answer-box li:last-child:after{
+	content: "";
+}
+.test-box .answer-box{
+	display: inline-block;
+	float: right;
+	position: absolute;
+	margin-left: 10px;
+	border: 1px solid black;
+    padding: 0px 3px 0px 3px;
+}
+.test-box .question-box {
+	display: inline-block;
+}
+.test-box .question-heading {
+	margin-bottom: 5px;
+}
+.explain-when-wrong {
+	display: inline-block;
+	color: red;
+}
 
