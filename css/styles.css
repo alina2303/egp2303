@@ -1084,18 +1084,28 @@ padding-top: 0;
 	display: inline-block;
 }
 .answers li {
-	display: inline-block;
+	/*display: inline-block;
 	padding-left: 40px;
 	width: 280px;
 	position: relative;
-	padding-bottom: 10px;
+	padding-bottom: 10px;*/
+	display: inline-block;
+    padding-left: 40px;
+    position: relative;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    width: 60px;
+    padding-left: 1;
+    /* text-align: center; */
+    margin: 0 auto;
 } 
 .answers li .flag {
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 20px;
-	width: 35px;
+	width: 60px;
 }
 .answers li .flag img {
 	width: 100%;
@@ -1120,7 +1130,7 @@ padding-top: 0;
  .drop-block {
 	background: #e8e8e8;
 	height: 30px;
-	width: 30px;
+	width: 60px;
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 10px;
@@ -1142,6 +1152,9 @@ padding-top: 0;
 }*/
 .drug-block {
 	z-index: 2;
+}
+.answers .flag {
+	text-align: center;
 }
 .flag.opacity {
 	opacity: 0.4;

@@ -235,17 +235,21 @@
 				<div class="border-blue-ex">
 					<div class="bott-block" id="bott-block">
 						<div class="head">
-							
-							
+							<h5> 
+								Der mangler nogle ord i den engelske oversættelse af den danske sætning.
+								<br>
+								 Træk de manglende ord til deres rette placering i de tomme felter. (10 sætninger)
+							</h5> 
 							<form class="js-test-form js-test drop-type-2" data-drug="2" action="#"></form>
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
+							<div class="result counter"> 
+								<div class="tru"> 
+									<img class="res-el" src="img/right2.png">
+									<span class="counter-right">0</span> 
+								</div> 
+								<div > 
+									<img class="res-el" src="img/wrong2.png">
+									<span class="counter-wrong">0</span> 
+								</div> 
 							</div> 
 						</div> 
 					</div> 
@@ -280,29 +284,79 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
-	<script src="js/custom.js"></script>
+	
 	<script src="js/pointer_events_polyfill.js"></script>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+	<script src="js/custom.js"></script>
 	
 
-	<script> </script>
-	
 	<script>
 	$('.js-test-form').test([{
-		text: '1. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i felteteferhver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span> Today<span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span> my breakfast</span></p></div></div> {{<li><span>eaten</span><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>eaten</span></div><div class="flag opacity"><span>have</span></div></li><li><span>have</span><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li><li><span>eaten</span><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li>|drugdrop}}',
-	   answers: [{'1':'draggable1'}, {'2':'draggable2'}, {'3':'draggable3'} ],
-	   right: '',
-	   wrong: ''
-   }, {
-	   text: '1. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i felteteferhver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span> Today<span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span> my breakfast</span></p></div></div> {{<li><span>I</span><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li><li><span>have</span><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li><li><span>eaten</span><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li>|drugdrop}}',
-	   answers: [{ '1': 'draggable1' }, { '2': 'draggable2' }, { '3': 'draggable3' }],
-	   right: '',
-	   wrong: ''
-   }, {
-	   text: '1. <div class="drugg-tests"><div class="head"><h5>Match sætning med regel. Hver af sætningerne følger en bestemt genitvregel. Træk reglen som anvendes op i felteteferhver sætning. (4 x 4 spørgsmål) </h5></div><div class="row"><p><span> Today<span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span> my breakfast</span></p></div></div> {{<li><span>I</span><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li><li><span>have</span><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li><li><span>eaten</span><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><img src="img/roed_9.png" alt=""></div><div class="flag opacity"><img src="img/roed_9.png" alt=""></div></li>|drugdrop}}',
-	   answers: [{ '1': 'draggable1' }, { '2': 'draggable2' }, { '3': 'draggable3' }],
-	   right: '',
-	   wrong: ''
-	   },]);
+		text: '<p>1. I dag har jeg spist min morgenmad.</p> <div class="drugg-tests"><div class="row"><p><span> Today<span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span> my breakfast.</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>eaten</span></div><div class="flag opacity"><span>eaten</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>have</span></div><div class="flag opacity"><span>have</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>I</span></div><div class="flag opacity"><span>I</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable3'}, {'2':'draggable2'}, {'3':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Engelsk har som hovedregel altid ligefrem ordstilling.</div></div></div>'
+	}, {
+	   text: '<p>2. Når solen står op, synger fuglene.</p> <div class="drugg-tests"><div class="row"><p><span> When the sun rises <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span>.</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>sing</span></div><div class="flag opacity"><span>sing</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>the birds</span></div><div class="flag opacity"><span>the birds</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable2'}, {'2':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Engelsk har som hovedregel altid ligefrem ordstilling.</div></div></div>'
+	}, {
+	   text: '<p>3. Har du set min nye cykel?</p> <div class="drugg-tests"><div class="row"><p><span><span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span> my new bike?</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>you</span></div><div class="flag opacity"><span>you</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>seen</span></div><div class="flag opacity"><span>seen</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>have</span></div><div class="flag opacity"><span>have</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable3'}, {'2':'draggable1'}, {'3':'draggable2'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Ved spørgende hovedsætninger har engelsk, som på dansk, omvendt ordstilling.</div></div></div>'
+
+
+	}, {
+	   text: '<p>4. Er den helt ny?</p> <div class="drugg-tests"><div class="row"><p><span><span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span> brand new?</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>is</span></div><div class="flag opacity"><span>is</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>it</span></div><div class="flag opacity"><span>it</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable1'}, {'2':'draggable2'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Ved spørgende hovedsætninger har engelsk, som på dansk, omvendt ordstilling.</div></div></div>'
+	}, {
+		text: '<p>5. Hver mandag spiller vi badminton.</p> <div class="drugg-tests"><div class="row"><p><span> Every monday <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span> badminton.</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>we</span></div><div class="flag opacity"><span>we</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>play</span></div><div class="flag opacity"><span>play</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable1'}, {'2':'draggable2'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Engelsk har som hovedregel altid ligefrem ordstilling.</div></div></div>'
+
+
+	}, {
+		text: '<p>6. Var det en god vin?</p> <div class="drugg-tests"><div class="row"><p><span><span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span> a good wine?</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>it</span></div><div class="flag opacity"><span>it</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable2'}, {'2':'draggable1'}],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Ved spørgende hovedsætninger har engelsk, som på dansk, omvendt ordstilling.</div></div></div>'
+
+
+	}, {
+		text: '<p>7. Heldigvis var foden ikke brækket.</p> <div class="drugg-tests"><div class="row"><p><span> Luckily <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span>.</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>The foot</span></div><div class="flag opacity"><span>The foot</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>not</span></div><div class="flag opacity"><span>not</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>broken</span></div><div class="flag opacity"><span>broken</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable1'}, {'2':'draggable3'}, {'3':'draggable2'}, {'4':'draggable4'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Engelsk har som hovedregel altid ligefrem ordstilling.</div></div></div>'
+
+
+	}, {
+		text: '<p>8. Måske er foråret endelig kommet.</p> <div class="drugg-tests"><div class="row"><p><span> Maybe <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span>.</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>arrived</span></div><div class="flag opacity"><span>arrived</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>has</span></div><div class="flag opacity"><span>has</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>spring</span></div><div class="flag opacity"><span>spring</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>finally</span></div><div class="flag opacity"><span>finally</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable3'}, {'2':'draggable2'}, {'3':'draggable4'}, {'4':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Engelsk har som hovedregel altid ligefrem ordstilling.</div></div></div>'
+
+
+	}, {
+		text: '<p>9. Vil du række mig saltet?</p> <div class="drugg-tests"><div class="row"><p><span><span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span> the salt?</span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>pass</span></div><div class="flag opacity"><span>pass</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>could</span></div><div class="flag opacity"><span>could</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>me</span></div><div class="flag opacity"><span>me</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>you</span></div><div class="flag opacity"><span>you</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable2'}, {'2':'draggable4'}, {'3':'draggable1'}, {'4':'draggable3'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Ved spørgende hovedsætninger har engelsk, som på dansk, omvendt ordstilling.</div></div></div>'
+
+
+	}, {
+		text: '<p>10. Når min kat er sulten, ser den meget bekymret ud.</p> <div class="drugg-tests"><div class="row"><p><span> When my cat is hungry <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>worried</span></div><div class="flag opacity"><span>worried</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>very</span></div><div class="flag opacity"><span>very</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>looks</span></div><div class="flag opacity"><span>looks</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>it</span></div><div class="flag opacity"><span>it</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable4'}, {'2':'draggable3'}, {'3':'draggable2'}, {'4':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip">Engelsk har som hovedregel altid ligefrem ordstilling.</div></div></div>'
+	}
+	]);
 </script>
 <script>
 

@@ -238,11 +238,9 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								FIND FEJLEN!
+								FIND FEJLEN! Alle tre sætninger indeholder et langt biled.
 								<br>
-								Alle tre sætninger indeholder et langt biled.
-								<br>
-								I én af sætningerne er bileddet placeret <ins class="not-italic">FORKERT</ins>. Hvilken? (12 sætninger)
+								I én af sætningerne er bileddet placeret <ins class="not-italic"><strong>forkert</strong></ins>. Hvilken? (11 point)
 							</h5> 
 
 							<form class="js-test-form js-test" action="#"></form>
@@ -286,22 +284,6 @@
 		</div> <!-- div id content-->
 	</div> <!-- div style-->
 
-
-
-  <!--<script>
-
-function look(t){
-	p=document.getElementById(t);
-	l=document.getElementById("a-"+t);
-	if(p.style.display=="none"){
-		l.innerHTML="Skjul eksempel";
-		p.style.display="block";}
-	else{
-		l.innerHTML="Vis ekempel";
-		p.style.display="none";}
-}
-	</script>!-->
-
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -311,105 +293,59 @@ function look(t){
 
 $('.js-test-form').test([{
 		text: '<s>1.</s> {{<i>When I go home from work'+"&#44;"+' I always take the Tube</i>., <i>I always take the Tube when I go home from work</i>., <i>I always when I go home from work take the Tube</i>.|radio}}',
-		answers: ['<i>They often meet for lunch at Christmas</i>.'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"><div class="tool-tip">Biordet skal foran udsagnsledet. Det består af ét ord, som ikke er <span>to be</span>.</div></div></div>'
+		answers: ['<i>I always when I go home from work take the Tube</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled må aldrig placeres mellem grundled og udsagnsled.</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 3 er forkert)</div></div>'
 	}, {
-		text: '2. He was at a conference on {{, his, her, the, x|select}} artificial intelligence in Florida.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>2.</s> {{<i>She had for the last three years played hockey</i>., <i>She had played hockey for the last three years</i>., <i>For the last three years'+"&#44;"+' she had played hockey</i>.|radio}}',
+		answers: ['<i>She had for the last three years played hockey</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled (eller mellem to dele af et udsagnsled).</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 1 er forkert)</div></div>'
 	}, {
-		text: '3. The guard tapped me on {{, his, her, the, x|select}} shoulder and told me not to touch the painting.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>3.</s> {{<i>My brother often sneaked my computer out of my room when he was younger.</i>, <i>My brother sneaked when he was younger often my computer out of my room</i>., <i>When he was younger'+"&#44;"+' my brother often sneaked my computer out of my room</i>.|radio}}',
+		answers: ['<i>My brother sneaked when he was younger often my computer out of my room</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled.</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 2 er forkert)</div></div>'
 	}, {
-		text: '4. The lawyer presented his evidence in {{, his, her, the, x|select}} court and argued for his client’s innocence.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen).</p>'
+		text: '<s>4.</s> {{<i>When they after a long trip finally got home'+"&#44;"+' they could not find the key</i>., <i>When'+"&#44;"+' after a long trip'+"&#44;"+' they finally got home'+"&#44;"+' they could not find the key</i>., <i>When'+"&#44;"+' after only a few seconds'+"&#44;"+' he turned the corner'+"&#44;"+' the car had left</i>.|radio}}',
+		answers: ['<i>When they after a long trip finally got home'+"&#44;"+' they could not find the key</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled.</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt, selv om der er et indledende ord. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"> (Sætning 1 er forkert)</div></div>'
 	}, {
-		text: '5. The player felt a little dizzy after the ball had hit him on {{, his, her, the, x|select}} head.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_15.png"></p>'
+		text: '<s>5.</s> {{<i>When she came back five years later'+"&#44;"+' she didn’t recognize her neighbour</i>., <i>She didn’t recognize her neighbour when she came back five years later</i>., <i>When she five years later came back'+"&#44;"+' she didn’t recognize her neighbor</i>.|radio}}',
+		answers: ['<i>When she five years later came back'+"&#44;"+' she didn’t recognize her neighbor</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled.</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 3 er forkert)</div></div>'
 	}, {
-		text: '6. The US President-elect, Donald Trump, raised {{, his, her, the, x|select}} right hand and took the oath.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>6.</s> {{<i>I now and then cannot avoid seeing it</i>., <i>Now and then'+"&#44;"+' I cannot avoid seeing it</i>., <i>I cannot avoid seeing it now and then</i>.|radio}}',
+		answers: ['<i>I now and then cannot avoid seeing it</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled.</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 1 er forkert)</div></div>'
 	}, {
-		text: '7. {{, his, her, the, x|select}} water is an extremely valuable resource, which we often take for granted.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>7.</s> {{<i>When he was a young man'+"&#44;"+' he often went to see her</i>., <i>He often when he was a young man went to see her</i>., <i>He often went to see her'+"&#44;"+' when he was a young man</i>.|radio}}',
+		answers: ['<i>He often when he was a young man went to see her</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled.</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 2 er forkert)</div></div>'
 	}, {
-		text: '8. He was hit on {{, his, her, the, x|select}} head by a masked person.</p>',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. I passivsætninger bruges altid den bestemte artikel <span>the</span>.'
+		text: '<s>8.</s> {{<i>Every day'+"&#44;"+' I on my way home from work do my shopping</i>., <i>Every day'+"&#44;"+' on my way home from work'+"&#44;"+' I do my shopping</i>., <i>I do my shopping every day on my way home from work</i>.|radio}}',
+		answers: ['<i>Every day'+"&#44;"+' I on my way home from work do my shopping</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled.</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 1 er forkert)</div></div>'
 	}, {
-		text: '9. {{, his, her, the, x|select}} generosity is a virtue which is appreciated all over the world.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (ingen artikel foran substantiver som betegner et begreb).</p>'
+		text: '<s>9.</s> {{<i>For more than three months'+"&#44;"+' the city was besieged</i>., <i>The city was besieged for more than three months</i>., <i>The city was for more than three months besieged</i>.|radio}}',
+		answers: ['<i>The city was for more than three months besieged</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled (eller mellem udsagnsled og omsagnsled til grundled).</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 3 er forkert)</div></div>'
 	}, {
-		text: '10. He leaned back in {{, his, her, the, x|select}} seat and really enjoyed the flight.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
+		text: '<s>10.</s> {{<i>She called early the next morning a taxi</i>., <i>Early the next morning she called a taxi</i>., <i>She called a taxi early the next morning</i>.|radio}}',
+		answers: ['<i>She called early the next morning a taxi</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled (eller mellem udsagnsled og genstandsled).</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 1 er forkert)</div></div>'
 	}, {
-		text: '11. She got the message when she came back from {{, his, her, the, x|select}} college.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har ingen artikel, når man tænker på funktionen og ikke bygningen). </p>'
-	}, {
-		text: '12. The little boy carefully brushed {{, his, her, the, x|select}} teeth twice a day.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '13. The young man’s lawyer made a statement outside {{, his, her, the, x|select}} court.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (substantiver der betegner institutioner har bestemt artikel, når man tænker på bygningen og ikke funktionen).</p>'
-	}, {
-		text: '14. The policeman shook {{, his, her, the, x|select}} head in disapproval of the boys’ behavior.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '15. {{, his, her, the, x|select}} first week we spent there was wonderful.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (bestemt artikel foran ordenstal).</p>'
-	}, {
-		text: '16. Here is what you must do {{, his, her, the, x|select}} first, you write your password, then you find the right folder.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel her. Reglen om artikel ved <span>first</span> gælder kun, når det er ordenstal; her er det adverbium.</p>'
-	}, {
-		text: '17. He broke {{, his, her, the, x|select}} arm when he crashed in the sprint in the Tour of Britain.',
-		answers: ['his'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/gron_14.png"></p>'
-	}, {
-		text: '18. She is {{, his, her, the, x|select}} one person that I can trust; therefore, I asked her to do the job.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Bestemt artikel i betydningen <span>"the only one"</span>. Det er kun, når <span>one</span> betyder den ene af to, der ikke bruges artikel.</p>'
-	}, {
-		text: '19. “Which way is {{, his, her, the, x|select}} south?” she asked.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Ingen artikel ved verdenshjørner - dog bruges der bestemt artikel ved præposition + verdenshjørne.</p>'
-	}, {
-		text: '20. After years of travelling, he finally settled down in {{, his, her, the, x|select}} north of Spain.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
-	
+		text: '<s>11.</s> {{<i>The trapper had for many days followed a herd of deer</i>., <i>For many days'+"&#44;"+' the trapper had followed a herd of deer</i>., <i>The trapper had followed a herd of deer for many days</i>.|radio}}',
+		answers: ['<i>The trapper had for many days followed a herd of deer</i>.'],
+		right: '<p><img src="img/right2.png" alt="" /> Et langt biled skal stå først eller sidst i sætningen. Det må aldrig placeres mellem grundled og udsagnsled (eller mellem to dele af et udsagnsled).</p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert! Bileddet er placeret rigtigt. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_6.png"> (Sætning 1 er forkert)</div></div>'	
 	}]);
 $('.js-test-form-1').test([{
 		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',
