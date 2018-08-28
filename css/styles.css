@@ -122,7 +122,7 @@ ul#navigation li.selected.blue a:link,
 
 }
 
-ul#navigation li.selected.rod a:link, 
+ul#navigation li.selected.rod a:link,
 ul#navigation li.selected.rod a:visited {
 	color: #e62e00;
 	border: solid 1px #fff;
@@ -131,7 +131,7 @@ ul#navigation li.selected.rod a:visited {
 	background: -webkit-gradient(linear,left bottom,left top,color-stop(.2, #f2f2f2),color-stop(.8, #d1d1d1));
 	background-color: #f2f2f2;
 	font-weight: bold;
-	
+
 }
 ul#navigation li.selected.green a:link,
 ul#navigation li.selected.green a:visited {
@@ -142,7 +142,7 @@ ul#navigation li.selected.green a:visited {
 	background: -webkit-gradient(linear,left bottom,left top,color-stop(.2, #f2f2f2),color-stop(.8, #d1d1d1));
 	background-color: #f2f2f2;
 	font-weight: bold;
-	
+
 }
 
 #content {
@@ -178,7 +178,7 @@ h2 {
 }
 h3 {
 	font-weight: bold;
-	color: red; /*#2B477D;*/ 
+	color: red; /*#2B477D;*/
 	font-size: 19px;
 	text-align: left;
 	font-family: Arial, serif;
@@ -197,7 +197,7 @@ h4  {
 }
 
 body {
-	background-image: url("../img/metal.jpg");
+	/* background-image: url("../img/metal.jpg"); */
 	/* background-image: url("../img/11.jpg");
 	background: url(http://37.media.tumblr.com/f6c67ec2821a91051e4175f8a102e1e2/tumblr_n6rzpcsMk41st5lhmo1_1280.jpg) 50% 50% / cover;*/
 	background-size: cover;
@@ -212,7 +212,7 @@ p {
 
 span  {
 	font-style: italic;
-	
+
 }
 .border-blue {
 	margin: 0 20px;
@@ -229,7 +229,7 @@ span  {
     padding-top: 20px;
     padding-bottom: 20px;
 
-} 
+}
 
 .border-green {
 	margin: 0 20px 0 20px;
@@ -238,7 +238,7 @@ span  {
     padding-top: 20px;
     padding-bottom: 20px;
 
-} 
+}
 
 i {
 	font-weight: bold;
@@ -248,24 +248,24 @@ i {
 	float: left;
 	vertical-align: middle;
 	margin-right: 10px;
-  
+
 }
 
 .alone {
-	
+
 	padding: 5px 25px 5px 105px;
-	
+
 }
 .alone1 {
 	padding: 0 25px 0 110px;
 	font-weight: bold;
 }
 .picture {
-	
+
 	padding: 7px 25px 7px 30px;
 }
 .picture1 {
-	
+
 	padding: 0 25px 0 0;
 }
 
@@ -279,16 +279,16 @@ i {
    abbr {
     cursor: pointer;
     text-decoration: none;
-    
+
    }
    .otbold{
     cursor: pointer;
-    
+
    }
    ins{
    	font-style: italic;
    }
-   
+
    s {
    	text-decoration: none;
    }
@@ -296,7 +296,7 @@ i {
 	position: relative;
 	padding-left: 60px;
 	 }
-   	
+
 
 .content-holder {
 	padding: 20px;
@@ -341,7 +341,7 @@ i {
 	width: 20px;
 }
 .arrow.add-top-padding img {
-	
+
 	 padding-top: 10px;
 }
 .hidden-block {
@@ -354,7 +354,7 @@ i {
 	left: 40px;
 	font-size: 14px;
 	color: gray;
-	
+
 }
 .hidden-block .text-holder {
 	max-height: 0px;
@@ -365,53 +365,53 @@ i {
 	overflow: initial;
 }
 /*style for exercise*/
-.border-blue-ex { 
+.border-blue-ex {
 	margin: 0px 20px 0px 20px;
     border: solid #2B477D 11px; /*#0033cc  #668cff  #99b3ff #006699*/
     border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
-} 
-.border-red-ex { 
+}
+.border-red-ex {
 	margin: 0px 20px 0px 20px;
     border: solid #e63900 11px; /*#ff3300  #668cff  #99b3ff #006699*/
     border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
-} 
-.border-green-ex { 
+}
+.border-green-ex {
 	margin: 0px 20px 0px 20px;
     border: solid #00802b  11px; /*#0033cc  #668cff  #99b3ff #006699*/
     border-radius: 9px;
     padding-top: 20px;
     padding-bottom: 20px;
-} 
-.bott-block { 
+}
+.bott-block {
 	padding: 20px;
 	padding-left: 60px;
 	position: relative;
 	padding-bottom: 30px;
 
-} 
-.head { 
-	padding-right: 100px; 
-	position: relative; 
-} 
+}
+.head {
+	padding-right: 100px;
+	position: relative;
+}
 .head h4 {
-	color: #15a0d1; 
+	color: #15a0d1;
 	font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 	font-size: 22px;
 
-} 
-.head h5 { 
-	color: #0033cc;; 
+}
+.head h5 {
+	color: #0033cc;;
 	font-size: 17px;
 	font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 	font-weight: bold;
 	font-style: normal;
 	padding-bottom: 20px;
 
-} 
+}
 .question {
 	display: inline-block;
 	max-width: 690px;
@@ -421,92 +421,92 @@ i {
 	background: url(../img/right2.png) 100% 0% no-repeat;
 	background-size: 20px;
 }
-.result { 
-	position: absolute; 
-	top: 0; 
-	right: 60px; 
+.result {
+	position: absolute;
+	top: 0;
+	right: 60px;
 
-} 
-.next { 
-	position: absolute; 
-	bottom: -60px; 
-	right: 20px; 
+}
+.next {
+	position: absolute;
+	bottom: -60px;
+	right: 20px;
 	text-align: center;
 	color: white;
 
-} 
-a.next { 
+}
+a.next {
 	text-decoration: none;
     border: 1px solid white;
     background: #005ce6; /*#29a329 #0040ff*/
     padding: 5px;
     border-radius: 5px;
-    width: 70px; 
-	
-} 
-a.next:hover { 
+    width: 70px;
+
+}
+a.next:hover {
 	-moz-box-shadow: 1px 1px 5px #999;
     -webkit-box-shadow: 1px 1px 5px #999;
         box-shadow: 1px 1px 10px #999;
         color: #fff;
 }
-	
-a.case { 
-	color: #000000; 
+
+a.case {
+	color: #000000;
 	font-weight: bold;
-	text-decoration: none; 
-} 
-.disabled { 
-	color: gray; 
-	pointer-events: none; 
-} 
-.text-res{ 
-	color: #000000; 
+	text-decoration: none;
+}
+.disabled {
+	color: gray;
+	pointer-events: none;
+}
+.text-res{
+	color: #000000;
 	font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 	text-align: center;
 	padding: 50px 40px 50px 40px;
 	font-size: 20px;
 	font-style: normal;
 
-} 
+}
 .res-el {
 	width: 20px;
 	vertical-align: middle;
 	margin-right: 10px;
 }
 .link {
-	
+
 	width: 30px;
 	vertical-align: middle;
-	
+
 }
 .link1 {
-	
+
 	width: 35px;
 	vertical-align: middle;
-	
+
 }
 .link2 {
-	
+
 	width: 20px;
 	vertical-align: middle;
-	
+
 }
 #result-uns {
 	margin-top: 30px;
 
 }
-.tru { 
-	
+.tru {
+
 	padding-bottom: 7px;
-} 
-.red { 
+}
+.red {
 	color: red;
 	padding-top: 10px;
-} 
-.exercise{ 
-	width: 120px; 
-} 
+}
+.exercise{
+	width: 120px;
+}
 
 .form-group {
 	padding-right: 40px;
@@ -530,7 +530,7 @@ a.case {
 }
 /*.question-wrong,
 .question-right,*/
-.question-wrong input, 
+.question-wrong input,
 .question-wrong select,
 .question-wrong label,
 .question-right input,
@@ -726,7 +726,7 @@ b {
 .invintation {
 	text-align: center;
 	padding: 50px 50px 50px 50px;
-	font-size: 30px; 
+	font-size: 30px;
 }
 
 .tool-tip-holder {
@@ -798,7 +798,7 @@ padding-top: 0;
 	top: 33px;
 	left: 0;
 	background: #2a507c;
-	
+
 }
 .tool-tip-holder.blue .tool-tip:before {
 	content: '';
@@ -825,7 +825,7 @@ padding-top: 0;
 	top: 33px;
 	left: 0;
 	background: #00802b;
-	
+
 }
 .tool-tip-holder.green .tool-tip:before {
 	content: '';
@@ -837,7 +837,7 @@ padding-top: 0;
 	border-style: solid;
 	border-width: 0 3.5px 10px 3.5px;
 	border-color: transparent transparent #00802b transparent;
-  
+
 }
 .comment {
 	font-weight: normal;
@@ -850,7 +850,7 @@ padding-top: 0;
 			width: 100%;
 			margin: 5px 0px 20px 0px;
 }
-		
+
 		.table-type-1 tr,
 		.table-type-1 td,
 		.table-type-1 th {
@@ -910,7 +910,7 @@ padding-top: 0;
     		font-weight: bold;
     	}
     	.green-bg {
-			background-color: #98d6a1; 
+			background-color: #98d6a1;
     		margin-left: 60px;
     		padding: 8px;
     		font-weight: bold;
@@ -930,7 +930,7 @@ padding-top: 0;
 			margin-right: 60px;
 		}
 
-		.adjectiv, 
+		.adjectiv,
 		.adjectiv th, td {
     		border: 1px solid black;
     		border-collapse: collapse;
@@ -989,12 +989,12 @@ padding-top: 0;
 			border: none;
 			font-style: italic;
 			padding-right: 60px;
-			
+
 		}
 		.background-green {
 		 background-color: #98d6a1;
 		 padding: 2px 35px 2px 35px;
-			
+
 		}
 		.row.add-top-margin {
 		 margin-top: 20px;
@@ -1037,7 +1037,7 @@ padding-top: 0;
 			border: none;
 			font-style: italic;
 			padding-right: 60px;
-		
+
 	}
 /*styles for drop sentenses */
 	.drop-sentenses {
@@ -1054,7 +1054,7 @@ padding-top: 0;
 		.background-green {
 		 background-color: #98d6a1;
 		 padding: 2px 35px 2px 35px;
-			
+
 		}
 
 .drop-sentenses .drop-block {
@@ -1099,7 +1099,7 @@ padding-top: 0;
     padding-left: 1;
     /* text-align: center; */
     margin: 0 auto;
-} 
+}
 .answers li .flag {
 	position: absolute;
 	top: 0;
@@ -1139,7 +1139,7 @@ padding-top: 0;
 }
 .drop-block.wide {
 	width: 60px;
-} 
+}
 
 /*.drug-block {
 	text-align: center;
@@ -1190,7 +1190,7 @@ padding-top: 0;
 }
 .touched .gp-1.click-in-box {
 	display: block;
-	
+
 }
 .touched {
 	pointer-events: none;
@@ -1260,7 +1260,7 @@ padding-top: 0;
 }
 .test-box .answer-box li:hover{
 	cursor: pointer;
-	
+
 }
 
 .test-box .answer-box li:after{
@@ -1287,4 +1287,3 @@ padding-top: 0;
 	display: inline-block;
 	color: red;
 }
-
