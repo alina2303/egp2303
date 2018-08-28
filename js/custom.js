@@ -396,6 +396,9 @@ $(document).ready(function () {
 					// accept: rightEl,
 					drop: function (event, ui) {
 						var $eventTarget = $(ui.draggable[0]);
+							$eventTarget.addClass('drug-disabled');
+							
+
 						var $question = $eventTarget.closest('.form-group');
 						var $eventTargetId = $eventTarget.attr('id');
 						var $eventTargetDataId = $eventTarget.data('id');

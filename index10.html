@@ -223,7 +223,7 @@
 								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
 							</h5> 
 
-							<form class="js-test-form js-test" action="#"></form>
+							<form class="js-test-form-1 js-test" action="#"></form>
 
 						</div> 
 						<div class="result counter"> 
@@ -243,10 +243,12 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Sætningen nedenfor er <ins class="not-italic"><strong>passiv</strong></ins>. Lav den om, så den bliver <ins class="not-italic"><strong>aktiv</strong></ins> ved at trække ordene op på deres rigtige plads. (12 sætninger) 
+								<br>
+								Bemærk: i flere af sætningerne er det ikke alle ord, som skal bruges!
 							</h5> 
 
-							<form class="js-test-form-1 js-test" action="#"></form>
+							<form class="js-test-form js-test drop-type-2" data-drug="2" action="#"></form>
 
 						</div> 
 						<div class="result counter"> 
@@ -268,13 +270,19 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
-	<script src="js/custom.js"></script>
+	
 	<script src="js/pointer_events_polyfill.js"></script>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
 	
 
 	<script> 
 
-$('.js-test-form').test([{
+$('.js-test-form-1').test([{
 		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
 		answers: ['the'],
 		right: '<img src="img/right2.png" alt="" />',
@@ -357,86 +365,67 @@ $('.js-test-form').test([{
 	
 	}]);
 
-$('.js-test-form-1').test([{
-		text: '1. Do you take {{milk, the milk|link}}in your tea?',
-		answers: ['milk'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+$('.js-test-form').test([{
+		text: '<p>1. <span>Susan is loved by Peter</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>loves</span></div><div class="flag opacity"><span>loves</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>loved</span></div><div class="flag opacity"><span>loved</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>is</span></div><div class="flag opacity"><span>is</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>Susan</span></div><div class="flag opacity"><span>Susan</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>Peter</span></div><div class="flag opacity"><span>Peter</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable5'}, {'2':'draggable1'}, {'3':'draggable4'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>Susan</span>, som var grundled i den passive sætning, bliver genstandsled i den aktive sætning, og udsagnsleddets form ændres: <span>Peter loves Susan</span>.</div></div></div>'
 	}, {
-		text: '2. {{Life, The life|link}}is full of wonderful surprises, he smiled.',
-		answers: ['Life'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>2. <span>The girl was seen leaving the building by two people</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>the building</span></div><div class="flag opacity"><span>the building</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>saw</span></div><div class="flag opacity"><span>saw</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>seen</span></div><div class="flag opacity"><span>seen</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>two people</span></div><div class="flag opacity"><span>two people</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>the girl</span></div><div class="flag opacity"><span>the girl</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>leaving</span></div><div class="flag opacity"><span>leaving</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable5'}, {'2':'draggable3'}, {'3':'draggable6'}, {'4':'draggable7'}, {'5':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The girl</span>, som var grundled i den passive sætning, bliver genstandsled i den aktive sætning, og udsagnsleddets form ændres: <span>Two people saw the girl leaving the building</span>.</div></div></div>'
 	}, {
-		text: '3. {{Time, The time|link}}I spent working at the factory really taught me a lot.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<p>3. <span>The students were finally told to keep quiet by someone</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>finally told</span></div><div class="flag opacity"><span>finally told</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>to keep</span></div><div class="flag opacity"><span>to keep</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>someone</span></div><div class="flag opacity"><span>someone</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>were</span></div><div class="flag opacity"><span>were</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>the students</span></div><div class="flag opacity"><span>the students</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>quiet</span></div><div class="flag opacity"><span>quiet</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable3'}, {'2':'draggable1'}, {'3':'draggable5'}, {'4':'draggable2'}, {'5':'draggable6'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The students</span>, som var grundled i den passive sætning, bliver genstandsled i den aktive sætning, og udsagnsleddets form ændres: <span>Someone told the students to keep quiet</span>.</div></div></div>'
 	}, {
-		text: '4. {{Crime, The crime|link}}is a huge problem in many inner cities.',
-		answers: ['Crime'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>4. <span>The song was sung on the radio by Elvis</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>on the radio</span></div><div class="flag opacity"><span>on the radio</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>sang</span></div><div class="flag opacity"><span>sang</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>sung</span></div><div class="flag opacity"><span>sung</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>the song</span></div><div class="flag opacity"><span>the song</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>Elvis</span></div><div class="flag opacity"><span>Elvis</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable6'}, {'2':'draggable2'}, {'3':'draggable4'}, {'4':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The song</span>, som var grundled i den passive sætning, bliver genstandsled i den aktive sætning, og udsagnsleddets form ændres: <span>Elvis sang the song on the radio</span>.</div></div></div>'
 	}, {
-		text: '5. They were both very interested in {{history, the history|link}}.',
-		answers: ['history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>5. <span>James had been promoted by his new boss</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>promoted</span></div><div class="flag opacity"><span>promoted</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>been</span></div><div class="flag opacity"><span>been</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>James</span></div><div class="flag opacity"><span>James</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>had</span></div><div class="flag opacity"><span>had</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>by</span></div><div class="flag opacity"><span>by</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>his new boss</span></div><div class="flag opacity"><span>his new boss</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable6'}, {'2':'draggable4'}, {'3':'draggable1'}, {'4':'draggable3'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>James</span>, som var grundled i den passive sætning, bliver genstandsled i den aktive sætning, og udsagnsleddets form ændres: <span>His new boss had promoted James</span>.</div></div></div>'
 	}, {
-		text: '6. It was {{first time, the first time|link}}they had ever met.',
-		answers: ['the first time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '<p>6. <span>The trip to Genoa was arranged by a 94-year-old man</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>to Genoa</span></div><div class="flag opacity"><span>to Genoa</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>a 94-year-old</span></div><div class="flag opacity"><span>a 94-year-old</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>man</span></div><div class="flag opacity"><span>man</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>the trip</span></div><div class="flag opacity"><span>the trip</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>arranged</span></div><div class="flag opacity"><span>arranged</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable2'}, {'2':'draggable3'}, {'3':'draggable5'}, {'4':'draggable4'}, {'5':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The trip to Genoa</span>, som var grundled i den passive sætning, bliver genstandsled i den aktive sætning, og udsagnsleddets form ændres: <span>A 94-year-old man arranged the trip to Genova</span>.</div></div></div>'
 	}, {
-		text: '7. I think {{nature, the nature|link}}can teach us many valuable things.',
-		answers: ['nature'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>7. <span>William invited Billy to the party</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>invited</span></div><div class="flag opacity"><span>invited</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>to the party</span></div><div class="flag opacity"><span>to the party</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>by</span></div><div class="flag opacity"><span>by</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>Billy</span></div><div class="flag opacity"><span>Billy</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>William</span></div><div class="flag opacity"><span>William</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable5'}, {'2':'draggable4'}, {'3':'draggable1'}, {'4':'draggable2'}, {'5':'draggable3'}, {'6':'draggable6'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>Billy</span>, som var genstandsled i den aktive sætning, bliver grundled i den passive sætning, og udsagnsleddet tilføjes en form af <span>to be</span> som hjælpeudsagnsord, mens hovedudsagnsordet ændres til kort tillægsform: <span>Billy was invited to the party by William</span>.</div></div></div>'
 	}, {
-		text: '8. During the French Revolution, they fought for {{freedom, the freedom|link}}.',
-		answers: ['freedom'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>8. <span>My sister gave the book as a present</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>the book</span></div><div class="flag opacity"><span>the book</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>as a present</span></div><div class="flag opacity"><span>as a present</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>given</span></div><div class="flag opacity"><span>given</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>by</span></div><div class="flag opacity"><span>by</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>my sister</span></div><div class="flag opacity"><span>my sister</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable1'}, {'2':'draggable2'}, {'3':'draggable4'}, {'4':'draggable5'}, {'5':'draggable6'}, {'6':'draggable3'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The book</span>, som var genstandsled i den aktive sætning, bliver grundled i den passive sætning, og udsagnsleddet tilføjes en form af <span>to be</span> som hjælpeudsagnsord, mens hovedudsagnsordet ændres til kort tillægsform: <span>The book was given by my sister as a present</span>.</div></div></div>'
 	}, {
-		text: '9. {{Paintings, The paintings|link}}in the gallery are all very expensive.',
-		answers: ['The paintings'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
+		text: '<p>9. <span>All the newspapers supported the government’s initiative</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>initiative</span></div><div class="flag opacity"><span>initiative</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>the government’s</span></div><div class="flag opacity"><span>the government’s</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>supported</span></div><div class="flag opacity"><span>supported</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>all the newspapers</span></div><div class="flag opacity"><span>all the newspapers</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>by</span></div><div class="flag opacity"><span>by</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable2'}, {'2':'draggable1'}, {'3':'draggable4'}, {'4':'draggable3'}, {'5':'draggable6'}, {'6':'draggable5'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The government’s initiative</span>, som var genstandsled i den aktive sætning, bliver grundled i den passive sætning, og udsagnsleddet tilføjes en form af <span>to be</span> som hjælpeudsagnsord, mens hovedudsagnsordet ændres til kort tillægsform: <span>The government’s initiative was supported by all newspapers</span>.</div></div></div>'
 	}, {
-		text: '10. {{History, The history|link}}of Germany is interesting.',
-		answers: ['The history'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '<p>10. <span>Somebody saw the robber</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>by</span></div><div class="flag opacity"><span>by</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>the robber</span></div><div class="flag opacity"><span>the robber</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>somebody</span></div><div class="flag opacity"><span>somebody</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>seen</span></div><div class="flag opacity"><span>seen</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable3'}, {'2':'draggable2'}, {'3':'draggable5'}, {'4':'draggable1'}, {'5':'draggable4'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The robber</span>, som var genstandsled i den aktive sætning, bliver grundled i den passive sætning, og udsagnsleddet tilføjes en form af <span>to be</span> som hjælpeudsagnsord, mens hovedudsagnsordet ændres til kort tillægsform: <span>The robber was seen by somebody</span>.</div></div></div>'
 	}, {
-		text: '11. It’s time to find {{love, the love|link}}again, she said. Let’s go to Jim’s party!',
-		answers: ['love'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>11. <span>The wind slammed the door shut</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>the wind</span></div><div class="flag opacity"><span>the wind</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>slammed shut</span></div><div class="flag opacity"><span>slammed shut</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>by</span></div><div class="flag opacity"><span>by</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>was</span></div><div class="flag opacity"><span>was</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>the door</span></div><div class="flag opacity"><span>the door</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable5'}, {'2':'draggable4'}, {'3':'draggable2'}, {'4':'draggable3'}, {'5':'draggable1'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The door</span>, som var genstandsled i den aktive sætning, bliver grundled i den passive sætning, og udsagnsleddet tilføjes en form af <span>to be</span> som hjælpeudsagnsord, mens hovedudsagnsordet ændres til kort tillægsform: <span>The door was slammed by the wind</span>.</div></div></div>'
 	}, {
-		text: '12. {{Music, The music|link}}of the 90s plays an important role in my life.',
-		answers: ['The music'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '13. {{Time, The time|link}}we spend together is precious, the commercial said.',
-		answers: ['The time'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '14. {{Articles, The articles|link}}are difficult to use.',
-		answers: ['Articles'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
-	}, {
-		text: '15. {{Water, The water|link}}we bought at the supermarket did not taste good.',
-		answers: ['The water'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"> NB!</p>'
-	}, {
-		text: '16. Many young people faced {{death, the death|link}}during the First World War.',
-		answers: ['death'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_4.png"></p>'
+		text: '<p>12. <span>The Indians smoked war pipes</span>.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>by</span></div><div class="flag opacity"><span>by</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>smoked</span></div><div class="flag opacity"><span>smoked</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>the Indians</span></div><div class="flag opacity"><span>the Indians</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>were</span></div><div class="flag opacity"><span>were</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>war pipes</span></div><div class="flag opacity"><span>war pipes</span></div></li>|drugdrop}}',
+	   	answers: [{'1':'draggable5'}, {'2':'draggable4'}, {'3':'draggable2'}, {'4':'draggable1'}, {'5':'draggable3'} ],
+	   	right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"><div class="tool-tip"><span>The pipes</span>, som var genstandsled i den aktive sætning, bliver grundled i den passive sætning, og udsagnsleddet tilføjes en form af <span>to be</span> som hjælpeudsagnsord, mens hovedudsagnsordet ændres til kort tillægsform: <span>The pipes were smoked by the Indians</span>.</div></div></div>'
+	
 	}]);
 </script> 
 
