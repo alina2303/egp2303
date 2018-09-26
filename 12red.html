@@ -252,50 +252,27 @@
 		</div>
 	</div><!-- div id border-->
 
-	<img class="headings-ex" src="img/Ovelse_roed_1.png">
-				<div class="border-red-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-								Nedenfor står en dansk sætning, som du skal oversættes ved at trække de rigtige ord op på deres rigtige plads (der kan være ord, som ikke skal bruges). (10 sætninger)
-							</h5> 
-							<form class="js-test-form js-test drop-type-2" data-drug="2" action="#"></form>
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
+		<img class="headings-ex" src="img/Ovelse_roed_1.png">
+		<div class="border-red-ex">
+			<div class="bott-block" id="bott-block"> 
+				<div class="head"> 
+					<h5> 
+						Nedenfor står en dansk sætning, som du skal oversættes ved at trække de rigtige ord op på deres rigtige plads (der kan være ord, som ikke skal bruges). (10 sætninger)
+					</h5> 
+					<form class="js-test-form js-test drop-type-2" data-drug="2" action="#"></form>
+				</div> 
+				<div class="result counter"> 
+					<div class="tru"> 
+						<img class="res-el" src="img/right2.png">
+						<span class="counter-right">0</span> 
+					</div> 
+					<div > 
+						<img class="res-el" src="img/wrong2.png">
+						<span class="counter-wrong">0</span> 
 					</div> 
 				</div> 
-					<img class="headings-ex" src="img/Ovelse_roed_2.png">
-					<div class="border-red-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-							Vælg det korrekte from af det possessive pronomen. 
-							</h5> 
-
-							<form class="js-test-form-1 js-test" action="#"></form>
-
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
-					</div> 
-				</div> 
+			</div> 
+		</div> 
 	</div> <!-- div id content-->
  </div> <!-- div style-->
 
@@ -318,95 +295,55 @@ $('.js-test-form').test([{
 		text: '<p>1. De rige har det bedre end de fattige.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>persons</span></div><div class="flag opacity"><span>persons</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>people</span></div><div class="flag opacity"><span>people</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>the rich</span></div><div class="flag opacity"><span>the rich</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>the poor</span></div><div class="flag opacity"><span>the poor</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>are</span></div><div class="flag opacity"><span>are</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>better off</span></div><div class="flag opacity"><span>better off</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>than</span></div><div class="flag opacity"><span>than</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable3'}, {'2':'draggable5'}, {'3':'draggable6'}, {'4':'draggable7'}, {'5':'draggable4'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. De rige og de fattige udgør hver en hel klasse, og skal derfor ikke have støtteord. Se <p><img class="link" src="img/roed_11.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. De rige og de fattige udgør hver en hel klasse, og skal derfor ikke have støtteord. Se <img class="link" src="img/roed_11.png"></div>'
 	}, {
 		text: '<p>2. De nye bøger er meget bedre end de gamle.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span><span data-drop="7" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>are</span></div><div class="flag opacity"><span>are</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>books</span></div><div class="flag opacity"><span>books</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>the old</span></div><div class="flag opacity"><span>the old</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>much better</span></div><div class="flag opacity"><span>much better</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>ones</span></div><div class="flag opacity"><span>ones</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>than</span></div><div class="flag opacity"><span>than</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>the new</span></div><div class="flag opacity"><span>the new</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable7'}, {'2':'draggable2'}, {'3':'draggable1'}, {'4':'draggable4'}, {'5':'draggable6'}, {'6':'draggable3'}, {'7':'draggable5'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>old</span>) som et navneord, skal man tilføje et støtteord. Se <p><img class="link" src="img/roed_10.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>old</span>) som et navneord, skal man tilføje et støtteord. Se <img class="link" src="img/roed_10.png"></div>'
 	}, {
 		text: '<p>3. Min bror er den yngste i vores familie.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>is</span></div><div class="flag opacity"><span>is</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>one</span></div><div class="flag opacity"><span>one</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>our</span></div><div class="flag opacity"><span>our</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>my brother</span></div><div class="flag opacity"><span>my brother</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>the youngest</span></div><div class="flag opacity"><span>the youngest</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>family</span></div><div class="flag opacity"><span>family</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>in</span></div><div class="flag opacity"><span>in</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable4'}, {'2':'draggable1'}, {'3':'draggable5'}, {'4':'draggable7'}, {'5':'draggable3'}, {'6':'draggable6'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når et tillægsord er bøjet i 3. grad, bruger man oftest ikke støtteord. Se <p><img class="link" src="img/roed_13.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når et tillægsord er bøjet i 3. grad, bruger man oftest ikke støtteord. Se <img class="link" src="img/roed_13.png"></div>'
 	}, {
 		text: '<p>4. Det gode ved historien er at den er sand.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>the story</span></div><div class="flag opacity"><span>the story</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>is</span></div><div class="flag opacity"><span>is</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>that it is true</span></div><div class="flag opacity"><span>that it is true</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>thing</span></div><div class="flag opacity"><span>thing</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>the good</span></div><div class="flag opacity"><span>the good</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>about</span></div><div class="flag opacity"><span>about</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable5'}, {'2':'draggable4'}, {'3':'draggable6'}, {'4':'draggable1'}, {'5':'draggable2'}, {'6':'draggable3'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (good) som et navneord, skal man tilføje et støtteord. Se <p><img class="link" src="img/roed_10.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (good) som et navneord, skal man tilføje et støtteord. Se <img class="link" src="img/roed_10.png"></div>'
 	}, {
 		text: '<p>5. Henry låner Johns cykel indtil han får sin egen.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span><span data-drop="7" class="drop-block"></span><span data-drop="8" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>will borrow</span></div><div class="flag opacity"><span>will borrow</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>one</span></div><div class="flag opacity"><span>one</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>until</span></div><div class="flag opacity"><span>until</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>John’s bike</span></div><div class="flag opacity"><span>John’s bike</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>gets</span></div><div class="flag opacity"><span>gets</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>he</span></div><div class="flag opacity"><span>he</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>Henry</span></div><div class="flag opacity"><span>Henry</span></div></li><li><div id="draggable8" class="flag drug-block ui-draggable ui-draggable-handle"><span>own</span></div><div class="flag opacity"><span>own</span></div></li><li><div id="draggable9" class="flag drug-block ui-draggable ui-draggable-handle"><span>his</span></div><div class="flag opacity"><span>his</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable7'}, {'2':'draggable1'}, {'3':'draggable4'}, {'4':'draggable3'}, {'5':'draggable6'}, {'6':'draggable5'}, {'7':'draggable9'}, {'8':'draggable8'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Efter tillægsordet <span>own</span> bruger man ikke støtteord. Se <p><img class="link" src="img/roed_12.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Efter tillægsordet <span>own</span> bruger man ikke støtteord. Se <img class="link" src="img/roed_12.png"></div>'
 	}, {
 		text: '<p>6. Køb nye sokker! De gamle er slidt op.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span><span data-drop="7" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>some new</span></div><div class="flag opacity"><span>some new</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>buy</span></div><div class="flag opacity"><span>buy</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>are</span></div><div class="flag opacity"><span>are</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>the old</span></div><div class="flag opacity"><span>the old</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>socks</span></div><div class="flag opacity"><span>socks</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>ones</span></div><div class="flag opacity"><span>ones</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>worn out</span></div><div class="flag opacity"><span>worn out</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable2'}, {'2':'draggable1'}, {'3':'draggable5'}, {'4':'draggable4'}, {'5':'draggable6'}, {'6':'draggable3'}, {'7':'draggable7'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>old</span>) som et navneord, skal man tilføje et støtteord. Se <p><img class="link" src="img/roed_10.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>old</span>) som et navneord, skal man tilføje et støtteord. Se <img class="link" src="img/roed_10.png"></div>'
 	}, {
 		text: '<p>7. Det eneste gode ved min skole er, at den er ny.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span><span data-drop="7" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>that it is</span></div><div class="flag opacity"><span>that it is</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>my school</span></div><div class="flag opacity"><span>my school</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>thing</span></div><div class="flag opacity"><span>thing</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>is</span></div><div class="flag opacity"><span>is</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>the only good</span></div><div class="flag opacity"><span>the only good</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>about</span></div><div class="flag opacity"><span>about</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>new</span></div><div class="flag opacity"><span>new</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable5'}, {'2':'draggable3'}, {'3':'draggable6'}, {'4':'draggable2'}, {'5':'draggable4'}, {'6':'draggable1'}, {'7':'draggable7'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>good</span>) som et navneord, skal man tilføje et støtteord. Se <p><img class="link" src="img/roed_10.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>good</span>) som et navneord, skal man tilføje et støtteord. Se <img class="link" src="img/roed_10.png"></div>'
 	}, {
 		text: '<p>8. Hans søster lånte en frakke, han havde sin egen.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span><span data-drop="7" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>borrowed</span></div><div class="flag opacity"><span>borrowed</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>had</span></div><div class="flag opacity"><span>had</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>he</span></div><div class="flag opacity"><span>he</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>a coat</span></div><div class="flag opacity"><span>a coat</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>his</span></div><div class="flag opacity"><span>his</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>his sister</span></div><div class="flag opacity"><span>his sister</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>own</span></div><div class="flag opacity"><span>own</span></div></li><li><div id="draggable7" class="flag drug-block ui-draggable ui-draggable-handle"><span>one</span></div><div class="flag opacity"><span>one</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable6'}, {'2':'draggable1'}, {'3':'draggable4'}, {'4':'draggable3'}, {'5':'draggable2'}, {'6':'draggable5'}, {'7':'draggable7'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>good</span>) som et navneord, skal man tilføje et støtteord. Se <p><img class="link" src="img/roed_10.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>good</span>) som et navneord, skal man tilføje et støtteord. Se <img class="link" src="img/roed_10.png"></div>'
 	}, {
 		text: '<p>9. Min bedstemor gav alle sine penge til de hjemløse.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>to</span></div><div class="flag opacity"><span>to</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>people</span></div><div class="flag opacity"><span>people</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>my grandmother</span></div><div class="flag opacity"><span>my grandmother</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>the homeless</span></div><div class="flag opacity"><span>the homeless</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>gave</span></div><div class="flag opacity"><span>gave</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>all her money</span></div><div class="flag opacity"><span>all her money</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable3'}, {'2':'draggable5'}, {'3':'draggable6'}, {'4':'draggable1'}, {'5':'draggable4'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. De hjemløse udgør en hel klasse, og skal derfor ikke have støtteord. Se <p><img class="link" src="img/roed_11.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. De hjemløse udgør en hel klasse, og skal derfor ikke have støtteord. Se <img class="link" src="img/roed_11.png"></div>'
 	}, {
 		text: '<p>10. Behold din hat, jeg vil have en ny.</p> <div class="drugg-tests"><div class="row"><p><span> <span data-drop="1" class="drop-block"></span><span data-drop="2" class="drop-block"></span><span data-drop="3" class="drop-block"></span><span data-drop="4" class="drop-block"></span><span data-drop="5" class="drop-block"></span><span data-drop="6" class="drop-block"></span></span></p></div></div> {{<li><div id="draggable1" class="flag drug-block ui-draggable ui-draggable-handle"><span>your hat</span></div><div class="flag opacity"><span>your hat</span></div></li><li><div id="draggable2" class="flag drug-block ui-draggable ui-draggable-handle"><span>I</span></div><div class="flag opacity"><span>I</span></div></li><li><div id="draggable3" class="flag drug-block ui-draggable ui-draggable-handle"><span>a new</span></div><div class="flag opacity"><span>a new</span></div></li><li><div id="draggable4" class="flag drug-block ui-draggable ui-draggable-handle"><span>keep</span></div><div class="flag opacity"><span>keep</span></div></li><li><div id="draggable5" class="flag drug-block ui-draggable ui-draggable-handle"><span>want</span></div><div class="flag opacity"><span>want</span></div></li><li><div id="draggable6" class="flag drug-block ui-draggable ui-draggable-handle"><span>one</span></div><div class="flag opacity"><span>one</span></div></li>|drugdrop}}',
 	   	answers: [{'1':'draggable4'}, {'2':'draggable1'}, {'3':'draggable2'}, {'4':'draggable5'}, {'5':'draggable3'}, {'6':'draggable6'} ],
 	   	right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>new</span>) som et navneord, skal man tilføje et støtteord. Se <p><img class="link" src="img/roed_11.png"></p></div>'
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Når man på engelsk bruger et tillægsord (<span>new</span>) som et navneord, skal man tilføje et støtteord. Se <img class="link" src="img/roed_11.png"></div>'
 	
 	}]);
-$('.js-test-form-1').test([{
-		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',
-		answers: ['your'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
-	}, {
-		text: '<p> 2. The house you can see in front of you is {{ , their, theirs, their’s|select}}.</p>',
-		answers: ['theirs'],
-		right: '<p><img src="img/right2.png" alt=""/></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 3. Leave that book! It is {{ , mine, my|select}}.</p>',
-		answers: ['mine'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 4. Leave them! It is {{ , my, mine|select}} books.</p>',
-		answers: ['my'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
-	}, {
-		text: '<p> 5. The responsibility is {{ , our, ours, our’s|select}} No doubt about that.</p>',
-		answers: ['ours'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
-	}, {
-		text: '<p> 6. Do you see the girl at the counter? The idea was {{ , hers, her, her’s|select}}</p>',
-		answers: ['hers'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 7. Is the car in the parking lot {{ , your, yours, your’s|select}}</p>',
-		answers: ['yours'],
-		right: '<p><img src="img/right2.png" alt="" /> </p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
-	}, {
-		text: '<p> 8. {{, Its, it’s|select}} fur has been cut far too often.</p>',
-		answers: ['Its'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
-	}]);
+
 </script> 
 
 </body></html>

@@ -173,49 +173,26 @@
 	</div><!-- div id border-->
 
 	<img class="headings-ex" src="img/Ovelse_roed_1.png">
-				<div class="border-red-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-								Vælg den af sætningerne, som indeholder et biord. (20 sætninger)
-							</h5> 
-							<form class="js-test-form js-test" action="#"></form>
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
+		<div class="border-red-ex">
+			<div class="bott-block" id="bott-block"> 
+				<div class="head"> 
+					<h5> 
+						Vælg den af sætningerne, som indeholder et biord. (20 sætninger)
+					</h5> 
+					<form class="js-test-form js-test" action="#"></form>
+				</div> 
+				<div class="result counter"> 
+					<div class="tru"> 
+						<img class="res-el" src="img/right2.png">
+						<span class="counter-right">0</span> 
+					</div> 
+					<div > 
+						<img class="res-el" src="img/wrong2.png">
+						<span class="counter-wrong">0</span> 
 					</div> 
 				</div> 
-					<img class="headings-ex" src="img/Ovelse_roed_2.png">
-					<div class="border-red-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-							Vælg det korrekte from af det possessive pronomen. 
-							</h5> 
-
-							<form class="js-test-form-1 js-test" action="#"></form>
-
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
-					</div> 
-				</div> 
+			</div> 
+		</div> 
 	</div> <!-- div id content-->
  </div> <!-- div style-->
 
@@ -329,47 +306,7 @@ $('.js-test-form').test([{
 		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se regel <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"><span>Angry</span> er et tillægsord. Her er det omsagnsled til grundled.</div></div></div>'
 	}]);
-$('.js-test-form-1').test([{
-		text: '<p> 1. Is that building {{ , your, yours, your’s|select}} house?</p>',
-		answers: ['your'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>It may lead to bushfires when the wind blows from <ins>the north</ins></span>. Se regel <img class="link" src="img/roed_6.png"></p>'
-	}, {
-		text: '<p> 2. The house you can see in front of you is {{ , their, theirs, their’s|select}}.</p>',
-		answers: ['theirs'],
-		right: '<p><img src="img/right2.png" alt=""/></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>Alice does not go <ins>to school</ins> by bus because it is less than a mile from her home.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 3. Leave that book! It is {{ , mine, my|select}}.</p>',
-		answers: ['mine'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være: <br><span>Do you know that Jane was taken <ins>to hospital</ins> this morning?</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 4. Leave them! It is {{ , my, mine|select}} books.</p>',
-		answers: ['my'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span> My boyfriend likes to have bacon and eggs <ins>for breakfast</ins></span>. Se regel <img class="link" src="img/roed_11.png"></p>'
-	}, {
-		text: '<p> 5. The responsibility is {{ , our, ours, our’s|select}} No doubt about that.</p>',
-		answers: ['ours'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>Time flies when you are among friends.</span> <img class="link" src="img/blaa_4.png"> , ingen artikel foran substantiver som betegner et begreb</p>'
-	}, {
-		text: '<p> 6. Do you see the girl at the counter? The idea was {{ , hers, her, her’s|select}}</p>',
-		answers: ['hers'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Anden sætning skal være:<br> <span>My brother always goes <ins>by train</ins> because he does not have a car.</span> Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '<p> 7. Is the car in the parking lot {{ , your, yours, your’s|select}}</p>',
-		answers: ['yours'],
-		right: '<p><img src="img/right2.png" alt="" /> </p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Tredje sætning skal være:<br> <span>It is <ins>the first</ins> time that I have really appreciated a novel.</span> <img class="link" src="img/blaa_1.png"> , bestemt artikel ved ordenstal</p>'
-	}, {
-		text: '<p> 8. {{, Its, it’s|select}} fur has been cut far too often.</p>',
-		answers: ['Its'],
-		right: '<p><img src="img/right2.png" alt="" /></p>',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Første sætning skal være:<br> <span>She is <ins>the owner of</ins> a beautiful little cottage in Devon.</span> <img class="link" src="img/blaa_2.png"> , bestemt artikel ved subtantiv + <span>of</span></p>'
-	}]);
+
 </script> 
 
 </body></html>

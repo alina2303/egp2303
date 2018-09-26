@@ -423,7 +423,7 @@ i {
 }
 .result { 
 	position: absolute; 
-	top: 0; 
+	top: 15px; 
 	right: 60px; 
 
 } 
@@ -528,6 +528,7 @@ a.case {
   pointer-events: none;
   opacity: 0.2;
 }
+
 /*.question-wrong,
 .question-right,*/
 .question-wrong input, 
@@ -1046,11 +1047,17 @@ max-width: 700px;
 
 .drop-sentenses .drop-field-pink {
 height: 10rem;
-background: #eccfd4 !important;
+background: #f7e1e4 !important;
 border-radius: 1rem;
 border: 1px solid #000;
 margin-bottom: 2rem;
 }
+
+.js-test-form.js-test.no-next-button button {
+	display: none;
+}
+
+
 .background-green {
  background-color: #98d6a1;
  padding: 2px 35px 2px 35px;
@@ -1078,12 +1085,60 @@ margin-bottom: 2rem;
 .table-type-2 tr td:nth-child(3) {
 	padding-left: 40px;
 }
+/*style for drag and drop words into 2 boxes*/
+
+.js-test-form.js-test.drop-words
+.form-group .drop-field-pink {
+	height: 10rem;
+	background: #f7e1e4 !important;
+	border-radius: 1rem;
+	border: 1px solid #000;
+	margin-bottom: 2rem;
+	width: 50%;
+	margin-top: 15px;
+}
+
+.drop-words 
+.form-group .answers {
+	max-width: 50%;
+	border: 1px solid #000;
+	padding: 5px;
+	border-radius: 1rem;
+}
+
+.drop-words
+.form-group .answers li {
+	display: inline-block;
+    position: relative;
+    width: 70px;
+    margin: 0 auto;
+    border: none;
+    padding: 3px;
+    text-align: center;
+    font-style: italic;
+}
+.bott-block .head h5 img {
+	width: 30px;
+}
 /*style for drag and drop chapter 3 green*/
 
 .answers ul {
 	display: inline-block;
 }
 .answers li {
+	display: inline-block;
+    padding-left: 40px;
+    position: relative;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    width: 130px;
+    /*padding-left: 40px;
+    text-align: center; */
+    margin: 0 auto;
+} 
+
+.answers .draggable-image.number  {
 	/*display: inline-block;
 	padding-left: 40px;
 	width: 280px;
@@ -1092,14 +1147,16 @@ margin-bottom: 2rem;
 	display: inline-block;
     padding-left: 40px;
     position: relative;
-    padding-bottom: 10px;
-    border: 1px solid black;
-    padding: 10px 10px 10px 10px;
-    width: 130px;
-    padding-left: 1;
-    /* text-align: center; */
+    width: 280px;
+    /*padding-left: 40px;
+    text-align: center; */
     margin: 0 auto;
+    border: none;
 } 
+.answers li .flag.image {
+	width: 35px;
+	padding-right: 30px;
+}
 .answers li .flag {
 	position: absolute;
 	top: 0;
@@ -1133,14 +1190,17 @@ margin-bottom: 2rem;
 	width: 130px;
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: 7px;
 	margin-bottom: 7px;
 	border: 1px solid #afa6a6;
 	border-radius: 10px;
 }
 .drop-block.wide {
 	width: 60px;
-} 
+}
+
+.drop-block.image-field {
+	width: 40px;
+}
 
 /*.drug-block {
 	text-align: center;
@@ -1153,6 +1213,7 @@ margin-bottom: 2rem;
 }*/
 .drug-block {
 	z-index: 2;
+	cursor: pointer;
 }
 .drug-disabled {
 	pointer-events: none;
@@ -1290,5 +1351,86 @@ margin-bottom: 2rem;
 .explain-when-wrong {
 	display: inline-block;
 	color: red;
+}
+
+/*style for react DnD sentences into pink field*/
+.form-group.dgaggable-sentences .container-drag .droppable {
+	max-width: 70%;
+	height: 180px;
+	background-color: #f9d6e1;
+	margin: 0 auto;
+	border: solid #535860 0.5px;
+	border-radius: 25px;
+	padding: 10px;
+
+	
+}
+
+.form-group.dgaggable-sentences 
+.container-drag .draggable {
+	padding-top: 10px;
+
+}
+.form-group.dgaggable-sentences.disabled-drag {
+	pointer-events: none;
+}
+
+.container-drag p {
+	display: inline-block;
+	min-height: 13rem;
+	width: 60%;
+	background: #eccfd4 !important;
+	border-radius: 1rem;
+	border: 1px solid #000;
+	margin-bottom: 2rem;
+	padding: 8px;
+}
+.container-drag.box p{
+	display: inline-block;
+	min-height: 15rem;
+	width: 100%;
+	background: #f7e1e4 !important;
+	border-radius: 1rem;
+	border: 1px solid #000;
+	margin-bottom: 2rem;
+	padding: 8px;
+}
+.container-drag.box 
+.row.flex .col div{
+	font-style: italic;
+	display: inline-block;
+}
+.container-drag.box .row.flex 
+.col .placeHolder-name {
+	font-style: normal;
+}
+.row.flex .col {
+	width: 35%;
+	margin-right: 3rem;
+}
+
+.container-drag.box 
+.row.flex .col.left div{
+	font-style: normal;
+}
+
+.flex.words-box .col.right {
+	width: 39%;
+}
+.flex {
+	display: flex;
+	flex-direction: row;
+}
+.flex .col.left {
+	width: 40%;
+}
+.flex .col.right {
+	width: 60%;
+}
+.flex .col div  {
+	margin: 2px 0px 0px 4px;
+}
+.green {
+	color: green;
 }
 

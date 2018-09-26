@@ -390,10 +390,12 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Afgør om disse ord/grupper som hovedregel bruges med eller uden den bestemte artikel? (20 spørgsmål)
+								Syv af ordene herunder bruger man normalt ikke i forbindelse med udvidet tid.  Træk de 7 rigtige ord ned i den røde boks. (7 forsøg – hold øje med pointene ude til højre)
+								<br>
+								(Husk <img src="img/gron_10.png" alt=""> : Ord, der ikke betegner en handling kan normalt ikke forekomme i udvidet tid).
 							</h5> 
 
-							<form class="js-test-form-1 js-test" action="#"></form>
+							<form class="js-test-form js-test drop-words no-next-button" data-drug="1" action="#"></form>
 
 						</div> 
 						<div class="result counter"> 
@@ -411,27 +413,17 @@
 		</div> <!-- div id content-->
 	</div> <!-- div style-->
 
-
-
-  <!--<script>
-
-function look(t){
-	p=document.getElementById(t);
-	l=document.getElementById("a-"+t);
-	if(p.style.display=="none"){
-		l.innerHTML="Skjul eksempel";
-		p.style.display="block";}
-	else{
-		l.innerHTML="Vis ekempel";
-		p.style.display="none";}
-}
-	</script>!-->
-
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
+	<script src="js/pointer_events_polyfill.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+
 	<script> 
 
 $('.js-test-form-3').test([{
@@ -475,107 +467,14 @@ $('.js-test-form-3').test([{
  		right: '<p><img src="img/right2.png" alt="" /></p>',
 		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder green"><img class="link" src="img/gron_7.png"> simpel tid. <div class="tool-tip">Familien går I kirke hver søndag. Der er tale om en regelmæssig handling, og sætningen følger derfor regel C.</div></div></div>'
 	}]);
-$('.js-test-form-1').test([{
-		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Enkelte lande bruges med bestemt artikel, bl. a. lande hvor <span>union, kingdom</span> eller <span>state</span> indgår i navnet).</p>'
-	}, {
-		text: '2. The word “most” <span class="not-normal">(det meste/de fleste)</span> {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"> (Ved ordet <span>most</span> (det meste/de fleste) bruges ikke artikel).</p>'
-	}, {
-		text: '3. Ordinal numbers (e.g. first, second) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (Ved ordenstal bruges bestemt artikel).</p>'
-	}, {
-		text: '4. Rivers and seas {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> Ved floder og have bruges bestemt artikel, men ikke ved søer.</p>'
-	}, {
-		text: '5. Countries in the singular {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Reglen siger, at ved nogle få lande bruges bestemt artikel, men hovedreglen for lande siger ingen artikel; så lande i singularis bruges uden artikel).</p>'
-	}, {
-		text: '6. Preposition + left or right {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_7.png"> (Ved forholdsord + <span>left</span> eller <span>right</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '7. Ships and cars {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Både skibe og biler bruges som hovedregel med bestemt artikel).</p>'
-	}, {
-		text: '8. Nouns for means of transportation or institutions (-about their main purpose) {{med artikel, uden artikel|radio}}</p>',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (Substantiver der betegner transportmidler og institutioner har ingen artikel, når man tænker på funktionen; man bruger derimod artikel om den konkrete bygning/ting).</p>'
-	}, {
-		text: '9. Newspapers {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Ved aviser bruges som hovedregel bestemt artikel).</p>'
-	}, {
-		text: '10. Countries in the plural {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Reglen siger ved nogle få lande bruges bestemt artikel og disse er blandt andet lande i flertal. Men hovedreglen for lande siger ingen artikel).</p>'
-	}, {
-		text: '11. Abstract nouns (e.g. life, death) {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (Ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '12. Theatres and cinemas {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Ved teatre og biografer bruges som hovedregel bestemt artikel).</p>'
-	}, {
-		text: '13. Days, months and seasons {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (ved dage, måneder og ved årstider bruges ikke artikel).</p>'
-	}, {
-		text: '14. Preposition + the corners of the world {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (Ved præpositioner + verdenshjørnerne bruges bestemt artikel).</p>'
-	}, {
-		text: '15. Meals {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_11.png"> (Ved måltider bruges som hovedregel ikke bestemt artikel).</p>'
-	}, {
-		text: '16. Certain adjectives (e.g. following, same, opposite) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (Ved visse adjektiver som <span>following, same</span> og <span>opposite</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '17. The word “one” <span class="not-normal">(den ene)</span> {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_5.png"> (Ved ordet <span>one</span> (den ene) bruges ikke artikel).</p>'
-	}, {
-		text: '18. of-constructions {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_2.png"> (Foran ord som følges af et <span>of</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '19. Hotels and restaurants {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png">  (Hoteller og restauranter bruges med artikel).</p>'
-	}, {
-		text: '20. Nouns for institutions (-about the building, e.g. church) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (Substantiver der betegner transportmidler og institutioner har ingen artikel, når man tænker på funktionen; man bruger derimod artikel om den konkrete bygning/ting).</p>'
-	
+
+
+$('.js-test-form').test([{
+		text: ' {{<li data-id="0" class="drug-block">to play</li><li data-id="1" class="drug-block">to own</li><li data-id="0" class="drug-block">to do</li><li data-id="0" class="drug-block">to walk</li><li data-id="0" class="drug-block">to get</li><li data-id="1" class="drug-block">to like</li><li data-id="1" class="drug-block">to mean</li><li data-id="1" class="drug-block">to smell</li><li data-id="0" class="drug-block">to go</li><li data-id="0" class="drug-block">to let</li><li data-id="0" class="drug-block">to sleep</li><li data-id="1" class="drug-block">to hate</li><li data-id="1" class="drug-block">to believe</li><li data-id="0" class="drug-block">to toast</li><li data-id="1" class="drug-block">to taste</li><li data-id="0" class="drug-block">to obey</li><li data-id="0" class="drug-block">to hit</li><li data-id="0" class="drug-block">to rise</li><li data-id="0" class="drug-block">to stick</li><li data-id="0" class="drug-block">to shut</li><li data-id="0" class="drug-block">to cast</li><li data-id="0" class="drug-block">to fly</li>|drugdrop}} <div data-drop="11" class="drop-field-pink drop-block"></div>',
+		answers: [{ '11': '1' }, { '11': '1' }, { '11': '1' }, { '11': '1' }, { '11': '1' }, { '11': '1' }, { '11': '1' }],
+		right: '',
+		wrong: ''
+
 	}]);
 </script> 
 

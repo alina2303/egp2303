@@ -485,6 +485,7 @@ $(document).ready(function () {
 				if (counter === testData.length) {
 					form.html('<span class="text-res"> Du er nu færdig med opgaven. Du havde ' + rightAnswers + ' rigtige ud af ' + testData.length + '.</span>');
 				}
+
 			})
 
 			$question = $('<div>')

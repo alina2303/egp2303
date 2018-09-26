@@ -191,47 +191,8 @@
 						</div> 
 					</div> 
 				</div> 
-					<img class="headings-ex" src="img/Ovelse_groen_2.png">
-					<div class="border-green-ex">
-					<div class="bott-block" id="bott-block"> 
-						<div class="head"> 
-							<h5> 
-								Afgør om disse ord/grupper som hovedregel bruges med eller uden den bestemte artikel? (20 spørgsmål)
-							</h5> 
-
-							<form class="js-test-form-1 js-test" action="#"></form>
-
-						</div> 
-						<div class="result counter"> 
-							<div class="tru"> 
-								<img class="res-el" src="img/right2.png">
-								<span class="counter-right">0</span> 
-							</div> 
-							<div > 
-								<img class="res-el" src="img/wrong2.png">
-								<span class="counter-wrong">0</span> 
-							</div> 
-						</div> 
-					</div> 
-				</div> 
 		</div> <!-- div id content-->
 	</div> <!-- div style-->
-
-
-
-  <!--<script>
-
-function look(t){
-	p=document.getElementById(t);
-	l=document.getElementById("a-"+t);
-	if(p.style.display=="none"){
-		l.innerHTML="Skjul eksempel";
-		p.style.display="block";}
-	else{
-		l.innerHTML="Vis ekempel";
-		p.style.display="none";}
-}
-	</script>!-->
 
     <!-- javascript
     ================================================== -->
@@ -342,108 +303,7 @@ $('.js-test-form').test([{
 		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (bestemt artikel ved præposition + verdenshjørne) samt <img class="link" src="img/blaa_2.png"> (bestemt artikel ved subtantiv + <span>of</span>)</p>'
 	
 	}]);
-$('.js-test-form-1').test([{
-		text: '1. Countries where union, kingdom or state are parts of the name {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Enkelte lande bruges med bestemt artikel, bl. a. lande hvor <span>union, kingdom</span> eller <span>state</span> indgår i navnet).</p>'
-	}, {
-		text: '2. The word “most” <span class="not-normal">(det meste/de fleste)</span> {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"> (Ved ordet <span>most</span> (det meste/de fleste) bruges ikke artikel).</p>'
-	}, {
-		text: '3. Ordinal numbers (e.g. first, second) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (Ved ordenstal bruges bestemt artikel).</p>'
-	}, {
-		text: '4. Rivers and seas {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> Ved floder og have bruges bestemt artikel, men ikke ved søer.</p>'
-	}, {
-		text: '5. Countries in the singular {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Reglen siger, at ved nogle få lande bruges bestemt artikel, men hovedreglen for lande siger ingen artikel; så lande i singularis bruges uden artikel).</p>'
-	}, {
-		text: '6. Preposition + left or right {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_7.png"> (Ved forholdsord + <span>left</span> eller <span>right</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '7. Ships and cars {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Både skibe og biler bruges som hovedregel med bestemt artikel).</p>'
-	}, {
-		text: '8. Nouns for means of transportation or institutions (-about their main purpose) {{med artikel, uden artikel|radio}}</p>',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (Substantiver der betegner transportmidler og institutioner har ingen artikel, når man tænker på funktionen; man bruger derimod artikel om den konkrete bygning/ting).</p>'
-	}, {
-		text: '9. Newspapers {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Ved aviser bruges som hovedregel bestemt artikel).</p>'
-	}, {
-		text: '10. Countries in the plural {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_3.png"> (Reglen siger ved nogle få lande bruges bestemt artikel og disse er blandt andet lande i flertal. Men hovedreglen for lande siger ingen artikel).</p>'
-	}, {
-		text: '11. Abstract nouns (e.g. life, death) {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_4.png"> (Ingen artikel foran substantiver som betegner et begreb).</p>'
-	}, {
-		text: '12. Theatres and cinemas {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png"> (Ved teatre og biografer bruges som hovedregel bestemt artikel).</p>'
-	}, {
-		text: '13. Days, months and seasons {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (ved dage, måneder og ved årstider bruges ikke artikel).</p>'
-	}, {
-		text: '14. Preposition + the corners of the world {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_6.png"> (Ved præpositioner + verdenshjørnerne bruges bestemt artikel).</p>'
-	}, {
-		text: '15. Meals {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_11.png"> (Ved måltider bruges som hovedregel ikke bestemt artikel).</p>'
-	}, {
-		text: '16. Certain adjectives (e.g. following, same, opposite) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> (Ved visse adjektiver som <span>following, same</span> og <span>opposite</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '17. The word “one” <span class="not-normal">(den ene)</span> {{med artikel, uden artikel|radio}}',
-		answers: ['uden artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_5.png"> (Ved ordet <span>one</span> (den ene) bruges ikke artikel).</p>'
-	}, {
-		text: '18. of-constructions {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_2.png"> (Foran ord som følges af et <span>of</span> bruges bestemt artikel).</p>'
-	}, {
-		text: '19. Hotels and restaurants {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_9.png">  (Hoteller og restauranter bruges med artikel).</p>'
-	}, {
-		text: '20. Nouns for institutions (-about the building, e.g. church) {{med artikel, uden artikel|radio}}',
-		answers: ['med artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/roed_13.png"> (Substantiver der betegner transportmidler og institutioner har ingen artikel, når man tænker på funktionen; man bruger derimod artikel om den konkrete bygning/ting).</p>'
-	
-	}]);
+
 </script> 
 
 </body></html>
