@@ -178,7 +178,7 @@
 			<div class="bott-block" id="bott-block"> 
 				<div class="head"> 
 					<h5> 
-						Vælg <span class="bold-italic">’the’</span> eller ’x’ (= ingen artikel) (20 sætninger)
+						Vælg den rigtige oversættelse til engelsk. (6 point)
 					</h5> 
 
 					<form class="js-test-form js-test" action="#"></form>
@@ -207,114 +207,36 @@
 	<script src="js/custom.js"></script>
 	<script> 
 
-
-$(document).on('keypress', function(e) {
-	e.preventDefault();
-})
-
-
-
 $('.js-test-form').test([{
-		text: '1. We can go by {{, x, the|select}} bus if you prefer that.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"><span>Forkert. Se regel </span><div class="tool-tip-holder"><img class="link" src="img/roed_13.png"><div class="tool-tip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, rerum.</div></div></div>'
+		text: '<p>1. Jeg ved lidt om madlavning. {{<span>I know a little about cooking.</span>, <span>I know little about cooking.</span>|radio}}</p>',
+		answers: ['<span>I know a little about cooking.</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert! Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"> Den danske sætning udtrykker, at jeg dog ved noget, derfor ubestemt kendeord.</div></div></div>'
 	}, {
-		text: '2. Everybody left the office and went home to celebrate {{, x, the|select}} Christmas.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_12.png"></p>'
+		text: '<p>2. Han havde få idéer, som var anvendelige. {{<span>He had a few ideas'+"&#44;"+' which were useful.</span>, <span>He had few ideas which were useful.</span>|radio}}</p>',
+		answers: ['<span>He had few ideas which were useful.</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert! Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"> Den danske sætning udtrykker, at han kun havde ganske få idéer, derfor ikke kendeord.</div></div></div>'
 	}, {
-		text: '3. Two cyclists were taken to {{, x, the|select}} hospital before the race was over.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<p>3. Vi modtog få forslag, som gav mening. {{<span>We received few suggestions that made sense.</span>, <span>We received a few suggestions that made sense.</span>|radio}}</p>',
+		answers: ['<span>We received few suggestions that made sense.</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert! Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"> Den danske sætning udtrykker, at de kun modtog ganske få forslag. Derfor ikke kendeord.</div></div></div>'
 	}, {
-		text: '4. I was born in {{, x, the|select}} South, but grew up in New York.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_6.png"></p>'
+		text: '<p>4. Hun fik en del lykønskninger, da hun havde vundet løbet. {{<span>She got few congratulations when she had won the race.</span>, <span>She got quite a few congratulations when she had won the race.</span>|radio}}</p>',
+		answers: ['<span>She got quite a few congratulations when she had won the race.</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert! Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"> Den danske sætning siger hun fik en del, derfor kendeord.</div></div></div>'
 	}, {
-		text: '5. She always went to {{, x, the|select}} bed very early because she had to go to work at five am.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
+		text: '<p>5. Hæren vandt lidt territorium under vinterens offensiv. {{<span>The army won a little territory during the winter offensive.</span>, <span>The army won little territory during the winter offensive.</span>|radio}}</p>',
+		answers: ['<span>The army won a little territory during the winter offensive.</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert! Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"> Hæren vandt dog noget territorium, derfor kendeord.</div></div></div>'
 	}, {
-		text: '6. A sign reminded them to keep on {{, x, the|select}} left side of the road.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_7.png"></p>'
-	}, {
-		text: '7. Only shortly after he had been released from {{, x, the|select}} prison, he was arrested again.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '8. She told us to keep straight on for another mile and then turn to {{, x, the|select}} left.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_7.png"></p>'
-	}, {
-		text: '9. What did you have for {{, x, the|select}} breakfast when you went to Greece last year?',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"></p>'
-	}, {
-		text: '10. The doctor says that I can visit her at {{, x, the|select}} hospital tomorrow.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '11. He has read {{, x, the|select}} Washington Post every morning for 10 years.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '12. I don’t think I will ever forget {{, x, the|select}} dinner we had at the top of the Eiffel Tower.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"> , NB!</p>'
-	}, {
-		text: '13. My sister lives on {{, x, the|select}} third floor, in an apartment facing the Thames.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. <img class="link" src="img/blaa_1.png"> Engelsk har bestemt kendeord ved ’ordenstal’</p>'
-	}, {
-		text: '14. He has gone to {{, x, the|select}} church every Sunday for twenty years.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '15. On April 14, 1912,{{, x, the|select}} Titanic hit an iceberg and less than 3 hours later it had sunk.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '16. {{, x, the|select}} passive voice is often used in scientific writings.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_8.png"></p>'
-	}, {
-		text: '17. She quit {{, x, the|select}} university because she got an interesting job.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_13.png"></p>'
-	}, {
-		text: '18. We have booked a week at {{, x, the|select}} Intercontinental. It is said to be a nice hotel.',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_9.png"></p>'
-	}, {
-		text: '19. She has just published a number of essays on {{, x, the|select}} man and nature.',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_10.png"></p>'
-	}, {
-		text: '20. “We are going to {{, x, the|select}} dinner with the Browns”, he said, “so you’d better hurry!”',
-		answers: ['x'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/roed_11.png"></p>'
-	
+		text: '<p>6. Jeg ved lidt om fysik. {{<span>I know little about physics.</span>, <span>I know a little about physics.</span>|radio}}</p>',
+		answers: ['<span>I know a little about physics.</span>'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png"> Forkert! Se <div class="tool-tip-holder"><img class="link" src="img/roed_5.png"><div class="tool-tip"> Han ved dog noget om fysik, derfor kendeord.</div></div></div>'	
 	}]);
 
 </script> 

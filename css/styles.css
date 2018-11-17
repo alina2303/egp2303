@@ -197,10 +197,11 @@ h4  {
 }
 
 body {
-	background-image: url("../img/metal.jpg");
+	/*background-image: url("../img/metal.jpg");*/
 	/* background-image: url("../img/11.jpg");
 	background: url(http://37.media.tumblr.com/f6c67ec2821a91051e4175f8a102e1e2/tumblr_n6rzpcsMk41st5lhmo1_1280.jpg) 50% 50% / cover;*/
 	background-size: cover;
+	background-color: #edf2f9;
 	background-position: center;
 	background-attachment: fixed;
 }
@@ -1408,7 +1409,10 @@ margin-bottom: 2rem;
 	width: 35%;
 	margin-right: 3rem;
 }
-
+.row.flex .col.FullSentence {
+	width: 50%;
+	margin-right: 3rem;
+}
 .container-drag.box 
 .row.flex .col.left div{
 	font-style: normal;
@@ -1423,6 +1427,12 @@ margin-bottom: 2rem;
 }
 .flex .col.left {
 	width: 40%;
+}
+.flex .col.left.FullSentence {
+	width: 50%;
+}
+.flex .col.right.FullSentence {
+	width: 60%;
 }
 .flex .col.right {
 	width: 60%;

@@ -301,10 +301,10 @@
 					<div class="bott-block" id="bott-block"> 
 						<div class="head"> 
 							<h5> 
-								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
+								Afgør om sætningen skal have eller ikke have ubestemt kendeord. (11 point)
 							</h5> 
 
-							<form class="js-test-form js-test" action="#"></form>
+							<form class="js-test-form-1 js-test" action="#"></form>
 
 						</div> 
 						<div class="result counter"> 
@@ -327,7 +327,7 @@
 								Klik på den korrekte brug af bestemt artikel (16 spørgsmål)
 							</h5> 
 
-							<form class="js-test-form-1 js-test" action="#"></form>
+							<form class="js-test-form js-test" action="#"></form>
 
 						</div> 
 						<div class="result counter"> 
@@ -354,86 +354,60 @@
 	<script> 
 
 $('.js-test-form').test([{
-		text: '1. Jane felt sick in the evening, but she was well ....... following day. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <a class="tooltip" href="#"><img class="link" src="img/blaa_1.png"><span class="custom help"><img src="Help.png" alt="Помощь" height="48" width="48" /><em>Помощь</em>Это просто пример того, как сделать подсказки с использованием CSS!</span></a></p>'
+		text: '1. He became {{ , a, Ingen|select}} lead singer in the band.</p>',
+		answers: ['Ingen'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er kun én <span>“lead singer”</span>.</div></div></div>'
 	}, {
-		text: '2. He wants to study in  ....... USA. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '2. My sister dreams of becoming {{ , a, Ingen|select}} pilot.</p>',
+		answers: ['a'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">En blandt mange piloter.</div></div></div>'
 	}, {
-		text: '3. ....... most of the students in our class wanted to go to London. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '3. His wife was {{ , a, Ingen|select}} singer.</p>',
+		answers: ['a'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">En blandt mange sangere.</div></div></div>'
 	}, {
-		text: '4. She is   ....... daughter of one of my teachers from high school. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '4. He had said so {{ , a, Ingen|select}} hundred times, but no one listened.</p>',
+		answers: ['a'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_4.png"> <div class="tool-tip">På engelsk sætter man ubestemt kendeord foran <span>hundred</span>.</div></div></div>'
 	}, {
-		text: '5. This was  ....... third time that she had tried to call him. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
+		text: '5. He was promoted to {{ , a, Ingen|select}} head teacher at my son’s school.</p>',
+		answers: ['Ingen'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er kun én <span>“head teacher”</span>.</div></div></div>'
 	}, {
-		text: '6. ....... author of the novel is still unknown. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
+		text: '6. In The Lord of the Rings he played {{ , a, Ingen|select}} dwarf.</p>',
+		answers: ['a'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Én blandt mange dværge.</div></div></div>'
 	}, {
-		text: '7. He broke ....... one arm when he was skiing in Aspen. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '7. In Norway, they celebrate their Constitution once {{ , a, Ingen|select}} year.</p>',
+		answers: ['a'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_3.png"> <div class="tool-tip">Ved pr. og om bruges ubestemt kendeord.</div></div></div>'
 	}, {
-		text: '8. Have you ever been to ....... Netherlands?. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande i flertal bruger bestemt artikel</p>'
+		text: '8. She woke up with {{ , a, Ingen|select}} headache.</p>',
+		answers: ['a'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_2.png"> <div class="tool-tip">Tælleligt navneord, som angiver én af en slags.</div></div></div>'
 	}, {
-		text: '9. Yes, we visited ....... Hague last summer. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"></p>'
+		text: '9. After the meeting, he became {{ , a, Ingen|select}} General Manager.</p>',
+		answers: ['Ingen'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er kun én øverste direktør.</div></div></div>'
 	}, {
-		text: '10. I think ....... most students do their homework. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
+		text: '10. My father is {{ , a, Ingen|select}} king of the house.</p>',
+		answers: ['Ingen'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er kun én konge.</div></div></div>'
 	}, {
-		text: '11. My best friend lives in ....... United Kingdom. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_3.png"> , lande med <span>union</span> (her <span>united</span>), <span>state</span>, og <span>republic</span> i navnet har artikel</p>'
-	}, {
-		text: '12. You will find an English version on ....... opposite page. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"> , <span>opposite</span> bruges med bestemt artikel ligesom <span>same</span> og <span>following</span></p>'
-	}, {
-		text: '13. When they came back, ....... one student was missing. {{the, ingen artikel|radio}}',
-		answers: ['ingen artikel'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_5.png"></p>'
-	}, {
-		text: '14. ....... same thing happened three years ago. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	}, {
-		text: '15. He is ....... owner of the Franklin Barbecue. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_2.png"></p>'
-	}, {
-		text: '16. ....... following exercises must be answered before you can go home: 2, 15 and 16. {{the, ingen artikel|radio}}',
-		answers: ['the'],
-		right: '<img src="img/right2.png" alt="" />',
-		wrong: '<p class="red"><img class="res-el" src="img/wrong2.png"> Forkert. Se regel <img class="link" src="img/blaa_1.png"></p>'
-	
+		text: '11. Being {{ , a, Ingen|select}} mother means little sleep.</p>',
+		answers: ['a'],
+		right: '<p><img src="img/right2.png" alt="" /></p>',
+		wrong: '<div class="red"><img class="res-el" src="img/wrong2.png">Forkert. Se <div class="tool-tip-holder blue"><img class="link" src="img/blaa_1.png"> <div class="tool-tip">Der er mange mødre.</div></div></div>'
 	}]);
 
 $('.js-test-form-1').test([{
